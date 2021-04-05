@@ -60,11 +60,13 @@ namespace ABC_Institute_Menu
 
         private void btnWorkingDaysHours_Click(object sender, EventArgs e)
         {
+           
             showSubMenu(panelWorkingDaysHours);
         }
 
         private void addWorkingDaysHours_Click(object sender, EventArgs e)
         {
+            openChildForm(new Form2());
             hideSubMenu();
         }
 
@@ -172,9 +174,10 @@ namespace ABC_Institute_Menu
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(childForm);
-            mainPanel.Tag = childForm;
-            mainPanel.Show();
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

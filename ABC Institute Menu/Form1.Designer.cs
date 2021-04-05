@@ -62,7 +62,7 @@ namespace ABC_Institute_Menu
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btngenerateTimetable = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.mainPanel = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSide.SuspendLayout();
             this.panelSession.SuspendLayout();
@@ -523,14 +523,15 @@ namespace ABC_Institute_Menu
             this.panelLogo.Size = new System.Drawing.Size(233, 100);
             this.panelLogo.TabIndex = 0;
             // 
-            // mainPanel
+            // panelChildForm
             // 
-            this.mainPanel.AutoScroll = true;
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(250, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1100, 729);
-            this.mainPanel.TabIndex = 1;
+            this.panelChildForm.AutoScroll = true;
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1100, 729);
+            this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -548,7 +549,7 @@ namespace ABC_Institute_Menu
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSide);
             this.MinimumSize = new System.Drawing.Size(1366, 768);
             this.Name = "Form1";
@@ -603,7 +604,7 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button btnStatistics;
         private System.Windows.Forms.Button btngenerateTimetable;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
