@@ -60,7 +60,6 @@ namespace ABC_Institute_Menu
 
         private void btnWorkingDaysHours_Click(object sender, EventArgs e)
         {
-           
             showSubMenu(panelWorkingDaysHours);
         }
 
