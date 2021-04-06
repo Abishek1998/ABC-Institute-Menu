@@ -113,7 +113,7 @@ namespace ABC_Institute_Menu
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 33);
             this.button3.TabIndex = 29;
-            this.button3.Text = "Add";
+            this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
