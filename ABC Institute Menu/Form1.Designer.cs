@@ -65,6 +65,7 @@ namespace ABC_Institute_Menu
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.updateLecturers = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelSide.SuspendLayout();
             this.panelSession.SuspendLayout();
             this.panelLocation.SuspendLayout();
@@ -109,7 +110,7 @@ namespace ABC_Institute_Menu
             this.panelSession.Controls.Add(this.btnManageSession);
             this.panelSession.Controls.Add(this.btnAddSession);
             this.panelSession.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSession.Location = new System.Drawing.Point(0, 1051);
+            this.panelSession.Location = new System.Drawing.Point(0, 1081);
             this.panelSession.Name = "panelSession";
             this.panelSession.Size = new System.Drawing.Size(233, 90);
             this.panelSession.TabIndex = 16;
@@ -149,7 +150,7 @@ namespace ABC_Institute_Menu
             this.btnSession.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSession.FlatAppearance.BorderSize = 0;
             this.btnSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSession.Location = new System.Drawing.Point(0, 1011);
+            this.btnSession.Location = new System.Drawing.Point(0, 1041);
             this.btnSession.Name = "btnSession";
             this.btnSession.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSession.Size = new System.Drawing.Size(233, 40);
@@ -164,7 +165,7 @@ namespace ABC_Institute_Menu
             this.panelLocation.Controls.Add(this.btnManageLocation);
             this.panelLocation.Controls.Add(this.btnAddLocation);
             this.panelLocation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLocation.Location = new System.Drawing.Point(0, 921);
+            this.panelLocation.Location = new System.Drawing.Point(0, 951);
             this.panelLocation.Name = "panelLocation";
             this.panelLocation.Size = new System.Drawing.Size(233, 90);
             this.panelLocation.TabIndex = 14;
@@ -202,7 +203,7 @@ namespace ABC_Institute_Menu
             this.btnLocation.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLocation.FlatAppearance.BorderSize = 0;
             this.btnLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocation.Location = new System.Drawing.Point(0, 881);
+            this.btnLocation.Location = new System.Drawing.Point(0, 911);
             this.btnLocation.Name = "btnLocation";
             this.btnLocation.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLocation.Size = new System.Drawing.Size(233, 40);
@@ -217,7 +218,7 @@ namespace ABC_Institute_Menu
             this.panelTag.Controls.Add(this.btnManageTags);
             this.panelTag.Controls.Add(this.btnAddTags);
             this.panelTag.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTag.Location = new System.Drawing.Point(0, 791);
+            this.panelTag.Location = new System.Drawing.Point(0, 821);
             this.panelTag.Name = "panelTag";
             this.panelTag.Size = new System.Drawing.Size(233, 90);
             this.panelTag.TabIndex = 12;
@@ -257,7 +258,7 @@ namespace ABC_Institute_Menu
             this.btnTags.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTags.FlatAppearance.BorderSize = 0;
             this.btnTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTags.Location = new System.Drawing.Point(0, 751);
+            this.btnTags.Location = new System.Drawing.Point(0, 781);
             this.btnTags.Name = "btnTags";
             this.btnTags.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnTags.Size = new System.Drawing.Size(233, 40);
@@ -272,7 +273,7 @@ namespace ABC_Institute_Menu
             this.panelStudents.Controls.Add(this.btnManageStudents);
             this.panelStudents.Controls.Add(this.btnAddStudents);
             this.panelStudents.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStudents.Location = new System.Drawing.Point(0, 661);
+            this.panelStudents.Location = new System.Drawing.Point(0, 691);
             this.panelStudents.Name = "panelStudents";
             this.panelStudents.Size = new System.Drawing.Size(233, 90);
             this.panelStudents.TabIndex = 10;
@@ -312,7 +313,7 @@ namespace ABC_Institute_Menu
             this.btnStudents.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStudents.FlatAppearance.BorderSize = 0;
             this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudents.Location = new System.Drawing.Point(0, 621);
+            this.btnStudents.Location = new System.Drawing.Point(0, 651);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnStudents.Size = new System.Drawing.Size(233, 40);
@@ -324,12 +325,13 @@ namespace ABC_Institute_Menu
             // 
             // panelSubjects
             // 
+            this.panelSubjects.Controls.Add(this.button1);
             this.panelSubjects.Controls.Add(this.manageSubjects);
             this.panelSubjects.Controls.Add(this.addSubjects);
             this.panelSubjects.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubjects.Location = new System.Drawing.Point(0, 531);
+            this.panelSubjects.Location = new System.Drawing.Point(0, 519);
             this.panelSubjects.Name = "panelSubjects";
-            this.panelSubjects.Size = new System.Drawing.Size(233, 90);
+            this.panelSubjects.Size = new System.Drawing.Size(233, 132);
             this.panelSubjects.TabIndex = 8;
             // 
             // manageSubjects
@@ -367,7 +369,7 @@ namespace ABC_Institute_Menu
             this.btnSubjects.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSubjects.FlatAppearance.BorderSize = 0;
             this.btnSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubjects.Location = new System.Drawing.Point(0, 491);
+            this.btnSubjects.Location = new System.Drawing.Point(0, 479);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSubjects.Size = new System.Drawing.Size(233, 40);
@@ -385,7 +387,7 @@ namespace ABC_Institute_Menu
             this.panelLecturers.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLecturers.Location = new System.Drawing.Point(0, 350);
             this.panelLecturers.Name = "panelLecturers";
-            this.panelLecturers.Size = new System.Drawing.Size(233, 141);
+            this.panelLecturers.Size = new System.Drawing.Size(233, 129);
             this.panelLecturers.TabIndex = 6;
             // 
             // manageLecturers
@@ -561,6 +563,21 @@ namespace ABC_Institute_Menu
             this.updateLecturers.UseVisualStyleBackColor = true;
             this.updateLecturers.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 80);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(233, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Update Subjects";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,6 +641,7 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button updateLecturers;
+        private System.Windows.Forms.Button button1;
     }
 }
 

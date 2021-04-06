@@ -81,12 +81,13 @@ namespace ABC_Institute_Menu
 
         private void addLecturers_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form3());
+            openChildForm(new FormAddLecturer());
             hideSubMenu();
         }
 
         private void manageLecturers_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormManageLecturers());
             hideSubMenu();
         }
 
@@ -97,11 +98,13 @@ namespace ABC_Institute_Menu
 
         private void addSubjects_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormAddSubjects());
             hideSubMenu();
         }
 
         private void manageSubjects_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormManageSubjects());
             hideSubMenu();
         }
 
@@ -182,6 +185,13 @@ namespace ABC_Institute_Menu
 
         private void button1_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUpdateLecturers());
+            hideSubMenu();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new FormUpdateSubjects());
             hideSubMenu();
         }
     }

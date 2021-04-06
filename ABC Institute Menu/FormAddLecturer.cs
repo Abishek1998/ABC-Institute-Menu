@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ABC_Institute_Menu
 {
-    public partial class Form3 : Form
+    public partial class FormAddLecturer : Form
     {
-        public Form3()
+        public FormAddLecturer()
         {
             InitializeComponent();
         }
