@@ -81,6 +81,7 @@ namespace ABC_Institute_Menu
 
         private void addLecturers_Click(object sender, EventArgs e)
         {
+            openChildForm(new Form3());
             hideSubMenu();
         }
 
@@ -177,6 +178,11 @@ namespace ABC_Institute_Menu
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
         }
     }
 }
