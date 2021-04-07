@@ -1,7 +1,7 @@
 ﻿
 namespace ABC_Institute_Menu
 {
-    partial class Form2
+    partial class addWorkingDays
     {
         /// <summary>
         /// Required designer variable.

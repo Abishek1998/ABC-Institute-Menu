@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ABC_Institute_Menu
 {
-    public partial class Form2 : Form
+    public partial class addWorkingDays : Form
     {
-        public Form2()
+        public addWorkingDays()
         {
             InitializeComponent();
         }
