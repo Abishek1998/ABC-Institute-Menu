@@ -79,7 +79,7 @@ namespace ABC_Institute_Menu
             // panelSide
             // 
             this.panelSide.AutoScroll = true;
-            this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panelSide.Controls.Add(this.panelSession);
             this.panelSide.Controls.Add(this.btnSession);
             this.panelSide.Controls.Add(this.panelLocation);
