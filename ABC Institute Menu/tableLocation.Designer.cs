@@ -82,8 +82,9 @@ namespace ABC_Institute_Menu
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 24;
-            this.button2.Text = "Add New Location";
+            this.button2.Text = "Add Location";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tableLocation
             // 
