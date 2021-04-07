@@ -71,6 +71,7 @@ namespace ABC_Institute_Menu
 
         private void manageWorkingDaysHours_Click(object sender, EventArgs e)
         {
+            openChildForm(new manageWorkingDaysHours());
             hideSubMenu();
         }
 
