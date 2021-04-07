@@ -554,7 +554,7 @@ namespace ABC_Institute_Menu
             this.MinimumSize = new System.Drawing.Size(1366, 768);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "ABC Institute Timetable";
             this.panelSide.ResumeLayout(false);
             this.panelSession.ResumeLayout(false);
             this.panelLocation.ResumeLayout(false);
