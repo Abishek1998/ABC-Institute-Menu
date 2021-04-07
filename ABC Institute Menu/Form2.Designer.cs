@@ -39,6 +39,7 @@ namespace ABC_Institute_Menu
             this.noOfWorkingDays = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btmlabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,6 +67,7 @@ namespace ABC_Institute_Menu
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.workingDays);
             this.panel2.Controls.Add(this.minutes);
             this.panel2.Controls.Add(this.hours);
@@ -149,6 +151,14 @@ namespace ABC_Institute_Menu
             this.btmlabel.TabIndex = 0;
             this.btmlabel.Text = "ABC Institute Timetable Management";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(34, 66);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(214, 37);
+            this.textBox1.TabIndex = 12;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +191,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Label hours;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label btmlabel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
