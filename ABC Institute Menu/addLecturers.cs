@@ -10,26 +10,11 @@ using System.Windows.Forms;
 
 namespace ABC_Institute_Menu
 {
-    public partial class Form2 : Form
+    public partial class addLecturers : Form
     {
-        public Form2()
+        public addLecturers()
         {
             InitializeComponent();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hours_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
