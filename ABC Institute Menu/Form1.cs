@@ -142,6 +142,7 @@ namespace ABC_Institute_Menu
 
         private void btnAddLocation_Click(object sender, EventArgs e)
         {
+            openChildForm(new addlocation());
             hideSubMenu();
         }
 
