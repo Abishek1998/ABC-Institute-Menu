@@ -36,7 +36,6 @@ namespace ABC_Institute_Menu
             this.btnAddSession = new System.Windows.Forms.Button();
             this.btnSession = new System.Windows.Forms.Button();
             this.panelLocation = new System.Windows.Forms.Panel();
-            this.btnManageLocation = new System.Windows.Forms.Button();
             this.btnAddLocation = new System.Windows.Forms.Button();
             this.btnLocation = new System.Windows.Forms.Button();
             this.panelTag = new System.Windows.Forms.Panel();
@@ -101,7 +100,7 @@ namespace ABC_Institute_Menu
             this.panelSide.Location = new System.Drawing.Point(0, 0);
             this.panelSide.Margin = new System.Windows.Forms.Padding(4);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(333, 897);
+            this.panelSide.Size = new System.Drawing.Size(250, 897);
             this.panelSide.TabIndex = 0;
             // 
             // panelSession
@@ -112,7 +111,7 @@ namespace ABC_Institute_Menu
             this.panelSession.Location = new System.Drawing.Point(0, 1230);
             this.panelSession.Margin = new System.Windows.Forms.Padding(4);
             this.panelSession.Name = "panelSession";
-            this.panelSession.Size = new System.Drawing.Size(312, 111);
+            this.panelSession.Size = new System.Drawing.Size(229, 111);
             this.panelSession.TabIndex = 16;
             // 
             // btnManageSession
@@ -124,7 +123,7 @@ namespace ABC_Institute_Menu
             this.btnManageSession.Location = new System.Drawing.Point(0, 49);
             this.btnManageSession.Name = "btnManageSession";
             this.btnManageSession.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnManageSession.Size = new System.Drawing.Size(312, 40);
+            this.btnManageSession.Size = new System.Drawing.Size(229, 40);
             this.btnManageSession.TabIndex = 1;
             this.btnManageSession.Text = "Manage Session";
             this.btnManageSession.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,7 +140,7 @@ namespace ABC_Institute_Menu
             this.btnAddSession.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddSession.Name = "btnAddSession";
             this.btnAddSession.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnAddSession.Size = new System.Drawing.Size(312, 49);
+            this.btnAddSession.Size = new System.Drawing.Size(229, 49);
             this.btnAddSession.TabIndex = 0;
             this.btnAddSession.Text = "Add Session";
             this.btnAddSession.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,7 +157,7 @@ namespace ABC_Institute_Menu
             this.btnSession.Margin = new System.Windows.Forms.Padding(4);
             this.btnSession.Name = "btnSession";
             this.btnSession.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnSession.Size = new System.Drawing.Size(312, 49);
+            this.btnSession.Size = new System.Drawing.Size(229, 49);
             this.btnSession.TabIndex = 15;
             this.btnSession.Text = "Session";
             this.btnSession.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,31 +166,13 @@ namespace ABC_Institute_Menu
             // 
             // panelLocation
             // 
-            this.panelLocation.Controls.Add(this.btnManageLocation);
             this.panelLocation.Controls.Add(this.btnAddLocation);
             this.panelLocation.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLocation.Location = new System.Drawing.Point(0, 1070);
             this.panelLocation.Margin = new System.Windows.Forms.Padding(4);
             this.panelLocation.Name = "panelLocation";
-            this.panelLocation.Size = new System.Drawing.Size(312, 111);
+            this.panelLocation.Size = new System.Drawing.Size(229, 111);
             this.panelLocation.TabIndex = 14;
-            // 
-            // btnManageLocation
-            // 
-            this.btnManageLocation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageLocation.FlatAppearance.BorderSize = 0;
-            this.btnManageLocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.btnManageLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageLocation.Location = new System.Drawing.Point(0, 49);
-            this.btnManageLocation.Margin = new System.Windows.Forms.Padding(4);
-            this.btnManageLocation.Name = "btnManageLocation";
-            this.btnManageLocation.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnManageLocation.Size = new System.Drawing.Size(312, 49);
-            this.btnManageLocation.TabIndex = 1;
-            this.btnManageLocation.Text = "Manage Location";
-            this.btnManageLocation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageLocation.UseVisualStyleBackColor = true;
-            this.btnManageLocation.Click += new System.EventHandler(this.btnManageLocation_Click);
             // 
             // btnAddLocation
             // 
@@ -203,7 +184,7 @@ namespace ABC_Institute_Menu
             this.btnAddLocation.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddLocation.Name = "btnAddLocation";
             this.btnAddLocation.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnAddLocation.Size = new System.Drawing.Size(312, 49);
+            this.btnAddLocation.Size = new System.Drawing.Size(229, 49);
             this.btnAddLocation.TabIndex = 0;
             this.btnAddLocation.Text = "Add Location";
             this.btnAddLocation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,7 +201,7 @@ namespace ABC_Institute_Menu
             this.btnLocation.Margin = new System.Windows.Forms.Padding(4);
             this.btnLocation.Name = "btnLocation";
             this.btnLocation.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnLocation.Size = new System.Drawing.Size(312, 49);
+            this.btnLocation.Size = new System.Drawing.Size(229, 49);
             this.btnLocation.TabIndex = 13;
             this.btnLocation.Text = "Location";
             this.btnLocation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,7 +216,7 @@ namespace ABC_Institute_Menu
             this.panelTag.Location = new System.Drawing.Point(0, 910);
             this.panelTag.Margin = new System.Windows.Forms.Padding(4);
             this.panelTag.Name = "panelTag";
-            this.panelTag.Size = new System.Drawing.Size(312, 111);
+            this.panelTag.Size = new System.Drawing.Size(229, 111);
             this.panelTag.TabIndex = 12;
             // 
             // btnManageTags
@@ -248,7 +229,7 @@ namespace ABC_Institute_Menu
             this.btnManageTags.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageTags.Name = "btnManageTags";
             this.btnManageTags.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnManageTags.Size = new System.Drawing.Size(312, 49);
+            this.btnManageTags.Size = new System.Drawing.Size(229, 49);
             this.btnManageTags.TabIndex = 1;
             this.btnManageTags.Text = "Manage Tags";
             this.btnManageTags.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -265,7 +246,7 @@ namespace ABC_Institute_Menu
             this.btnAddTags.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddTags.Name = "btnAddTags";
             this.btnAddTags.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnAddTags.Size = new System.Drawing.Size(312, 49);
+            this.btnAddTags.Size = new System.Drawing.Size(229, 49);
             this.btnAddTags.TabIndex = 0;
             this.btnAddTags.Text = "Add Tags";
             this.btnAddTags.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,7 +263,7 @@ namespace ABC_Institute_Menu
             this.btnTags.Margin = new System.Windows.Forms.Padding(4);
             this.btnTags.Name = "btnTags";
             this.btnTags.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnTags.Size = new System.Drawing.Size(312, 49);
+            this.btnTags.Size = new System.Drawing.Size(229, 49);
             this.btnTags.TabIndex = 11;
             this.btnTags.Text = "Tags";
             this.btnTags.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -297,7 +278,7 @@ namespace ABC_Institute_Menu
             this.panelStudents.Location = new System.Drawing.Point(0, 750);
             this.panelStudents.Margin = new System.Windows.Forms.Padding(4);
             this.panelStudents.Name = "panelStudents";
-            this.panelStudents.Size = new System.Drawing.Size(312, 111);
+            this.panelStudents.Size = new System.Drawing.Size(229, 111);
             this.panelStudents.TabIndex = 10;
             // 
             // btnManageStudents
@@ -310,7 +291,7 @@ namespace ABC_Institute_Menu
             this.btnManageStudents.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageStudents.Name = "btnManageStudents";
             this.btnManageStudents.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnManageStudents.Size = new System.Drawing.Size(312, 49);
+            this.btnManageStudents.Size = new System.Drawing.Size(229, 49);
             this.btnManageStudents.TabIndex = 1;
             this.btnManageStudents.Text = "Manage Students";
             this.btnManageStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -327,7 +308,7 @@ namespace ABC_Institute_Menu
             this.btnAddStudents.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddStudents.Name = "btnAddStudents";
             this.btnAddStudents.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnAddStudents.Size = new System.Drawing.Size(312, 49);
+            this.btnAddStudents.Size = new System.Drawing.Size(229, 49);
             this.btnAddStudents.TabIndex = 0;
             this.btnAddStudents.Text = "Add Students";
             this.btnAddStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -344,7 +325,7 @@ namespace ABC_Institute_Menu
             this.btnStudents.Margin = new System.Windows.Forms.Padding(4);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnStudents.Size = new System.Drawing.Size(312, 49);
+            this.btnStudents.Size = new System.Drawing.Size(229, 49);
             this.btnStudents.TabIndex = 9;
             this.btnStudents.Text = "Students";
             this.btnStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -359,7 +340,7 @@ namespace ABC_Institute_Menu
             this.panelSubjects.Location = new System.Drawing.Point(0, 590);
             this.panelSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubjects.Name = "panelSubjects";
-            this.panelSubjects.Size = new System.Drawing.Size(312, 111);
+            this.panelSubjects.Size = new System.Drawing.Size(229, 111);
             this.panelSubjects.TabIndex = 8;
             // 
             // manageSubjects
@@ -372,7 +353,7 @@ namespace ABC_Institute_Menu
             this.manageSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.manageSubjects.Name = "manageSubjects";
             this.manageSubjects.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.manageSubjects.Size = new System.Drawing.Size(312, 49);
+            this.manageSubjects.Size = new System.Drawing.Size(229, 49);
             this.manageSubjects.TabIndex = 1;
             this.manageSubjects.Text = "Manage Subjects";
             this.manageSubjects.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -389,7 +370,7 @@ namespace ABC_Institute_Menu
             this.addSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.addSubjects.Name = "addSubjects";
             this.addSubjects.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.addSubjects.Size = new System.Drawing.Size(312, 49);
+            this.addSubjects.Size = new System.Drawing.Size(229, 49);
             this.addSubjects.TabIndex = 0;
             this.addSubjects.Text = "Add Subjects";
             this.addSubjects.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -406,7 +387,7 @@ namespace ABC_Institute_Menu
             this.btnSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnSubjects.Size = new System.Drawing.Size(312, 49);
+            this.btnSubjects.Size = new System.Drawing.Size(229, 49);
             this.btnSubjects.TabIndex = 7;
             this.btnSubjects.Text = "Subjects";
             this.btnSubjects.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -421,7 +402,7 @@ namespace ABC_Institute_Menu
             this.panelLecturers.Location = new System.Drawing.Point(0, 430);
             this.panelLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.panelLecturers.Name = "panelLecturers";
-            this.panelLecturers.Size = new System.Drawing.Size(312, 111);
+            this.panelLecturers.Size = new System.Drawing.Size(229, 111);
             this.panelLecturers.TabIndex = 6;
             // 
             // manageLecturers
@@ -434,7 +415,7 @@ namespace ABC_Institute_Menu
             this.manageLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.manageLecturers.Name = "manageLecturers";
             this.manageLecturers.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.manageLecturers.Size = new System.Drawing.Size(312, 49);
+            this.manageLecturers.Size = new System.Drawing.Size(229, 49);
             this.manageLecturers.TabIndex = 1;
             this.manageLecturers.Text = "Manage Lecturers";
             this.manageLecturers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -451,7 +432,7 @@ namespace ABC_Institute_Menu
             this.addLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.addLecturers.Name = "addLecturers";
             this.addLecturers.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.addLecturers.Size = new System.Drawing.Size(312, 49);
+            this.addLecturers.Size = new System.Drawing.Size(229, 49);
             this.addLecturers.TabIndex = 0;
             this.addLecturers.Text = "Add Lecturers";
             this.addLecturers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -468,7 +449,7 @@ namespace ABC_Institute_Menu
             this.btnLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.btnLecturers.Name = "btnLecturers";
             this.btnLecturers.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnLecturers.Size = new System.Drawing.Size(312, 49);
+            this.btnLecturers.Size = new System.Drawing.Size(229, 49);
             this.btnLecturers.TabIndex = 5;
             this.btnLecturers.Text = "Lecturers";
             this.btnLecturers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -483,7 +464,7 @@ namespace ABC_Institute_Menu
             this.panelWorkingDaysHours.Location = new System.Drawing.Point(0, 270);
             this.panelWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4);
             this.panelWorkingDaysHours.Name = "panelWorkingDaysHours";
-            this.panelWorkingDaysHours.Size = new System.Drawing.Size(312, 111);
+            this.panelWorkingDaysHours.Size = new System.Drawing.Size(229, 111);
             this.panelWorkingDaysHours.TabIndex = 4;
             // 
             // manageWorkingDaysHours
@@ -496,7 +477,7 @@ namespace ABC_Institute_Menu
             this.manageWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4);
             this.manageWorkingDaysHours.Name = "manageWorkingDaysHours";
             this.manageWorkingDaysHours.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.manageWorkingDaysHours.Size = new System.Drawing.Size(312, 49);
+            this.manageWorkingDaysHours.Size = new System.Drawing.Size(229, 49);
             this.manageWorkingDaysHours.TabIndex = 1;
             this.manageWorkingDaysHours.Text = "Manage Working Days, Hours";
             this.manageWorkingDaysHours.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -513,7 +494,7 @@ namespace ABC_Institute_Menu
             this.addWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4);
             this.addWorkingDaysHours.Name = "addWorkingDaysHours";
             this.addWorkingDaysHours.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.addWorkingDaysHours.Size = new System.Drawing.Size(312, 49);
+            this.addWorkingDaysHours.Size = new System.Drawing.Size(229, 49);
             this.addWorkingDaysHours.TabIndex = 0;
             this.addWorkingDaysHours.Text = "Add Working Days, Hours";
             this.addWorkingDaysHours.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -530,7 +511,7 @@ namespace ABC_Institute_Menu
             this.btnWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4);
             this.btnWorkingDaysHours.Name = "btnWorkingDaysHours";
             this.btnWorkingDaysHours.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnWorkingDaysHours.Size = new System.Drawing.Size(312, 49);
+            this.btnWorkingDaysHours.Size = new System.Drawing.Size(229, 49);
             this.btnWorkingDaysHours.TabIndex = 3;
             this.btnWorkingDaysHours.Text = "Working Days , Hours";
             this.btnWorkingDaysHours.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -547,7 +528,7 @@ namespace ABC_Institute_Menu
             this.btnStatistics.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnStatistics.Size = new System.Drawing.Size(312, 49);
+            this.btnStatistics.Size = new System.Drawing.Size(229, 49);
             this.btnStatistics.TabIndex = 2;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -562,7 +543,7 @@ namespace ABC_Institute_Menu
             this.btngenerateTimetable.Margin = new System.Windows.Forms.Padding(4);
             this.btngenerateTimetable.Name = "btngenerateTimetable";
             this.btngenerateTimetable.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btngenerateTimetable.Size = new System.Drawing.Size(312, 49);
+            this.btngenerateTimetable.Size = new System.Drawing.Size(229, 49);
             this.btngenerateTimetable.TabIndex = 1;
             this.btngenerateTimetable.Text = "Generate Timetable";
             this.btngenerateTimetable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -575,7 +556,7 @@ namespace ABC_Institute_Menu
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(312, 123);
+            this.panelLogo.Size = new System.Drawing.Size(229, 123);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -585,7 +566,7 @@ namespace ABC_Institute_Menu
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(312, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -595,10 +576,9 @@ namespace ABC_Institute_Menu
             this.panelChildForm.AutoScroll = true;
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(333, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
+            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1467, 897);
+            this.panelChildForm.Size = new System.Drawing.Size(1550, 897);
             this.panelChildForm.TabIndex = 1;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
@@ -637,7 +617,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button btnAddSession;
         private System.Windows.Forms.Button btnSession;
         private System.Windows.Forms.Panel panelLocation;
-        private System.Windows.Forms.Button btnManageLocation;
         private System.Windows.Forms.Button btnAddLocation;
         private System.Windows.Forms.Button btnLocation;
         private System.Windows.Forms.Panel panelTag;
