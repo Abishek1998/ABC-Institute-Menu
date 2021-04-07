@@ -142,6 +142,7 @@ namespace ABC_Institute_Menu
 
         private void btnAddLocation_Click(object sender, EventArgs e)
         {
+            openChildForm(new addlocation());
             hideSubMenu();
         }
 
@@ -178,6 +179,11 @@ namespace ABC_Institute_Menu
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
