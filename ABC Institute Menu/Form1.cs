@@ -142,11 +142,14 @@ namespace ABC_Institute_Menu
 
         private void btnAddLocation_Click(object sender, EventArgs e)
         {
-            openChildForm(new addlocation());
+           
             hideSubMenu();
         }
 
-     
+        private void btnManageLocation_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
 
         private void btnSession_Click(object sender, EventArgs e)
         {
@@ -179,11 +182,6 @@ namespace ABC_Institute_Menu
         }
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnManageLocation_Click(object sender, EventArgs e)
         {
 
         }

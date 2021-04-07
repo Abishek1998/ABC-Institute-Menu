@@ -63,7 +63,6 @@ namespace ABC_Institute_Menu
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.btnManageLocation = new System.Windows.Forms.Button();
             this.panelSide.SuspendLayout();
             this.panelSession.SuspendLayout();
             this.panelLocation.SuspendLayout();
@@ -167,7 +166,6 @@ namespace ABC_Institute_Menu
             // 
             // panelLocation
             // 
-            this.panelLocation.Controls.Add(this.btnManageLocation);
             this.panelLocation.Controls.Add(this.btnAddLocation);
             this.panelLocation.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLocation.Location = new System.Drawing.Point(0, 1070);
@@ -584,23 +582,6 @@ namespace ABC_Institute_Menu
             this.panelChildForm.TabIndex = 1;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
-            // btnManageLocation
-            // 
-            this.btnManageLocation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageLocation.FlatAppearance.BorderSize = 0;
-            this.btnManageLocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.btnManageLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageLocation.Location = new System.Drawing.Point(0, 49);
-            this.btnManageLocation.Margin = new System.Windows.Forms.Padding(4);
-            this.btnManageLocation.Name = "btnManageLocation";
-            this.btnManageLocation.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnManageLocation.Size = new System.Drawing.Size(229, 49);
-            this.btnManageLocation.TabIndex = 1;
-            this.btnManageLocation.Text = "Manage Location";
-            this.btnManageLocation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageLocation.UseVisualStyleBackColor = true;
-            this.btnManageLocation.Click += new System.EventHandler(this.btnManageLocation_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -663,7 +644,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnManageLocation;
     }
 }
 
