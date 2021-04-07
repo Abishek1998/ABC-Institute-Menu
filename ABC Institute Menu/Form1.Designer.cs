@@ -505,6 +505,7 @@ namespace ABC_Institute_Menu
             this.btngenerateTimetable.Dock = System.Windows.Forms.DockStyle.Top;
             this.btngenerateTimetable.FlatAppearance.BorderSize = 0;
             this.btngenerateTimetable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngenerateTimetable.Image = ((System.Drawing.Image)(resources.GetObject("btngenerateTimetable.Image")));
             this.btngenerateTimetable.Location = new System.Drawing.Point(0, 100);
             this.btngenerateTimetable.Name = "btngenerateTimetable";
             this.btngenerateTimetable.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);

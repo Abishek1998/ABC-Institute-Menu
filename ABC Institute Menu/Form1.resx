@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btngenerateTimetable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAMlJREFUOE9jAIGC9f8Fqtb/z69Y/7+eHAzSW77+vwLYMCDHoHLd//cV6/7/pwSX
+        A80oXfXfgAFo2HlsCsjE+xmwCFKEh4mBe67//7/5InY5dEyUgXdfA/Er7HLomH4GgrwINgiIv//6//8b
+        EMP4e65h1wPCOA0EhRvIVSAMMhCEYXx84TmEwxAZrz7z//8qIMYmh46JMpAUPBINpGZ5CCxkzzMAi24H
+        bJKkYlCpX7bmfwC4Gihf/l8BW11BLAbXKUAzwIZRFzAwAAAfcRNRdBuEQAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOkAAABkCAYAAABjGRflAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
