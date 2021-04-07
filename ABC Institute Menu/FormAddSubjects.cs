@@ -21,5 +21,10 @@ namespace ABC_Institute_Menu
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
