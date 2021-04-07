@@ -141,13 +141,17 @@ namespace ABC_Institute_Menu
 
         private void btnAddLocation_Click(object sender, EventArgs e)
         {
+            openChildForm(new addLocation());
             hideSubMenu();
         }
 
         private void btnManageLocation_Click(object sender, EventArgs e)
         {
+            openChildForm(new tableLocation());
             hideSubMenu();
         }
+
+      
 
         private void btnSession_Click(object sender, EventArgs e)
         {
@@ -177,6 +181,11 @@ namespace ABC_Institute_Menu
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void btngenerateTimetable_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -171,6 +171,8 @@ namespace ABC_Institute_Menu
             // btnManageLocation
             // 
             this.btnManageLocation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageLocation.FlatAppearance.BorderSize = 0;
+            this.btnManageLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageLocation.Location = new System.Drawing.Point(0, 40);
             this.btnManageLocation.Name = "btnManageLocation";
             this.btnManageLocation.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -513,6 +515,7 @@ namespace ABC_Institute_Menu
             this.btngenerateTimetable.Text = "Generate Timetable";
             this.btngenerateTimetable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngenerateTimetable.UseVisualStyleBackColor = true;
+            this.btngenerateTimetable.Click += new System.EventHandler(this.btngenerateTimetable_Click);
             // 
             // panelLogo
             // 
@@ -578,7 +581,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button btnAddSession;
         private System.Windows.Forms.Button btnSession;
         private System.Windows.Forms.Panel panelLocation;
-        private System.Windows.Forms.Button btnManageLocation;
         private System.Windows.Forms.Button btnAddLocation;
         private System.Windows.Forms.Button btnLocation;
         private System.Windows.Forms.Panel panelTag;
@@ -606,6 +608,7 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnManageLocation;
     }
 }
 
