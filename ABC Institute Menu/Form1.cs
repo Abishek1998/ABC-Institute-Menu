@@ -146,10 +146,7 @@ namespace ABC_Institute_Menu
             hideSubMenu();
         }
 
-        private void btnManageLocation_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
+     
 
         private void btnSession_Click(object sender, EventArgs e)
         {
