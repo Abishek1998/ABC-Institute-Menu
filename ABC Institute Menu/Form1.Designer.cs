@@ -154,6 +154,8 @@ namespace ABC_Institute_Menu
             this.btnSession.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSession.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSession.Image = ((System.Drawing.Image)(resources.GetObject("btnSession.Image")));
+            this.btnSession.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSession.Location = new System.Drawing.Point(0, 960);
             this.btnSession.Name = "btnSession";
             this.btnSession.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -215,6 +217,8 @@ namespace ABC_Institute_Menu
             this.btnLocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocation.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLocation.Image = ((System.Drawing.Image)(resources.GetObject("btnLocation.Image")));
+            this.btnLocation.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLocation.Location = new System.Drawing.Point(0, 830);
             this.btnLocation.Name = "btnLocation";
             this.btnLocation.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -276,6 +280,8 @@ namespace ABC_Institute_Menu
             this.btnTags.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTags.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTags.Image = ((System.Drawing.Image)(resources.GetObject("btnTags.Image")));
+            this.btnTags.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTags.Location = new System.Drawing.Point(0, 700);
             this.btnTags.Name = "btnTags";
             this.btnTags.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -337,6 +343,8 @@ namespace ABC_Institute_Menu
             this.btnStudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudents.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnStudents.Image")));
+            this.btnStudents.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStudents.Location = new System.Drawing.Point(0, 570);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -398,6 +406,8 @@ namespace ABC_Institute_Menu
             this.btnSubjects.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubjects.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubjects.Image = ((System.Drawing.Image)(resources.GetObject("btnSubjects.Image")));
+            this.btnSubjects.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSubjects.Location = new System.Drawing.Point(0, 440);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -459,6 +469,8 @@ namespace ABC_Institute_Menu
             this.btnLecturers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnLecturers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLecturers.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLecturers.Image = ((System.Drawing.Image)(resources.GetObject("btnLecturers.Image")));
+            this.btnLecturers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLecturers.Location = new System.Drawing.Point(0, 310);
             this.btnLecturers.Name = "btnLecturers";
             this.btnLecturers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -520,6 +532,8 @@ namespace ABC_Institute_Menu
             this.btnWorkingDaysHours.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnWorkingDaysHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWorkingDaysHours.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWorkingDaysHours.Image = ((System.Drawing.Image)(resources.GetObject("btnWorkingDaysHours.Image")));
+            this.btnWorkingDaysHours.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnWorkingDaysHours.Location = new System.Drawing.Point(0, 180);
             this.btnWorkingDaysHours.Name = "btnWorkingDaysHours";
             this.btnWorkingDaysHours.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -527,6 +541,7 @@ namespace ABC_Institute_Menu
             this.btnWorkingDaysHours.TabIndex = 3;
             this.btnWorkingDaysHours.Text = "Working Days , Hours";
             this.btnWorkingDaysHours.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWorkingDaysHours.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnWorkingDaysHours.UseVisualStyleBackColor = true;
             this.btnWorkingDaysHours.Click += new System.EventHandler(this.btnWorkingDaysHours_Click);
             // 
