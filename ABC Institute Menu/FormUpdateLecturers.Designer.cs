@@ -35,7 +35,6 @@ namespace ABC_Institute_Menu
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -53,6 +52,7 @@ namespace ABC_Institute_Menu
             this.noOfWorkingDays = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.addWorkingDaysHours = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,10 +80,10 @@ namespace ABC_Institute_Menu
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.comboBox5);
             this.panel2.Controls.Add(this.comboBox4);
             this.panel2.Controls.Add(this.comboBox3);
@@ -109,9 +109,9 @@ namespace ABC_Institute_Menu
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(692, 332);
+            this.button3.Location = new System.Drawing.Point(660, 332);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 33);
+            this.button3.Size = new System.Drawing.Size(120, 40);
             this.button3.TabIndex = 29;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
@@ -120,9 +120,9 @@ namespace ABC_Institute_Menu
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(572, 332);
+            this.button2.Location = new System.Drawing.Point(534, 332);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 33);
+            this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 28;
             this.button2.Text = "Clear All";
             this.button2.UseVisualStyleBackColor = false;
@@ -131,72 +131,66 @@ namespace ABC_Institute_Menu
             // 
             this.button1.BackColor = System.Drawing.Color.Goldenrod;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(369, 332);
+            this.button1.Location = new System.Drawing.Point(408, 332);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 33);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 27;
             this.button1.Text = "Generate Renk";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(203, 287);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(431, 20);
-            this.textBox3.TabIndex = 26;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(203, 249);
+            this.comboBox5.Location = new System.Drawing.Point(234, 249);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(431, 21);
+            this.comboBox5.Size = new System.Drawing.Size(300, 21);
             this.comboBox5.TabIndex = 25;
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(203, 213);
+            this.comboBox4.Location = new System.Drawing.Point(234, 213);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(431, 21);
+            this.comboBox4.Size = new System.Drawing.Size(300, 21);
             this.comboBox4.TabIndex = 24;
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(203, 176);
+            this.comboBox3.Location = new System.Drawing.Point(234, 176);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(431, 21);
+            this.comboBox3.Size = new System.Drawing.Size(300, 21);
             this.comboBox3.TabIndex = 23;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(203, 138);
+            this.comboBox2.Location = new System.Drawing.Point(234, 138);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(431, 21);
+            this.comboBox2.Size = new System.Drawing.Size(300, 21);
             this.comboBox2.TabIndex = 22;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(203, 101);
+            this.comboBox1.Location = new System.Drawing.Point(234, 101);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(431, 21);
+            this.comboBox1.Size = new System.Drawing.Size(300, 21);
             this.comboBox1.TabIndex = 21;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(203, 67);
+            this.textBox2.Location = new System.Drawing.Point(234, 67);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(431, 20);
+            this.textBox2.Size = new System.Drawing.Size(300, 20);
             this.textBox2.TabIndex = 20;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(203, 30);
+            this.textBox1.Location = new System.Drawing.Point(234, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(431, 20);
+            this.textBox1.Size = new System.Drawing.Size(300, 20);
             this.textBox1.TabIndex = 19;
             // 
             // label6
@@ -299,6 +293,13 @@ namespace ABC_Institute_Menu
             this.addWorkingDaysHours.TabIndex = 2;
             this.addWorkingDaysHours.Text = "Update Lecturers";
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(234, 289);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(300, 20);
+            this.textBox3.TabIndex = 30;
+            // 
             // FormUpdateLecturers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,7 +328,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -345,5 +345,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Label noOfWorkingDays;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label addWorkingDaysHours;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

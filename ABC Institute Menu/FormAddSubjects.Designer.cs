@@ -144,7 +144,7 @@ namespace ABC_Institute_Menu
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(692, 332);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 33);
+            this.button3.Size = new System.Drawing.Size(120, 40);
             this.button3.TabIndex = 29;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = false;
@@ -155,7 +155,7 @@ namespace ABC_Institute_Menu
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(572, 332);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 33);
+            this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 28;
             this.button2.Text = "Clear All";
             this.button2.UseVisualStyleBackColor = false;
@@ -164,7 +164,7 @@ namespace ABC_Institute_Menu
             // 
             this.textBox1.Location = new System.Drawing.Point(310, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(431, 20);
+            this.textBox1.Size = new System.Drawing.Size(300, 20);
             this.textBox1.TabIndex = 19;
             // 
             // label6
@@ -314,14 +314,14 @@ namespace ABC_Institute_Menu
             // 
             this.textBox2.Location = new System.Drawing.Point(310, 139);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(431, 20);
+            this.textBox2.Size = new System.Drawing.Size(300, 20);
             this.textBox2.TabIndex = 34;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(310, 102);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(431, 20);
+            this.textBox4.Size = new System.Drawing.Size(300, 20);
             this.textBox4.TabIndex = 35;
             // 
             // numericUpDown1
