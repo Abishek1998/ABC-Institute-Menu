@@ -174,7 +174,9 @@ namespace ABC_Institute_Menu
             // btnManageLocation
             // 
             this.btnManageLocation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageLocation.FlatAppearance.BorderSize = 0;
             this.btnManageLocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.btnManageLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageLocation.Location = new System.Drawing.Point(0, 40);
             this.btnManageLocation.Name = "btnManageLocation";
             this.btnManageLocation.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
