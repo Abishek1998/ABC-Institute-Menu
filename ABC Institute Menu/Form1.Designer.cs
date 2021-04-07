@@ -117,6 +117,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnManageSession.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManageSession.FlatAppearance.BorderSize = 0;
+            this.btnManageSession.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnManageSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageSession.Location = new System.Drawing.Point(0, 40);
             this.btnManageSession.Name = "btnManageSession";
@@ -132,6 +133,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnAddSession.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddSession.FlatAppearance.BorderSize = 0;
+            this.btnAddSession.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnAddSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddSession.Location = new System.Drawing.Point(0, 0);
             this.btnAddSession.Name = "btnAddSession";
@@ -147,6 +149,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnSession.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSession.FlatAppearance.BorderSize = 0;
+            this.btnSession.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSession.Location = new System.Drawing.Point(0, 960);
             this.btnSession.Name = "btnSession";
@@ -171,6 +174,7 @@ namespace ABC_Institute_Menu
             // btnManageLocation
             // 
             this.btnManageLocation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageLocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnManageLocation.Location = new System.Drawing.Point(0, 40);
             this.btnManageLocation.Name = "btnManageLocation";
             this.btnManageLocation.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -185,6 +189,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnAddLocation.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddLocation.FlatAppearance.BorderSize = 0;
+            this.btnAddLocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnAddLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddLocation.Location = new System.Drawing.Point(0, 0);
             this.btnAddLocation.Name = "btnAddLocation";
@@ -200,6 +205,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnLocation.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLocation.FlatAppearance.BorderSize = 0;
+            this.btnLocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocation.Location = new System.Drawing.Point(0, 830);
             this.btnLocation.Name = "btnLocation";
@@ -225,6 +231,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnManageTags.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManageTags.FlatAppearance.BorderSize = 0;
+            this.btnManageTags.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnManageTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageTags.Location = new System.Drawing.Point(0, 40);
             this.btnManageTags.Name = "btnManageTags";
@@ -240,6 +247,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnAddTags.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddTags.FlatAppearance.BorderSize = 0;
+            this.btnAddTags.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnAddTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTags.Location = new System.Drawing.Point(0, 0);
             this.btnAddTags.Name = "btnAddTags";
@@ -255,6 +263,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnTags.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTags.FlatAppearance.BorderSize = 0;
+            this.btnTags.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTags.Location = new System.Drawing.Point(0, 700);
             this.btnTags.Name = "btnTags";
@@ -280,6 +289,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnManageStudents.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManageStudents.FlatAppearance.BorderSize = 0;
+            this.btnManageStudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnManageStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageStudents.Location = new System.Drawing.Point(0, 40);
             this.btnManageStudents.Name = "btnManageStudents";
@@ -295,6 +305,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnAddStudents.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddStudents.FlatAppearance.BorderSize = 0;
+            this.btnAddStudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnAddStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStudents.Location = new System.Drawing.Point(0, 0);
             this.btnAddStudents.Name = "btnAddStudents";
@@ -310,6 +321,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnStudents.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStudents.FlatAppearance.BorderSize = 0;
+            this.btnStudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudents.Location = new System.Drawing.Point(0, 570);
             this.btnStudents.Name = "btnStudents";
@@ -335,6 +347,7 @@ namespace ABC_Institute_Menu
             // 
             this.manageSubjects.Dock = System.Windows.Forms.DockStyle.Top;
             this.manageSubjects.FlatAppearance.BorderSize = 0;
+            this.manageSubjects.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.manageSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.manageSubjects.Location = new System.Drawing.Point(0, 40);
             this.manageSubjects.Name = "manageSubjects";
@@ -350,6 +363,7 @@ namespace ABC_Institute_Menu
             // 
             this.addSubjects.Dock = System.Windows.Forms.DockStyle.Top;
             this.addSubjects.FlatAppearance.BorderSize = 0;
+            this.addSubjects.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.addSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addSubjects.Location = new System.Drawing.Point(0, 0);
             this.addSubjects.Name = "addSubjects";
@@ -365,6 +379,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnSubjects.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSubjects.FlatAppearance.BorderSize = 0;
+            this.btnSubjects.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubjects.Location = new System.Drawing.Point(0, 440);
             this.btnSubjects.Name = "btnSubjects";
@@ -390,6 +405,7 @@ namespace ABC_Institute_Menu
             // 
             this.manageLecturers.Dock = System.Windows.Forms.DockStyle.Top;
             this.manageLecturers.FlatAppearance.BorderSize = 0;
+            this.manageLecturers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.manageLecturers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.manageLecturers.Location = new System.Drawing.Point(0, 40);
             this.manageLecturers.Name = "manageLecturers";
@@ -405,6 +421,7 @@ namespace ABC_Institute_Menu
             // 
             this.addLecturers.Dock = System.Windows.Forms.DockStyle.Top;
             this.addLecturers.FlatAppearance.BorderSize = 0;
+            this.addLecturers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.addLecturers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addLecturers.Location = new System.Drawing.Point(0, 0);
             this.addLecturers.Name = "addLecturers";
@@ -420,6 +437,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnLecturers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLecturers.FlatAppearance.BorderSize = 0;
+            this.btnLecturers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnLecturers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLecturers.Location = new System.Drawing.Point(0, 310);
             this.btnLecturers.Name = "btnLecturers";
@@ -445,6 +463,7 @@ namespace ABC_Institute_Menu
             // 
             this.manageWorkingDaysHours.Dock = System.Windows.Forms.DockStyle.Top;
             this.manageWorkingDaysHours.FlatAppearance.BorderSize = 0;
+            this.manageWorkingDaysHours.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.manageWorkingDaysHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.manageWorkingDaysHours.Location = new System.Drawing.Point(0, 40);
             this.manageWorkingDaysHours.Name = "manageWorkingDaysHours";
@@ -460,6 +479,7 @@ namespace ABC_Institute_Menu
             // 
             this.addWorkingDaysHours.Dock = System.Windows.Forms.DockStyle.Top;
             this.addWorkingDaysHours.FlatAppearance.BorderSize = 0;
+            this.addWorkingDaysHours.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.addWorkingDaysHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addWorkingDaysHours.Location = new System.Drawing.Point(0, 0);
             this.addWorkingDaysHours.Name = "addWorkingDaysHours";
@@ -475,6 +495,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnWorkingDaysHours.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnWorkingDaysHours.FlatAppearance.BorderSize = 0;
+            this.btnWorkingDaysHours.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnWorkingDaysHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWorkingDaysHours.Location = new System.Drawing.Point(0, 180);
             this.btnWorkingDaysHours.Name = "btnWorkingDaysHours";
@@ -490,6 +511,7 @@ namespace ABC_Institute_Menu
             // 
             this.btnStatistics.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStatistics.FlatAppearance.BorderSize = 0;
+            this.btnStatistics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistics.Location = new System.Drawing.Point(0, 140);
             this.btnStatistics.Name = "btnStatistics";
@@ -504,6 +526,7 @@ namespace ABC_Institute_Menu
             // 
             this.btngenerateTimetable.Dock = System.Windows.Forms.DockStyle.Top;
             this.btngenerateTimetable.FlatAppearance.BorderSize = 0;
+            this.btngenerateTimetable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btngenerateTimetable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btngenerateTimetable.Image = ((System.Drawing.Image)(resources.GetObject("btngenerateTimetable.Image")));
             this.btngenerateTimetable.Location = new System.Drawing.Point(0, 100);
