@@ -496,7 +496,7 @@ namespace ABC_Institute_Menu
             this.manageWorkingDaysHours.Location = new System.Drawing.Point(0, 49);
             this.manageWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4);
             this.manageWorkingDaysHours.Name = "manageWorkingDaysHours";
-            this.manageWorkingDaysHours.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.manageWorkingDaysHours.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.manageWorkingDaysHours.Size = new System.Drawing.Size(312, 49);
             this.manageWorkingDaysHours.TabIndex = 1;
             this.manageWorkingDaysHours.Text = "Manage Working Days, Hours";
@@ -513,7 +513,7 @@ namespace ABC_Institute_Menu
             this.addWorkingDaysHours.Location = new System.Drawing.Point(0, 0);
             this.addWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4);
             this.addWorkingDaysHours.Name = "addWorkingDaysHours";
-            this.addWorkingDaysHours.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.addWorkingDaysHours.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.addWorkingDaysHours.Size = new System.Drawing.Size(312, 49);
             this.addWorkingDaysHours.TabIndex = 0;
             this.addWorkingDaysHours.Text = "Add Working Days, Hours";
