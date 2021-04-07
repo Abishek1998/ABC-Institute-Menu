@@ -32,13 +32,6 @@ namespace ABC_Institute_Menu
             this.panel1 = new System.Windows.Forms.Panel();
             this.addWorkingDaysHours = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.sunday = new Guna.UI.WinForms.GunaCheckBox();
-            this.saturday = new Guna.UI.WinForms.GunaCheckBox();
-            this.friday = new Guna.UI.WinForms.GunaCheckBox();
-            this.thursday = new Guna.UI.WinForms.GunaCheckBox();
-            this.wednesday = new Guna.UI.WinForms.GunaCheckBox();
-            this.tuesday = new Guna.UI.WinForms.GunaCheckBox();
-            this.monday = new Guna.UI.WinForms.GunaCheckBox();
             this.workingDays = new System.Windows.Forms.Label();
             this.minutes = new System.Windows.Forms.Label();
             this.hours = new System.Windows.Forms.Label();
@@ -73,13 +66,6 @@ namespace ABC_Institute_Menu
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.sunday);
-            this.panel2.Controls.Add(this.saturday);
-            this.panel2.Controls.Add(this.friday);
-            this.panel2.Controls.Add(this.thursday);
-            this.panel2.Controls.Add(this.wednesday);
-            this.panel2.Controls.Add(this.tuesday);
-            this.panel2.Controls.Add(this.monday);
             this.panel2.Controls.Add(this.workingDays);
             this.panel2.Controls.Add(this.minutes);
             this.panel2.Controls.Add(this.hours);
@@ -90,97 +76,6 @@ namespace ABC_Institute_Menu
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1084, 402);
             this.panel2.TabIndex = 5;
-            // 
-            // sunday
-            // 
-            this.sunday.BaseColor = System.Drawing.Color.White;
-            this.sunday.CheckedOffColor = System.Drawing.Color.Gray;
-            this.sunday.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            this.sunday.FillColor = System.Drawing.Color.White;
-            this.sunday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sunday.Location = new System.Drawing.Point(578, 103);
-            this.sunday.Name = "sunday";
-            this.sunday.Size = new System.Drawing.Size(87, 22);
-            this.sunday.TabIndex = 22;
-            this.sunday.Text = "Sunday";
-            // 
-            // saturday
-            // 
-            this.saturday.BaseColor = System.Drawing.Color.White;
-            this.saturday.CheckedOffColor = System.Drawing.Color.Gray;
-            this.saturday.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            this.saturday.FillColor = System.Drawing.Color.White;
-            this.saturday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saturday.Location = new System.Drawing.Point(475, 103);
-            this.saturday.Name = "saturday";
-            this.saturday.Size = new System.Drawing.Size(97, 22);
-            this.saturday.TabIndex = 19;
-            this.saturday.Text = "Saturday";
-            // 
-            // friday
-            // 
-            this.friday.BaseColor = System.Drawing.Color.White;
-            this.friday.CheckedOffColor = System.Drawing.Color.Gray;
-            this.friday.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            this.friday.FillColor = System.Drawing.Color.White;
-            this.friday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.friday.Location = new System.Drawing.Point(379, 103);
-            this.friday.Name = "friday";
-            this.friday.Size = new System.Drawing.Size(77, 22);
-            this.friday.TabIndex = 18;
-            this.friday.Text = "Friday";
-            // 
-            // thursday
-            // 
-            this.thursday.BaseColor = System.Drawing.Color.White;
-            this.thursday.CheckedOffColor = System.Drawing.Color.Gray;
-            this.thursday.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            this.thursday.FillColor = System.Drawing.Color.White;
-            this.thursday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thursday.Location = new System.Drawing.Point(700, 64);
-            this.thursday.Name = "thursday";
-            this.thursday.Size = new System.Drawing.Size(100, 22);
-            this.thursday.TabIndex = 17;
-            this.thursday.Text = "Thursday";
-            // 
-            // wednesday
-            // 
-            this.wednesday.BaseColor = System.Drawing.Color.White;
-            this.wednesday.CheckedOffColor = System.Drawing.Color.Gray;
-            this.wednesday.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            this.wednesday.FillColor = System.Drawing.Color.White;
-            this.wednesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wednesday.Location = new System.Drawing.Point(576, 64);
-            this.wednesday.Name = "wednesday";
-            this.wednesday.Size = new System.Drawing.Size(118, 22);
-            this.wednesday.TabIndex = 16;
-            this.wednesday.Text = "Wednesday";
-            // 
-            // tuesday
-            // 
-            this.tuesday.BaseColor = System.Drawing.Color.White;
-            this.tuesday.CheckedOffColor = System.Drawing.Color.Gray;
-            this.tuesday.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            this.tuesday.FillColor = System.Drawing.Color.White;
-            this.tuesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tuesday.Location = new System.Drawing.Point(475, 64);
-            this.tuesday.Name = "tuesday";
-            this.tuesday.Size = new System.Drawing.Size(95, 22);
-            this.tuesday.TabIndex = 15;
-            this.tuesday.Text = "Tuesday";
-            // 
-            // monday
-            // 
-            this.monday.BaseColor = System.Drawing.Color.White;
-            this.monday.CheckedOffColor = System.Drawing.Color.Gray;
-            this.monday.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            this.monday.FillColor = System.Drawing.Color.White;
-            this.monday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monday.Location = new System.Drawing.Point(379, 64);
-            this.monday.Name = "monday";
-            this.monday.Size = new System.Drawing.Size(90, 22);
-            this.monday.TabIndex = 14;
-            this.monday.Text = "Monday";
             // 
             // workingDays
             // 
@@ -284,13 +179,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Label workingDays;
         private System.Windows.Forms.Label minutes;
         private System.Windows.Forms.Label hours;
-        private Guna.UI.WinForms.GunaCheckBox monday;
-        private Guna.UI.WinForms.GunaCheckBox tuesday;
-        private Guna.UI.WinForms.GunaCheckBox saturday;
-        private Guna.UI.WinForms.GunaCheckBox friday;
-        private Guna.UI.WinForms.GunaCheckBox thursday;
-        private Guna.UI.WinForms.GunaCheckBox wednesday;
-        private Guna.UI.WinForms.GunaCheckBox sunday;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label btmlabel;
     }
