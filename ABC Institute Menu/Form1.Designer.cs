@@ -122,10 +122,9 @@ namespace ABC_Institute_Menu
             this.btnManageSession.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnManageSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageSession.Location = new System.Drawing.Point(0, 49);
-            this.btnManageSession.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageSession.Name = "btnManageSession";
-            this.btnManageSession.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.btnManageSession.Size = new System.Drawing.Size(312, 49);
+            this.btnManageSession.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnManageSession.Size = new System.Drawing.Size(312, 40);
             this.btnManageSession.TabIndex = 1;
             this.btnManageSession.Text = "Manage Session";
             this.btnManageSession.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
