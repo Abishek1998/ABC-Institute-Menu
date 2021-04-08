@@ -82,6 +82,7 @@ namespace ABC_Institute_Menu
 
         private void addLecturers_Click(object sender, EventArgs e)
         {
+            openChildForm(new addLecturer());
             hideSubMenu();
         }
 
@@ -112,6 +113,7 @@ namespace ABC_Institute_Menu
 
         private void btnAddStudents_Click(object sender, EventArgs e)
         {
+            openChildForm(new addStudentGroup());
             hideSubMenu();
         }
 
