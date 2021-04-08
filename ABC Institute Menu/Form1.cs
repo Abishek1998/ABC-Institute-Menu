@@ -148,6 +148,7 @@ namespace ABC_Institute_Menu
 
         private void btnManageLocation_Click(object sender, EventArgs e)
         {
+            openChildForm(new locationTable());
             hideSubMenu();
         }
 
