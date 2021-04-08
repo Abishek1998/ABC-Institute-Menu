@@ -78,6 +78,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addLecturer.Designer.cs">
+      <DependentUpon>addLecturer.cs</DependentUpon>
+    </Compile>
     <Compile Include="addlocation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     <Compile Include="viewlocation.Designer.cs">
       <DependentUpon>viewlocation.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addLecturer.resx">
+      <DependentUpon>addLecturer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addlocation.resx">
       <DependentUpon>addlocation.cs</DependentUpon>
     </EmbeddedResource>
