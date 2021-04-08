@@ -86,6 +86,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Subjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Subjects.Designer.cs">
+      <DependentUpon>Add Subjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="addLecturer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <Compile Include="viewTag.Designer.cs">
       <DependentUpon>viewTag.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add Subjects.resx">
+      <DependentUpon>Add Subjects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addLecturer.resx">
       <DependentUpon>addLecturer.cs</DependentUpon>
     </EmbeddedResource>
