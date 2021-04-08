@@ -367,6 +367,7 @@ namespace ABC_Institute_Menu
             this.btnAdd.TabIndex = 27;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // addWorkingDays
             // 

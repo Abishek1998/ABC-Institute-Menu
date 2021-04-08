@@ -56,13 +56,6 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
-        //ADD
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            string txtQuery = "Insert into workingDaysHours (noOfWorkingDays, hours, minutes) values ('" + numericUpDown1.Text + "' , '" + numericUpDown2.Text + "' , '" + numericUpDown3.Text + "' )";
-            ExecuteQuery(txtQuery);
-            LoadData();
-        }
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -77,6 +70,15 @@ namespace ABC_Institute_Menu
         private void hours_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        //ADD
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            string txtQuery = "Insert into workingDaysHours (noOfWorkingDays, hours, minutes) values ('" + numericUpDown1.Text + "' , '" + numericUpDown2.Text + "' , '" + numericUpDown3.Text + "' )";
+            ExecuteQuery(txtQuery);
+            LoadData();
         }
     }
 }
