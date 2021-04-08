@@ -114,6 +114,18 @@
     <Compile Include="locationTable.Designer.cs">
       <DependentUpon>locationTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="manageLecturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageLecturers.Designer.cs">
+      <DependentUpon>manageLecturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manageSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageSubjects.Designer.cs">
+      <DependentUpon>manageSubjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="manageWorkingDaysHours.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="locationTable.resx">
       <DependentUpon>locationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageLecturers.resx">
+      <DependentUpon>manageLecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageSubjects.resx">
+      <DependentUpon>manageSubjects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manageWorkingDaysHours.resx">
       <DependentUpon>manageWorkingDaysHours.cs</DependentUpon>
