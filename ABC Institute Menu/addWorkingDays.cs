@@ -16,6 +16,7 @@ namespace ABC_Institute_Menu
         public addWorkingDays()
         {
             InitializeComponent();
+            
         }
 
         private SQLiteConnection sql_con;
@@ -23,6 +24,9 @@ namespace ABC_Institute_Menu
         private SQLiteDataAdapter DB;
         private DataSet DS = new DataSet();
         private DataTable DT = new DataTable();
+
+
+        
 
         //set Connection
         private void SetConnection()
@@ -62,6 +66,8 @@ namespace ABC_Institute_Menu
             LoadData();
         }
 
+        
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -76,9 +82,33 @@ namespace ABC_Institute_Menu
         //ADD
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            string txtQuery = "Insert into workingDaysHours (noOfWorkingDays, hours, minutes) values ('" + numericUpDown1.Text + "' , '" + numericUpDown2.Text + "' , '" + numericUpDown3.Text + "' )";
+            string txtQuery = "Insert into workingDaysHours (ID, noOfWorkingDays, hours, minutes, workingDays) values ('" + textBox1.Text + "' , '" + numericUpDown1.Text + "' , '" + numericUpDown2.Text + "' , '" + numericUpDown3.Text + "' ,'" + monday + "')";
             ExecuteQuery(txtQuery);
             LoadData();
+            System.Windows.Forms.MessageBox.Show("Data Added");
+        }
+
+        //Update
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "Update workingDaysHours set noOfWorkingDays = '" + numericUpDown1.Text + "' , hours = '" + numericUpDown2.Text + "' , minutes = '" + numericUpDown3.Text + "'  where ID = '" + textBox1.Text + "' ";
+           
+            ExecuteQuery(txtQuery);
+            LoadData();
+        }
+
+        //"update Example set Info ='" + textBox2.Text + ", Text ='"+textBox3.Text + "where ID ='" + textBox1.Text +"'"
+
+        private void monday_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            string workingDays;
+            workingDays = "Monday";
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
