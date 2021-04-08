@@ -61,7 +61,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -96,6 +96,12 @@
     <Compile Include="addWorkingDays.Designer.cs">
       <DependentUpon>addWorkingDays.cs</DependentUpon>
     </Compile>
+    <Compile Include="locationTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="locationTable.Designer.cs">
+      <DependentUpon>locationTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="manageWorkingDaysHours.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="updatetlocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatetlocation.Designer.cs">
+      <DependentUpon>updatetlocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewlocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewlocation.Designer.cs">
+      <DependentUpon>viewlocation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addlocation.resx">
       <DependentUpon>addlocation.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addWorkingDays.resx">
       <DependentUpon>addWorkingDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="locationTable.resx">
+      <DependentUpon>locationTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manageWorkingDaysHours.resx">
       <DependentUpon>manageWorkingDaysHours.cs</DependentUpon>
@@ -126,6 +147,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="updatetlocation.resx">
+      <DependentUpon>updatetlocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewlocation.resx">
+      <DependentUpon>viewlocation.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
