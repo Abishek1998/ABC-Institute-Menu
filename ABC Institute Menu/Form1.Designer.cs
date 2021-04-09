@@ -1,4 +1,15 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SQLite;
+
+
 namespace ABC_Institute_Menu
 {
     partial class Form1
@@ -631,5 +642,8 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
+
+
+
 }
 
