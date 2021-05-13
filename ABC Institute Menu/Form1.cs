@@ -161,7 +161,6 @@ namespace ABC_Institute_Menu
 
         private void btnAddSession_Click(object sender, EventArgs e)
         {
-            //openChildForm(new addsession());
             hideSubMenu();
         }
 
