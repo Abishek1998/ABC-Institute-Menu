@@ -34,6 +34,8 @@ namespace ABC_Institute_Menu
             this.addWorkingDaysHours = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -53,8 +55,6 @@ namespace ABC_Institute_Menu
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -98,7 +98,6 @@ namespace ABC_Institute_Menu
             // panel1
             // 
             this.panel1.Controls.Add(this.addWorkingDaysHours);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(10);
             this.panel1.Name = "panel1";
@@ -107,7 +106,7 @@ namespace ABC_Institute_Menu
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtId);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.numericUpDown3);
             this.panel2.Controls.Add(this.numericUpDown2);
@@ -124,11 +123,31 @@ namespace ABC_Institute_Menu
             this.panel2.Controls.Add(this.hours);
             this.panel2.Controls.Add(this.workingTimePerDay);
             this.panel2.Controls.Add(this.noOfWorkingDays);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1084, 133);
             this.panel2.TabIndex = 8;
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(38, 59);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(44, 23);
+            this.txtId.TabIndex = 29;
+            this.txtId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtId.Validating += new System.ComponentModel.CancelEventHandler(this.txtId_Validating);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 17);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // numericUpDown3
             // 
@@ -144,6 +163,7 @@ namespace ABC_Institute_Menu
             this.numericUpDown3.Size = new System.Drawing.Size(100, 23);
             this.numericUpDown3.TabIndex = 27;
             this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // numericUpDown2
             // 
@@ -159,6 +179,7 @@ namespace ABC_Institute_Menu
             this.numericUpDown2.Size = new System.Drawing.Size(100, 23);
             this.numericUpDown2.TabIndex = 26;
             this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // numericUpDown1
             // 
@@ -174,6 +195,8 @@ namespace ABC_Institute_Menu
             this.numericUpDown1.Size = new System.Drawing.Size(100, 23);
             this.numericUpDown1.TabIndex = 25;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.numericUpDown1.Validating += new System.ComponentModel.CancelEventHandler(this.numericUpDown1_Validating);
             // 
             // sunday
             // 
@@ -266,7 +289,6 @@ namespace ABC_Institute_Menu
             this.monday.Text = "Mon";
             this.monday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.monday.UseVisualStyleBackColor = true;
-            this.monday.CheckedChanged += new System.EventHandler(this.monday_CheckedChanged);
             // 
             // workingDays
             // 
@@ -304,9 +326,9 @@ namespace ABC_Institute_Menu
             this.workingTimePerDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workingTimePerDay.Location = new System.Drawing.Point(282, 24);
             this.workingTimePerDay.Name = "workingTimePerDay";
-            this.workingTimePerDay.Size = new System.Drawing.Size(150, 17);
+            this.workingTimePerDay.Size = new System.Drawing.Size(99, 17);
             this.workingTimePerDay.TabIndex = 6;
-            this.workingTimePerDay.Text = "Working Time Per Day";
+            this.workingTimePerDay.Text = "Working Time ";
             // 
             // noOfWorkingDays
             // 
@@ -320,17 +342,24 @@ namespace ABC_Institute_Menu
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeight = 40;
+            this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridView2.GridColor = System.Drawing.Color.White;
             this.dataGridView2.Location = new System.Drawing.Point(0, 183);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView2.RowHeadersWidth = 150;
+            this.dataGridView2.RowHeadersWidth = 50;
             this.dataGridView2.RowTemplate.Height = 40;
+            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(1084, 405);
             this.dataGridView2.TabIndex = 14;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // btnDelete
             // 
@@ -345,6 +374,7 @@ namespace ABC_Institute_Menu
             this.btnDelete.TabIndex = 29;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -376,29 +406,12 @@ namespace ABC_Institute_Menu
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 17);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(38, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(44, 23);
-            this.textBox1.TabIndex = 29;
-            // 
             // addWorkingDays
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1084, 690);
             this.Controls.Add(this.btnDelete);
@@ -409,6 +422,7 @@ namespace ABC_Institute_Menu
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Name = "addWorkingDays";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABC Institute";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel3.ResumeLayout(false);
@@ -451,6 +465,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
