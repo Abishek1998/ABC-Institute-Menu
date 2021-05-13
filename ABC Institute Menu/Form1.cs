@@ -161,6 +161,7 @@ namespace ABC_Institute_Menu
 
         private void btnAddSession_Click(object sender, EventArgs e)
         {
+            openChildForm(new addsession());
             hideSubMenu();
         }
 
@@ -182,6 +183,11 @@ namespace ABC_Institute_Menu
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
