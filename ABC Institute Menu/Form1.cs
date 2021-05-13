@@ -58,6 +58,11 @@ namespace ABC_Institute_Menu
                 sideMenu.Visible = false;
         }
 
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            //openChildForm(new Form1());
+        }
+
         private void btnWorkingDaysHours_Click(object sender, EventArgs e)
         {
             showSubMenu(panelWorkingDaysHours);
@@ -183,5 +188,7 @@ namespace ABC_Institute_Menu
             childForm.BringToFront();
             childForm.Show();
         }
+
+        
     }
 }
