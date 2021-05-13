@@ -53,6 +53,8 @@ namespace ABC_Institute_Menu
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -105,6 +107,8 @@ namespace ABC_Institute_Menu
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.numericUpDown3);
             this.panel2.Controls.Add(this.numericUpDown2);
             this.panel2.Controls.Add(this.numericUpDown1);
@@ -130,7 +134,7 @@ namespace ABC_Institute_Menu
             // 
             this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(311, 66);
+            this.numericUpDown3.Location = new System.Drawing.Point(411, 60);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             60,
             0,
@@ -145,7 +149,7 @@ namespace ABC_Institute_Menu
             // 
             this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(185, 66);
+            this.numericUpDown2.Location = new System.Drawing.Point(285, 60);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             24,
             0,
@@ -160,7 +164,7 @@ namespace ABC_Institute_Menu
             // 
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(15, 66);
+            this.numericUpDown1.Location = new System.Drawing.Point(115, 60);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             7,
             0,
@@ -177,7 +181,7 @@ namespace ABC_Institute_Menu
             this.sunday.FlatAppearance.BorderSize = 0;
             this.sunday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sunday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sunday.Location = new System.Drawing.Point(911, 66);
+            this.sunday.Location = new System.Drawing.Point(1011, 60);
             this.sunday.Name = "sunday";
             this.sunday.Size = new System.Drawing.Size(54, 24);
             this.sunday.TabIndex = 21;
@@ -190,7 +194,7 @@ namespace ABC_Institute_Menu
             this.saturday.FlatAppearance.BorderSize = 0;
             this.saturday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saturday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saturday.Location = new System.Drawing.Point(837, 66);
+            this.saturday.Location = new System.Drawing.Point(937, 60);
             this.saturday.Name = "saturday";
             this.saturday.Size = new System.Drawing.Size(50, 24);
             this.saturday.TabIndex = 20;
@@ -203,7 +207,7 @@ namespace ABC_Institute_Menu
             this.friday.FlatAppearance.BorderSize = 0;
             this.friday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.friday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.friday.Location = new System.Drawing.Point(773, 66);
+            this.friday.Location = new System.Drawing.Point(873, 60);
             this.friday.Name = "friday";
             this.friday.Size = new System.Drawing.Size(43, 24);
             this.friday.TabIndex = 19;
@@ -216,7 +220,7 @@ namespace ABC_Institute_Menu
             this.thursday.FlatAppearance.BorderSize = 0;
             this.thursday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thursday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thursday.Location = new System.Drawing.Point(689, 66);
+            this.thursday.Location = new System.Drawing.Point(789, 60);
             this.thursday.Name = "thursday";
             this.thursday.Size = new System.Drawing.Size(57, 24);
             this.thursday.TabIndex = 18;
@@ -229,7 +233,7 @@ namespace ABC_Institute_Menu
             this.wednesday.FlatAppearance.BorderSize = 0;
             this.wednesday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wednesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wednesday.Location = new System.Drawing.Point(607, 66);
+            this.wednesday.Location = new System.Drawing.Point(707, 60);
             this.wednesday.Name = "wednesday";
             this.wednesday.Size = new System.Drawing.Size(58, 24);
             this.wednesday.TabIndex = 17;
@@ -242,7 +246,7 @@ namespace ABC_Institute_Menu
             this.tuesday.FlatAppearance.BorderSize = 0;
             this.tuesday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tuesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tuesday.Location = new System.Drawing.Point(530, 66);
+            this.tuesday.Location = new System.Drawing.Point(630, 60);
             this.tuesday.Name = "tuesday";
             this.tuesday.Size = new System.Drawing.Size(52, 24);
             this.tuesday.TabIndex = 16;
@@ -255,19 +259,20 @@ namespace ABC_Institute_Menu
             this.monday.FlatAppearance.BorderSize = 0;
             this.monday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.monday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monday.Location = new System.Drawing.Point(453, 66);
+            this.monday.Location = new System.Drawing.Point(553, 60);
             this.monday.Name = "monday";
             this.monday.Size = new System.Drawing.Size(56, 24);
             this.monday.TabIndex = 15;
             this.monday.Text = "Mon";
             this.monday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.monday.UseVisualStyleBackColor = true;
+            this.monday.CheckedChanged += new System.EventHandler(this.monday_CheckedChanged);
             // 
             // workingDays
             // 
             this.workingDays.AutoSize = true;
             this.workingDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.workingDays.Location = new System.Drawing.Point(450, 30);
+            this.workingDays.Location = new System.Drawing.Point(550, 24);
             this.workingDays.Name = "workingDays";
             this.workingDays.Size = new System.Drawing.Size(96, 17);
             this.workingDays.TabIndex = 11;
@@ -277,7 +282,7 @@ namespace ABC_Institute_Menu
             // 
             this.minutes.AutoSize = true;
             this.minutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minutes.Location = new System.Drawing.Point(308, 92);
+            this.minutes.Location = new System.Drawing.Point(408, 86);
             this.minutes.Name = "minutes";
             this.minutes.Size = new System.Drawing.Size(57, 17);
             this.minutes.TabIndex = 10;
@@ -287,7 +292,7 @@ namespace ABC_Institute_Menu
             // 
             this.hours.AutoSize = true;
             this.hours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hours.Location = new System.Drawing.Point(181, 92);
+            this.hours.Location = new System.Drawing.Point(281, 86);
             this.hours.Name = "hours";
             this.hours.Size = new System.Drawing.Size(46, 17);
             this.hours.TabIndex = 9;
@@ -297,7 +302,7 @@ namespace ABC_Institute_Menu
             // 
             this.workingTimePerDay.AutoSize = true;
             this.workingTimePerDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.workingTimePerDay.Location = new System.Drawing.Point(182, 30);
+            this.workingTimePerDay.Location = new System.Drawing.Point(282, 24);
             this.workingTimePerDay.Name = "workingTimePerDay";
             this.workingTimePerDay.Size = new System.Drawing.Size(150, 17);
             this.workingTimePerDay.TabIndex = 6;
@@ -307,7 +312,7 @@ namespace ABC_Institute_Menu
             // 
             this.noOfWorkingDays.AutoSize = true;
             this.noOfWorkingDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noOfWorkingDays.Location = new System.Drawing.Point(12, 30);
+            this.noOfWorkingDays.Location = new System.Drawing.Point(112, 24);
             this.noOfWorkingDays.Name = "noOfWorkingDays";
             this.noOfWorkingDays.Size = new System.Drawing.Size(138, 17);
             this.noOfWorkingDays.TabIndex = 3;
@@ -315,6 +320,7 @@ namespace ABC_Institute_Menu
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView2.GridColor = System.Drawing.Color.White;
@@ -353,6 +359,7 @@ namespace ABC_Institute_Menu
             this.btnUpdate.TabIndex = 28;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -368,6 +375,25 @@ namespace ABC_Institute_Menu
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 17);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(38, 59);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(44, 23);
+            this.textBox1.TabIndex = 29;
             // 
             // addWorkingDays
             // 
@@ -424,5 +450,7 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
