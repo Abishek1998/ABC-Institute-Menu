@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace ABC_Institute_Menu
 {
@@ -98,6 +99,8 @@ namespace ABC_Institute_Menu
 
         private void addSubjects_Click(object sender, EventArgs e)
         {
+            openChildForm(new Add_Subjects());
+          
             hideSubMenu();
         }
 
