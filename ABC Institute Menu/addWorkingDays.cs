@@ -19,14 +19,12 @@ namespace ABC_Institute_Menu
             
         }
         
+
         private SQLiteConnection sql_con;
         private SQLiteCommand sql_cmd;
         private SQLiteDataAdapter DB;
         private DataSet DS = new DataSet();
         private DataTable DT = new DataTable();
-
-
-        
 
         //set Connection
         private void SetConnection()
