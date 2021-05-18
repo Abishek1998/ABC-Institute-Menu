@@ -18,7 +18,7 @@ namespace ABC_Institute_Menu
             InitializeComponent();
             
         }
-
+        //comment added
         private SQLiteConnection sql_con;
         private SQLiteCommand sql_cmd;
         private SQLiteDataAdapter DB;
