@@ -60,8 +60,6 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
-
-
        
 
         private void label2_Click(object sender, EventArgs e)
