@@ -89,7 +89,7 @@ namespace ABC_Institute_Menu
 
         }
 
-        //ADD
+        //ADD Session
         private void button1_Click(object sender, EventArgs e)
         {
             if (rbLectures.Checked)

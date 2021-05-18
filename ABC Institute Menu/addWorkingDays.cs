@@ -13,11 +13,11 @@ namespace ABC_Institute_Menu
 {
     public partial class addWorkingDays : Form
     {
-
+       
         public addWorkingDays()
         {
             InitializeComponent();
-
+            
         }
 
 
@@ -66,7 +66,12 @@ namespace ABC_Institute_Menu
             LoadData();
         }
 
+        
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void hours_Click(object sender, EventArgs e)
         {
@@ -77,127 +82,31 @@ namespace ABC_Institute_Menu
         //ADD
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-
-            string workingDays = "";
-
-            if (monday.CheckState == CheckState.Checked)
-            {
-                workingDays += "Monday";
-            }
-
-            if (tuesday.CheckState == CheckState.Checked)
-            {
-                workingDays += ", Tuesday";
-            }
-
-            if (wednesday.CheckState == CheckState.Checked)
-            {
-                workingDays += ", Wednesday";
-            }
-
-            if (thursday.CheckState == CheckState.Checked)
-            {
-                workingDays += ", Thursday";
-            }
-
-            if (friday.CheckState == CheckState.Checked)
-            {
-                workingDays += ", Friday";
-            }
-
-            if (saturday.CheckState == CheckState.Checked)
-            {
-                workingDays += ", Saturday";
-            }
-
-            if (sunday.CheckState == CheckState.Checked)
-            {
-                workingDays += ", Sunday";
-            }
-
-
-
-
-            string txtQuery = "Insert into workingDaysHours (ID, noOfWorkingDays, hours, minutes, workingDays) values ('" + txtId.Text + "' , '" + numericUpDown1.Text + "' , '" + numericUpDown2.Text + "' , '" + numericUpDown3.Text + "' ,'" + workingDays + "')";
+            string txtQuery = "Insert into workingDaysHours (ID, noOfWorkingDays, hours, minutes, workingDays) values ('" + textBox1.Text + "' , '" + numericUpDown1.Text + "' , '" + numericUpDown2.Text + "' , '" + numericUpDown3.Text + "' ,'" + monday + "')";
             ExecuteQuery(txtQuery);
             LoadData();
-            System.Windows.Forms.MessageBox.Show("Data Added Successfully!");
+            System.Windows.Forms.MessageBox.Show("Data Added");
         }
-
 
         //Update
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string txtQuery = "Update workingDaysHours set noOfWorkingDays = '" + numericUpDown1.Text + "' , hours = '" + numericUpDown2.Text + "' , minutes = '" + numericUpDown3.Text + "' where ID = '" + txtId.Text + "' ";
+            string txtQuery = "Update workingDaysHours set noOfWorkingDays = '" + numericUpDown1.Text + "' , hours = '" + numericUpDown2.Text + "' , minutes = '" + numericUpDown3.Text + "'  where ID = '" + textBox1.Text + "' ";
+           
             ExecuteQuery(txtQuery);
             LoadData();
-            System.Windows.Forms.MessageBox.Show("Data Updated Successfully!");
-
-
-
         }
 
-        //Delete
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
+        //"update Example set Info ='" + textBox2.Text + ", Text ='"+textBox3.Text + "where ID ='" + textBox1.Text +"'"
 
-            DialogResult dialogResult = MessageBox.Show("Are you sure do you want to delete this record?", "Delete Action", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                //do something
-                string txtQuery = "delete from workingDaysHours where ID = '" + txtId.Text + "'";
-                ExecuteQuery(txtQuery);
-                LoadData();
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-                return;
-            }
+        private void monday_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            string workingDays;
+            workingDays = "Monday";
         }
 
         private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            txtId.Text = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
-            numericUpDown1.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
-            numericUpDown2.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
-            numericUpDown3.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
-
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void txtId_Validating(object sender, CancelEventArgs e)
         {
 
         }
