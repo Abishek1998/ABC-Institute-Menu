@@ -22,6 +22,11 @@ namespace ABC_Institute_Menu
             //comment here
         }
 
+        private void NotAvailableTimes_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
 
