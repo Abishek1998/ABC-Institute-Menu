@@ -21,5 +21,10 @@ namespace ABC_Institute_Menu
         {
             //comment here
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
