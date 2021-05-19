@@ -165,7 +165,7 @@ namespace ABC_Institute_Menu
             hideSubMenu();
         }
 
-        private void btnbtnSessionNotAvailableTimeAllocation_Click(object sender, EventArgs e)
+        private void btnSessionNotAvailableTimeAllocation_Click(object sender, EventArgs e)
         {
             openChildForm(new sessionNotAvailableTimeAllocation());
             hideSubMenu();
