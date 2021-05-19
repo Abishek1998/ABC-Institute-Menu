@@ -32,6 +32,8 @@ namespace ABC_Institute_Menu
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSide = new System.Windows.Forms.Panel();
             this.panelSession = new System.Windows.Forms.Panel();
+            this.btnSessionNotAvailableTimeAllocation = new System.Windows.Forms.Button();
+            this.btnManageSession = new System.Windows.Forms.Button();
             this.btnAddSession = new System.Windows.Forms.Button();
             this.btnSession = new System.Windows.Forms.Button();
             this.panelLocation = new System.Windows.Forms.Panel();
@@ -85,7 +87,6 @@ namespace ABC_Institute_Menu
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSessionNotAvailableTimeAllocation = new System.Windows.Forms.Button();
             this.panelSide.SuspendLayout();
             this.panelSession.SuspendLayout();
             this.panelLocation.SuspendLayout();
@@ -135,12 +136,45 @@ namespace ABC_Institute_Menu
             // panelSession
             // 
             this.panelSession.Controls.Add(this.btnSessionNotAvailableTimeAllocation);
+            this.panelSession.Controls.Add(this.btnManageSession);
             this.panelSession.Controls.Add(this.btnAddSession);
             this.panelSession.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSession.Location = new System.Drawing.Point(0, 1000);
             this.panelSession.Name = "panelSession";
-            this.panelSession.Size = new System.Drawing.Size(233, 90);
+            this.panelSession.Size = new System.Drawing.Size(233, 122);
             this.panelSession.TabIndex = 16;
+            // 
+            // btnSessionNotAvailableTimeAllocation
+            // 
+            this.btnSessionNotAvailableTimeAllocation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSessionNotAvailableTimeAllocation.FlatAppearance.BorderSize = 0;
+            this.btnSessionNotAvailableTimeAllocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.btnSessionNotAvailableTimeAllocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSessionNotAvailableTimeAllocation.Location = new System.Drawing.Point(0, 80);
+            this.btnSessionNotAvailableTimeAllocation.Name = "btnSessionNotAvailableTimeAllocation";
+            this.btnSessionNotAvailableTimeAllocation.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSessionNotAvailableTimeAllocation.Size = new System.Drawing.Size(233, 40);
+            this.btnSessionNotAvailableTimeAllocation.TabIndex = 2;
+            this.btnSessionNotAvailableTimeAllocation.Text = "Session, Not Available time Allocation";
+            this.btnSessionNotAvailableTimeAllocation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSessionNotAvailableTimeAllocation.UseVisualStyleBackColor = true;
+            this.btnSessionNotAvailableTimeAllocation.Click += new System.EventHandler(this.btnSessionNotAvailableTimeAllocation_Click_1);
+            // 
+            // btnManageSession
+            // 
+            this.btnManageSession.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageSession.FlatAppearance.BorderSize = 0;
+            this.btnManageSession.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.btnManageSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageSession.Location = new System.Drawing.Point(0, 40);
+            this.btnManageSession.Name = "btnManageSession";
+            this.btnManageSession.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnManageSession.Size = new System.Drawing.Size(233, 40);
+            this.btnManageSession.TabIndex = 1;
+            this.btnManageSession.Text = "Manage Session";
+            this.btnManageSession.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageSession.UseVisualStyleBackColor = true;
+            this.btnManageSession.Click += new System.EventHandler(this.btnManageSession_Click);
             // 
             // btnAddSession
             // 
@@ -841,21 +875,6 @@ namespace ABC_Institute_Menu
             this.label1.TabIndex = 0;
             this.label1.Text = "50";
             // 
-            // btnSessionNotAvailableTimeAllocation
-            // 
-            this.btnSessionNotAvailableTimeAllocation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSessionNotAvailableTimeAllocation.FlatAppearance.BorderSize = 0;
-            this.btnSessionNotAvailableTimeAllocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.btnSessionNotAvailableTimeAllocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSessionNotAvailableTimeAllocation.Location = new System.Drawing.Point(0, 40);
-            this.btnSessionNotAvailableTimeAllocation.Name = "btnSessionNotAvailableTimeAllocation";
-            this.btnSessionNotAvailableTimeAllocation.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSessionNotAvailableTimeAllocation.Size = new System.Drawing.Size(233, 40);
-            this.btnSessionNotAvailableTimeAllocation.TabIndex = 1;
-            this.btnSessionNotAvailableTimeAllocation.Text = "Session, Not Available time Allocation";
-            this.btnSessionNotAvailableTimeAllocation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSessionNotAvailableTimeAllocation.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -952,6 +971,7 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnManageSession;
         private System.Windows.Forms.Button btnSessionNotAvailableTimeAllocation;
     }
 }
