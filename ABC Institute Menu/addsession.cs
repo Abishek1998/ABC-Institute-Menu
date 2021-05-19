@@ -109,7 +109,7 @@ namespace ABC_Institute_Menu
 
 
             string txtQuery = "Insert into sessionDetails (ID,Lecturer1, Lecturer2 , SubCode , Tag , GroupID , SubGroupID , Building , Room ) values ('" + textBox4.Text + "','" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + textBox5.Text + "', '" + Tag + "', '" + textBox1.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "' )";
-            //comment
+            //comment 1
 
 
             ExecuteQuery(txtQuery);
