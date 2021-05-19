@@ -124,7 +124,7 @@ namespace ABC_Institute_Menu
 
         }
 
-        //Update Location details
+        //Update Location details2
         private void button3_Click(object sender, EventArgs e)
         {
             if (LectureHall.Checked)
