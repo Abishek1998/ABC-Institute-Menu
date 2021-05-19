@@ -170,7 +170,7 @@ namespace ABC_Institute_Menu
 
         private void btnManageSession_Click(object sender, EventArgs e)
         {
-            //openChildForm(new managesession());
+            openChildForm(new managesessions());
             hideSubMenu();
         }
 
