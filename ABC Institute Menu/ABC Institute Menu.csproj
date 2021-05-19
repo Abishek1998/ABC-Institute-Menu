@@ -173,6 +173,12 @@
     <Compile Include="sessionNotAvailableTimeAllocation.Designer.cs">
       <DependentUpon>sessionNotAvailableTimeAllocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="statistics.Designer.cs">
+      <DependentUpon>statistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="updateStudentGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </Compile>
     <EmbeddedResource Include="sessionNotAvailableTimeAllocation.resx">
       <DependentUpon>sessionNotAvailableTimeAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="statistics.resx">
+      <DependentUpon>statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="updateStudentGroup.resx">
       <DependentUpon>updateStudentGroup.cs</DependentUpon>

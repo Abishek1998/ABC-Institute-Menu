@@ -199,6 +199,11 @@ namespace ABC_Institute_Menu
             openChildForm(new sessionNotAvailableTimeAllocation());
             hideSubMenu();
         }
-        
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            openChildForm(new statistics());
+            hideSubMenu();
+        }
     }
 }
