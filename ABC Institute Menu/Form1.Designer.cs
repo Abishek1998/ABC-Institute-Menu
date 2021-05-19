@@ -581,6 +581,7 @@ namespace ABC_Institute_Menu
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStatistics.UseVisualStyleBackColor = true;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
             // btngenerateTimetable
             // 
