@@ -134,6 +134,12 @@
     <Compile Include="locationTable.Designer.cs">
       <DependentUpon>locationTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="managesessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managesessions.Designer.cs">
+      <DependentUpon>managesessions.cs</DependentUpon>
+    </Compile>
     <Compile Include="manageStudentGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="locationTable.resx">
       <DependentUpon>locationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managesessions.resx">
+      <DependentUpon>managesessions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manageStudentGroup.resx">
       <DependentUpon>manageStudentGroup.cs</DependentUpon>
