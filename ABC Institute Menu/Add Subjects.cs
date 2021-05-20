@@ -79,6 +79,7 @@ namespace ABC_Institute_Menu
 
         }
 
+        //added button
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string txtQuery = "insert into tbSubjects (SubjectID,OfferedYear,OfferedSemester,SubjectName,SubjectCode,NoOfLectureHr,NoOfTutorialHr,NoOfLabHr,NoOfEvaluationHr) values ('" + textBox8.Text + "','" + textBox1.Text + "', '" + Semester + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "')";
