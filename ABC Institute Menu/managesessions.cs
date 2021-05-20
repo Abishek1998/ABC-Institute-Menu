@@ -72,8 +72,10 @@ namespace ABC_Institute_Menu
         private void button1_Click(object sender, EventArgs e)
         {
            
-
-
+            //int n = dataGridView2.Rows.Add();
+            //dataGridView2.Rows[n].Cells[0].Value = (n + 1).ToString();
+           // dataGridView2.Rows[n].Cells[1].Value = dateTimePicker1.Value.ToString();
+           // dataGridView2.Rows[n].Cells[2].Value = dateTimePicker2.Value.ToString();
 
             string txtQuery = "Insert into notAvailableTimesRoom (ID, selectRoom, selectDay, startTime, endTime) values ('" + txtId.Text + "' ,'" + textBox5.Text + "' , '" + DayComboDay.Text + "' , '" + dateTimePicker1.Text + "' , '" + dateTimePicker2.Text + "')";
             ExecuteQuery(txtQuery);
@@ -110,7 +112,9 @@ namespace ABC_Institute_Menu
             txtId.Text = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
             textBox5.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
             DayComboDay.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
-           dateTimePicker1.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
+            dataGridView2.SelectedRows[0].Cells[3].Value = dateTimePicker1.Value.ToString("t");
+            dataGridView2.SelectedRows[0].Cells[4].Value = dateTimePicker2.Value.ToString("t");
+            //dateTimePicker1.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
             //dateTimePicker2.Text = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
         }
         //EndNotAvailableTimes
