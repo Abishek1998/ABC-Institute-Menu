@@ -157,6 +157,7 @@ namespace ABC_Institute_Menu
 
         }
 
+        //show data base
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             

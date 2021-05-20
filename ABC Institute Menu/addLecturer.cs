@@ -103,6 +103,14 @@ namespace ABC_Institute_Menu
         {
             string txtQuery = " insert into tbLecturers ( EmployeeID,EmployeeName,Faculty,Department,Center,Building,Level,Rank ) values ( '" + textBox3.Text + "','" + textBox1.Text + "','" + textBox5.Text + "','" + textBox4.Text + "','" + textBox7.Text + "','" + textBox6.Text + "','" + textBox8.Text + "','" + textBox2.Text + "')";
 
+
+           /* if(ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(textBox1.Text, " No insert");
+            }*/
+
+
+
             ExecuteQuery(txtQuery);
             LoadData();
 
@@ -186,6 +194,57 @@ namespace ABC_Institute_Menu
             LoadData();
             MessageBox.Show("Record Deleted !! ");
             return;
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string EmpID = textBox3.Text;
+            string EmpLevel = textBox8.Text;
+            string Rank = EmpLevel + " . " + EmpID;
+            textBox2.Text = Rank;
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if( String.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                e.Cancel = true;
+                textBox1.Focus();
+                ErrorProvider.ReferenceEquals(textBox1, "Enter Employee Name");
+
+            }
+            else
+            {
+                e.Cancel = false;
+                ErrorProvider.ReferenceEquals(textBox1, " ");
+            }
         }
     }
 }
