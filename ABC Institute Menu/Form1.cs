@@ -100,7 +100,6 @@ namespace ABC_Institute_Menu
         private void addSubjects_Click(object sender, EventArgs e)
         {
             openChildForm(new Add_Subjects());
-          
             hideSubMenu();
         }
 
@@ -132,11 +131,13 @@ namespace ABC_Institute_Menu
 
         private void btnAddTags_Click(object sender, EventArgs e)
         {
+            openChildForm(new addTags());
             hideSubMenu();
         }
 
         private void btnManageTags_Click(object sender, EventArgs e)
         {
+            openChildForm(new manageTag());
             hideSubMenu();
         }
 
