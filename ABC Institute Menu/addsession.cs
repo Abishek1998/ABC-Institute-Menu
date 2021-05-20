@@ -13,8 +13,6 @@ namespace ABC_Institute_Menu
 {
     public partial class addsession : Form
     {
-        string Tag  ;
-        //comment
         public addsession()
         {
             InitializeComponent();
@@ -49,7 +47,7 @@ namespace ABC_Institute_Menu
             SetConnection();
             sql_con.Open();
             sql_cmd = sql_con.CreateCommand();
-            string CommandText = "select * from sessionDetails";
+            string CommandText = "select * from tbsessionDetails";
             DB = new SQLiteDataAdapter(CommandText, sql_con);
             DS.Reset();
             DB.Fill(DS);
@@ -59,57 +57,33 @@ namespace ABC_Institute_Menu
         }
 
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+
+
+
+
+
+
+
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void addsession_Load(object sender, EventArgs e)
+        private void addSessions_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void LectureHall_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbLab_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //ADD Session
         private void button1_Click(object sender, EventArgs e)
         {
-            if (rbLectures.Checked)
-            {
-                Tag = "Lecture";
-            }
+            string txtQuery = "Insert into tbsessionDetails (SessionID,Lecturer1, Lecturer2 , Tag , SubCode  , GroupID , SubGroupID , NoOfStudents , Duration ) values ('" + textBox1.Text + "','" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + Tag + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "' )";
 
-            if (rbLabs.Checked)
-            {
-                Tag = "Lab";
-            }
-
-            if (rbTutes.Checked)
-            {
-                Tag = "Tute";
-            }
-
-
-            string txtQuery = "Insert into sessionDetails (SessionID,Lecturer1, Lecturer2 , SubCode , Tag , GroupID , SubGroupID , NoOfStudents , Duration ) values ('" + textBox4.Text + "','" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + textBox5.Text + "', '" + Tag + "', '" + textBox1.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "' )";
-            //comment 1
 
 
             ExecuteQuery(txtQuery);
@@ -117,98 +91,62 @@ namespace ABC_Institute_Menu
 
             MessageBox.Show("One Record Added Successfully !! ");
             return;
-
         }
 
-        //Delete
-        private void button2_Click(object sender, EventArgs e)
+
+        String Tag;
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
-            DialogResult dialogResult = MessageBox.Show("Are you sure do you want to delete this record?", "Delete Action", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                //do something
-                string txtQuery = "delete from sessionDetails where SessionID = '" + textBox4.Text + "'";
-                ExecuteQuery(txtQuery);
-                LoadData();
-                MessageBox.Show("Record Deleted !! ");
-                return;
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-                return;
-            }
+            Tag = "Lecture";
         }
 
-        //Update
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Tag = "Lab";
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            Tag = "Tute";
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-
-            if (rbLectures.Checked)
-            {
-                Tag = "Lecture";
-            }
-
-            if (rbLabs.Checked)
-            {
-                Tag = "Lab";
-            }
-
-            if (rbTutes.Checked)
-            {
-                Tag = "Tute";
-            }
-
-
-            string txtQuery = "update sessionDetails set Lecturer1 = '" + textBox2.Text + "' , Lecturer2 = '" + textBox3.Text + "',  SubCode = '" + textBox5.Text + "', Tag = '" + Tag + "', GroupID = '" + textBox1.Text + "', SubGroupID = '" + textBox6.Text + "', NoOfStudents = '" + textBox7.Text + "', Duration = '" + textBox8.Text + "'  where SessionID = '" + textBox4.Text + "' ";
+            string txtQuery = "update tbsessionDetails set Lecturer1 = '" + textBox2.Text + "',Lecturer2 = '" + textBox3.Text + "',Tag = '" + Tag + "',SubCode = '" + textBox4.Text + "',GroupID = '" + textBox5.Text + "',SubGroupID='" + textBox6.Text + "',NoOfStudents = '" + textBox7.Text + "',Duration = '" + textBox8.Text + "' where SessionID = '" + textBox1.Text + "' ";
 
             ExecuteQuery(txtQuery);
             LoadData();
             MessageBox.Show("Updated Successfully !! ");
             return;
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox1.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             textBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            textBox4.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            textBox5.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            textBox4.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            textBox5.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             textBox6.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
             textBox7.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
-            textBox8.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+            Tag = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "delete from tbsessionDetails where SessionID = '" + textBox1.Text + "' ";
+            ExecuteQuery(txtQuery);
+            LoadData();
+            MessageBox.Show("Record Deleted !! ");
+            return;
+        }
 
-
-
-            if (dataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Lecture")
-            {
-                rbLabs.Checked = true;
-            }
-
-            else if (dataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Lab")
-            {
-                rbLectures.Checked = true;
-            }
-            else if (dataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Tute")
-            {
-                rbTutes.Checked = true;
-            }
-
-            else
-            {
-                rbLabs.Checked = false;
-                rbLectures.Checked = false;
-                rbTutes.Checked = false;
-            }
-
+        private void button4_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -222,11 +160,6 @@ namespace ABC_Institute_Menu
             }
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -236,37 +169,7 @@ namespace ABC_Institute_Menu
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (!char.IsDigit(ch) && ch != 8 && ch != 46)
