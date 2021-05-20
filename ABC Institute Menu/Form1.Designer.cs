@@ -68,7 +68,6 @@ namespace ABC_Institute_Menu
             this.addLecturers = new System.Windows.Forms.Button();
             this.btnLecturers = new System.Windows.Forms.Button();
             this.panelWorkingDaysHours = new System.Windows.Forms.Panel();
-            this.manageWorkingDaysHours = new System.Windows.Forms.Button();
             this.addWorkingDaysHours = new System.Windows.Forms.Button();
             this.btnWorkingDaysHours = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
@@ -150,7 +149,7 @@ namespace ABC_Institute_Menu
             this.panelSession.Controls.Add(this.btnManageSession);
             this.panelSession.Controls.Add(this.btnAddSession);
             this.panelSession.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSession.Location = new System.Drawing.Point(0, 1000);
+            this.panelSession.Location = new System.Drawing.Point(0, 961);
             this.panelSession.Name = "panelSession";
             this.panelSession.Size = new System.Drawing.Size(233, 122);
             this.panelSession.TabIndex = 16;
@@ -209,7 +208,7 @@ namespace ABC_Institute_Menu
             this.btnSession.FlatAppearance.BorderSize = 0;
             this.btnSession.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSession.Location = new System.Drawing.Point(0, 960);
+            this.btnSession.Location = new System.Drawing.Point(0, 921);
             this.btnSession.Name = "btnSession";
             this.btnSession.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSession.Size = new System.Drawing.Size(233, 40);
@@ -224,7 +223,7 @@ namespace ABC_Institute_Menu
             this.panelLocation.Controls.Add(this.btnManageLocation);
             this.panelLocation.Controls.Add(this.btnAddLocation);
             this.panelLocation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLocation.Location = new System.Drawing.Point(0, 870);
+            this.panelLocation.Location = new System.Drawing.Point(0, 831);
             this.panelLocation.Name = "panelLocation";
             this.panelLocation.Size = new System.Drawing.Size(233, 90);
             this.panelLocation.TabIndex = 14;
@@ -267,7 +266,7 @@ namespace ABC_Institute_Menu
             this.btnLocation.FlatAppearance.BorderSize = 0;
             this.btnLocation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocation.Location = new System.Drawing.Point(0, 830);
+            this.btnLocation.Location = new System.Drawing.Point(0, 791);
             this.btnLocation.Name = "btnLocation";
             this.btnLocation.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLocation.Size = new System.Drawing.Size(233, 40);
@@ -282,7 +281,7 @@ namespace ABC_Institute_Menu
             this.panelTag.Controls.Add(this.btnManageTags);
             this.panelTag.Controls.Add(this.btnAddTags);
             this.panelTag.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTag.Location = new System.Drawing.Point(0, 740);
+            this.panelTag.Location = new System.Drawing.Point(0, 701);
             this.panelTag.Name = "panelTag";
             this.panelTag.Size = new System.Drawing.Size(233, 90);
             this.panelTag.TabIndex = 12;
@@ -325,7 +324,7 @@ namespace ABC_Institute_Menu
             this.btnTags.FlatAppearance.BorderSize = 0;
             this.btnTags.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTags.Location = new System.Drawing.Point(0, 700);
+            this.btnTags.Location = new System.Drawing.Point(0, 661);
             this.btnTags.Name = "btnTags";
             this.btnTags.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnTags.Size = new System.Drawing.Size(233, 40);
@@ -340,7 +339,7 @@ namespace ABC_Institute_Menu
             this.panelStudents.Controls.Add(this.btnManageStudents);
             this.panelStudents.Controls.Add(this.btnAddStudents);
             this.panelStudents.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStudents.Location = new System.Drawing.Point(0, 610);
+            this.panelStudents.Location = new System.Drawing.Point(0, 571);
             this.panelStudents.Name = "panelStudents";
             this.panelStudents.Size = new System.Drawing.Size(233, 90);
             this.panelStudents.TabIndex = 10;
@@ -383,7 +382,7 @@ namespace ABC_Institute_Menu
             this.btnStudents.FlatAppearance.BorderSize = 0;
             this.btnStudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudents.Location = new System.Drawing.Point(0, 570);
+            this.btnStudents.Location = new System.Drawing.Point(0, 531);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnStudents.Size = new System.Drawing.Size(233, 40);
@@ -398,7 +397,7 @@ namespace ABC_Institute_Menu
             this.panelSubjects.Controls.Add(this.manageSubjects);
             this.panelSubjects.Controls.Add(this.addSubjects);
             this.panelSubjects.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubjects.Location = new System.Drawing.Point(0, 480);
+            this.panelSubjects.Location = new System.Drawing.Point(0, 441);
             this.panelSubjects.Name = "panelSubjects";
             this.panelSubjects.Size = new System.Drawing.Size(233, 90);
             this.panelSubjects.TabIndex = 8;
@@ -441,7 +440,7 @@ namespace ABC_Institute_Menu
             this.btnSubjects.FlatAppearance.BorderSize = 0;
             this.btnSubjects.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubjects.Location = new System.Drawing.Point(0, 440);
+            this.btnSubjects.Location = new System.Drawing.Point(0, 401);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSubjects.Size = new System.Drawing.Size(233, 40);
@@ -456,7 +455,7 @@ namespace ABC_Institute_Menu
             this.panelLecturers.Controls.Add(this.manageLecturers);
             this.panelLecturers.Controls.Add(this.addLecturers);
             this.panelLecturers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLecturers.Location = new System.Drawing.Point(0, 350);
+            this.panelLecturers.Location = new System.Drawing.Point(0, 311);
             this.panelLecturers.Name = "panelLecturers";
             this.panelLecturers.Size = new System.Drawing.Size(233, 90);
             this.panelLecturers.TabIndex = 6;
@@ -499,7 +498,7 @@ namespace ABC_Institute_Menu
             this.btnLecturers.FlatAppearance.BorderSize = 0;
             this.btnLecturers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
             this.btnLecturers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLecturers.Location = new System.Drawing.Point(0, 310);
+            this.btnLecturers.Location = new System.Drawing.Point(0, 271);
             this.btnLecturers.Name = "btnLecturers";
             this.btnLecturers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLecturers.Size = new System.Drawing.Size(233, 40);
@@ -511,29 +510,12 @@ namespace ABC_Institute_Menu
             // 
             // panelWorkingDaysHours
             // 
-            this.panelWorkingDaysHours.Controls.Add(this.manageWorkingDaysHours);
             this.panelWorkingDaysHours.Controls.Add(this.addWorkingDaysHours);
             this.panelWorkingDaysHours.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelWorkingDaysHours.Location = new System.Drawing.Point(0, 220);
             this.panelWorkingDaysHours.Name = "panelWorkingDaysHours";
-            this.panelWorkingDaysHours.Size = new System.Drawing.Size(233, 90);
+            this.panelWorkingDaysHours.Size = new System.Drawing.Size(233, 51);
             this.panelWorkingDaysHours.TabIndex = 4;
-            // 
-            // manageWorkingDaysHours
-            // 
-            this.manageWorkingDaysHours.Dock = System.Windows.Forms.DockStyle.Top;
-            this.manageWorkingDaysHours.FlatAppearance.BorderSize = 0;
-            this.manageWorkingDaysHours.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.manageWorkingDaysHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageWorkingDaysHours.Location = new System.Drawing.Point(0, 40);
-            this.manageWorkingDaysHours.Name = "manageWorkingDaysHours";
-            this.manageWorkingDaysHours.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.manageWorkingDaysHours.Size = new System.Drawing.Size(233, 40);
-            this.manageWorkingDaysHours.TabIndex = 1;
-            this.manageWorkingDaysHours.Text = "Manage Working Days, Hours";
-            this.manageWorkingDaysHours.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.manageWorkingDaysHours.UseVisualStyleBackColor = true;
-            this.manageWorkingDaysHours.Click += new System.EventHandler(this.manageWorkingDaysHours_Click);
             // 
             // addWorkingDaysHours
             // 
@@ -953,7 +935,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button addLecturers;
         private System.Windows.Forms.Button btnLecturers;
         private System.Windows.Forms.Panel panelWorkingDaysHours;
-        private System.Windows.Forms.Button manageWorkingDaysHours;
         private System.Windows.Forms.Button addWorkingDaysHours;
         private System.Windows.Forms.Button btnWorkingDaysHours;
         private System.Windows.Forms.Button btnStatistics;
