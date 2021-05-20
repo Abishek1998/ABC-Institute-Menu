@@ -72,7 +72,7 @@ namespace ABC_Institute_Menu
 
         private void manageWorkingDaysHours_Click(object sender, EventArgs e)
         {
-            openChildForm(new manageWorkingDaysHours());
+           // openChildForm(new manageWorkingDaysHours());
             hideSubMenu();
         }
 
@@ -115,12 +115,13 @@ namespace ABC_Institute_Menu
 
         private void btnAddStudents_Click(object sender, EventArgs e)
         {
-            openChildForm(new addStudentGroup());
+            openChildForm(new StudentGroup());
             hideSubMenu();
         }
 
         private void btnManageStudents_Click(object sender, EventArgs e)
         {
+            
             hideSubMenu();
         }
 
@@ -205,6 +206,11 @@ namespace ABC_Institute_Menu
         {
             openChildForm(new statistics());
             hideSubMenu();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

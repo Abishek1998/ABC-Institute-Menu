@@ -11,9 +11,9 @@ using System.Data.SQLite;
 
 namespace ABC_Institute_Menu
 {
-    public partial class viewTag : Form
+    public partial class ViewStudentGroup : Form
     {
-        public viewTag()
+        public ViewStudentGroup()
         {
             InitializeComponent();
         }
@@ -24,9 +24,7 @@ namespace ABC_Institute_Menu
         private DataSet DS = new DataSet();
         private DataTable DT = new DataTable();
 
-
-
-        private void viewTag_Load(object sender, EventArgs e)
+        private void ViewStudentGroup_Load(object sender, EventArgs e)
         {
             LoadData();
         }
@@ -56,7 +54,7 @@ namespace ABC_Institute_Menu
             SetConnection();
             sql_con.Open();
             sql_cmd = sql_con.CreateCommand();
-            string CommandText = "select * from tags";
+            string CommandText = "select * from studentGroup";
             DB = new SQLiteDataAdapter(CommandText, sql_con);
             DS.Reset();
             DB.Fill(DS);
@@ -66,9 +64,13 @@ namespace ABC_Institute_Menu
 
         }
 
+
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
     }
 }
+
+    
