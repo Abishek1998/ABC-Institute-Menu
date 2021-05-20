@@ -56,18 +56,21 @@ namespace ABC_Institute_Menu
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.btmlabel = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 569);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 484);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1255, 240);
+            this.dataGridView1.Size = new System.Drawing.Size(1255, 284);
             this.dataGridView1.TabIndex = 92;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -93,6 +96,7 @@ namespace ABC_Institute_Menu
             this.addWorkingDaysHours.Size = new System.Drawing.Size(196, 36);
             this.addWorkingDaysHours.TabIndex = 2;
             this.addWorkingDaysHours.Text = "Add Session";
+            this.addWorkingDaysHours.Click += new System.EventHandler(this.addWorkingDaysHours_Click);
             // 
             // panel1
             // 
@@ -112,6 +116,7 @@ namespace ABC_Institute_Menu
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 30);
             this.textBox1.TabIndex = 91;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress_1);
             // 
             // textBox2
@@ -122,6 +127,7 @@ namespace ABC_Institute_Menu
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(300, 30);
             this.textBox2.TabIndex = 96;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -131,15 +137,17 @@ namespace ABC_Institute_Menu
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(300, 30);
             this.textBox3.TabIndex = 97;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(241, 362);
+            this.textBox4.Location = new System.Drawing.Point(241, 342);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(300, 30);
             this.textBox4.TabIndex = 98;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -149,6 +157,7 @@ namespace ABC_Institute_Menu
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(300, 30);
             this.textBox5.TabIndex = 99;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -168,6 +177,7 @@ namespace ABC_Institute_Menu
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(300, 30);
             this.textBox7.TabIndex = 101;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress_1);
             // 
             // label1
@@ -180,6 +190,7 @@ namespace ABC_Institute_Menu
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 102;
             this.label1.Text = "Lecturer 1";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
@@ -191,28 +202,31 @@ namespace ABC_Institute_Menu
             this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 103;
             this.label2.Text = "Lecturer 2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(55, 303);
+            this.label4.Location = new System.Drawing.Point(55, 290);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 20);
             this.label4.TabIndex = 104;
             this.label4.Text = "Tag";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(55, 366);
+            this.label3.Location = new System.Drawing.Point(55, 346);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 20);
             this.label3.TabIndex = 105;
             this.label3.Text = "Subject Code";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox8
             // 
@@ -222,6 +236,7 @@ namespace ABC_Institute_Menu
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(300, 30);
             this.textBox8.TabIndex = 106;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress_1);
             // 
             // label5
@@ -234,6 +249,7 @@ namespace ABC_Institute_Menu
             this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 107;
             this.label5.Text = "Group ID";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -245,6 +261,7 @@ namespace ABC_Institute_Menu
             this.label6.Size = new System.Drawing.Size(111, 20);
             this.label6.TabIndex = 108;
             this.label6.Text = "Sub Group ID";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -256,6 +273,7 @@ namespace ABC_Institute_Menu
             this.label7.Size = new System.Drawing.Size(124, 20);
             this.label7.TabIndex = 109;
             this.label7.Text = "No Of Students";
+            this.label7.Click += new System.EventHandler(this.label7_Click_1);
             // 
             // label8
             // 
@@ -267,11 +285,12 @@ namespace ABC_Institute_Menu
             this.label8.Size = new System.Drawing.Size(73, 20);
             this.label8.TabIndex = 110;
             this.label8.Text = "Duration";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(241, 304);
+            this.radioButton1.Location = new System.Drawing.Point(243, 281);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(77, 21);
@@ -284,7 +303,7 @@ namespace ABC_Institute_Menu
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(344, 303);
+            this.radioButton2.Location = new System.Drawing.Point(346, 280);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(53, 21);
@@ -297,7 +316,7 @@ namespace ABC_Institute_Menu
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(447, 302);
+            this.radioButton3.Location = new System.Drawing.Point(449, 279);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(58, 21);
@@ -314,7 +333,7 @@ namespace ABC_Institute_Menu
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(1081, 484);
+            this.btnDelete.Location = new System.Drawing.Point(1096, 398);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(160, 49);
@@ -330,7 +349,7 @@ namespace ABC_Institute_Menu
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(913, 484);
+            this.btnUpdate.Location = new System.Drawing.Point(928, 398);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(160, 49);
@@ -346,7 +365,7 @@ namespace ABC_Institute_Menu
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(745, 484);
+            this.btnAdd.Location = new System.Drawing.Point(760, 398);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(160, 49);
@@ -362,19 +381,45 @@ namespace ABC_Institute_Menu
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(577, 484);
+            this.button5.Location = new System.Drawing.Point(592, 398);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(160, 49);
             this.button5.TabIndex = 117;
             this.button5.Text = "Manage session";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // btmlabel
+            // 
+            this.btmlabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btmlabel.AutoSize = true;
+            this.btmlabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmlabel.Location = new System.Drawing.Point(629, 21);
+            this.btmlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btmlabel.Name = "btmlabel";
+            this.btmlabel.Size = new System.Drawing.Size(240, 17);
+            this.btmlabel.TabIndex = 0;
+            this.btmlabel.Text = "ABC Institute Timetable Management";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btmlabel);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 784);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1445, 62);
+            this.panel3.TabIndex = 118;
             // 
             // addsession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1445, 846);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -403,11 +448,13 @@ namespace ABC_Institute_Menu
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "addsession";
-            this.Text = "addSessions";
+            this.Text = "addSession";
             this.Load += new System.EventHandler(this.addSessions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,7 +462,7 @@ namespace ABC_Institute_Menu
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label17;
+       private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label addWorkingDaysHours;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
@@ -441,5 +488,7 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label btmlabel;
+        private System.Windows.Forms.Panel panel3;
     }
 }

@@ -57,51 +57,12 @@ namespace ABC_Institute_Menu
         }
 
 
-
-
-
-
-
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void addSessions_Load(object sender, EventArgs e)
         {
             LoadData();
         }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
-        
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+       
         private void button3_Click(object sender, EventArgs e)
         {
             string txtQuery = "update tbsessionDetails set Lecturer1 = '" + textBox2.Text + "',Lecturer2 = '" + textBox3.Text + "',Tag = '" + Tag + "',SubCode = '" + textBox4.Text + "',GroupID = '" + textBox5.Text + "',SubGroupID='" + textBox6.Text + "',NoOfStudents = '" + textBox7.Text + "',Duration = '" + textBox8.Text + "' where SessionID = '" + textBox1.Text + "' ";
@@ -131,16 +92,6 @@ namespace ABC_Institute_Menu
             LoadData();
             MessageBox.Show("Record Deleted !! ");
             return;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
@@ -245,6 +196,8 @@ namespace ABC_Institute_Menu
             {
                 e.Handled = true;
             }
+
+            
         }
 
         private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -254,6 +207,91 @@ namespace ABC_Institute_Menu
             {
                 e.Handled = true;
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addWorkingDaysHours_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
