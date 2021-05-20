@@ -187,5 +187,40 @@ namespace ABC_Institute_Menu
             MessageBox.Show("Record Deleted !! ");
             return;
         }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string EmpID = textBox3.Text;
+            string EmpLevel = textBox8.Text;
+            string Rank = EmpLevel + " . " + EmpID;
+            textBox2.Text = Rank;
+        }
     }
 }
