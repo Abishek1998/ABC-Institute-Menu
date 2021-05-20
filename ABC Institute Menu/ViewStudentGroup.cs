@@ -70,6 +70,33 @@ namespace ABC_Institute_Menu
         {
 
         }
+
+        /*private void SearchButton_Click(object sender, EventArgs e)
+        {
+
+            sql_con.Open();
+
+            try
+            {
+                string txtQuery = "SELECT * FROM studentGroup ";
+                string txtQuery += "WHERE AcedemicYear LIKE @keyword2";
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Search Error: " +ex.Message.ToString(),
+                    "Error Message : Error finding.",
+                    MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                Close();
+                KeywordTextBox1.Focus();
+            }
+        }*/
     }
 }
 

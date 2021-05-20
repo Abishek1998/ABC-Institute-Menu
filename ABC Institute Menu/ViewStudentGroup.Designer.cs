@@ -31,10 +31,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.KeywordTextBox1 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.SearchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -75,25 +75,14 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Show Entries";
             // 
-            // textBox1
+            // KeywordTextBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(422, 193);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(532, 30);
-            this.textBox1.TabIndex = 16;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(962, 198);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Search";
+            this.KeywordTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeywordTextBox1.Location = new System.Drawing.Point(422, 194);
+            this.KeywordTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.KeywordTextBox1.Name = "KeywordTextBox1";
+            this.KeywordTextBox1.Size = new System.Drawing.Size(532, 28);
+            this.KeywordTextBox1.TabIndex = 16;
             // 
             // linkLabel1
             // 
@@ -116,15 +105,25 @@
             this.label1.TabIndex = 88;
             this.label1.Text = "View Student Group";
             // 
+            // SearchButton
+            // 
+            this.SearchButton.Location = new System.Drawing.Point(973, 193);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(114, 30);
+            this.SearchButton.TabIndex = 89;
+            this.SearchButton.Text = "Search";
+            this.SearchButton.UseVisualStyleBackColor = true;
+        //    this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // ViewStudentGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1445, 849);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.KeywordTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDown1);
@@ -143,9 +142,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox KeywordTextBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SearchButton;
     }
 }

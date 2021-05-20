@@ -149,6 +149,7 @@ namespace ABC_Institute_Menu
             this.button3.TabIndex = 88;
             this.button3.Text = "Generate Group ID";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -180,6 +181,7 @@ namespace ABC_Institute_Menu
             this.button1.TabIndex = 86;
             this.button1.Text = "Clear All";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox7
             // 
@@ -189,6 +191,7 @@ namespace ABC_Institute_Menu
             this.textBox7.Size = new System.Drawing.Size(537, 26);
             this.textBox7.TabIndex = 110;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // textBox1
             // 
@@ -207,6 +210,7 @@ namespace ABC_Institute_Menu
             this.textBox2.Size = new System.Drawing.Size(537, 26);
             this.textBox2.TabIndex = 112;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox3
             // 
@@ -216,6 +220,7 @@ namespace ABC_Institute_Menu
             this.textBox3.Size = new System.Drawing.Size(537, 26);
             this.textBox3.TabIndex = 113;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
             // 
@@ -225,6 +230,7 @@ namespace ABC_Institute_Menu
             this.textBox4.Size = new System.Drawing.Size(537, 26);
             this.textBox4.TabIndex = 114;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox5
             // 

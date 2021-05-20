@@ -18,7 +18,7 @@ namespace ABC_Institute_Menu
             InitializeComponent();
         }
 
-
+        //SQLite connection
         private SQLiteConnection sql_con;
         private SQLiteCommand sql_cmd;
         private SQLiteDataAdapter DB;
@@ -26,25 +26,20 @@ namespace ABC_Institute_Menu
         private DataTable DT = new DataTable();
 
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
         private void StudentGroup_Load(object sender, EventArgs e)
         {
-            LoadData();
+            //load data to gridview
+            //LoadData();
 
         }
         //set connection
         private void SetConnection()
         {
-            sql_con = new SQLiteConnection
-                ("Data Source = timetable.db; Version=3;New=False;Compress=True;");
+            //connect to the database
+            sql_con = new SQLiteConnection("Data Source = timetable.db; Version=3;New=False;Compress=True;");
         }
 
         //set exeutequery code
-
         private void ExecuteQuery(string txtQuery)
         {
             SetConnection();
@@ -55,7 +50,7 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
-
+        //loading data
         private void LoadData()
         {
             SetConnection();
@@ -68,51 +63,108 @@ namespace ABC_Institute_Menu
             DT = DS.Tables[0];
             //dataGridView2.DataSource = DT;
             sql_con.Close();
+            }
+
+
+        // Labels
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
 
         }
-
         private void label7_Click(object sender, EventArgs e)
         {
 
         }
-
         private void label6_Click(object sender, EventArgs e)
         {
 
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
-
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
-
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
+
+        //Text Boxes
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
         }
-        //add
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //text Boxes validation 
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+
+        //ADD Button
         private void button2_Click(object sender, EventArgs e)
         {
+            //insert Query
             string txtQuery = "insert into studentGroup (AcedemicYear,Semester,DegreeProgram,GroupNumber,SubGroupNumber,GroupID)values('" + textBox7.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
             ExecuteQuery(txtQuery);
             LoadData();
@@ -121,25 +173,19 @@ namespace ABC_Institute_Menu
             return;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        //CLEAR ALL Button
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        //GENERATE ID Button
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         /* private void label8_Click(object sender, EventArgs e)
          {
