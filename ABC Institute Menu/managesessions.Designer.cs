@@ -300,11 +300,11 @@ namespace ABC_Institute_Menu
             this.Sessions.Controls.Add(this.tabPage1);
             this.Sessions.Controls.Add(this.Consecutive);
             this.Sessions.Controls.Add(this.NotAvailableTimes);
-            this.Sessions.Location = new System.Drawing.Point(3, -4);
+            this.Sessions.Location = new System.Drawing.Point(3, 5);
             this.Sessions.Margin = new System.Windows.Forms.Padding(2);
             this.Sessions.Name = "Sessions";
             this.Sessions.SelectedIndex = 0;
-            this.Sessions.Size = new System.Drawing.Size(1078, 717);
+            this.Sessions.Size = new System.Drawing.Size(1078, 708);
             this.Sessions.TabIndex = 1;
             // 
             // Consecutive
@@ -335,7 +335,7 @@ namespace ABC_Institute_Menu
             this.NotAvailableTimes.Location = new System.Drawing.Point(4, 22);
             this.NotAvailableTimes.Margin = new System.Windows.Forms.Padding(2);
             this.NotAvailableTimes.Name = "NotAvailableTimes";
-            this.NotAvailableTimes.Size = new System.Drawing.Size(1070, 691);
+            this.NotAvailableTimes.Size = new System.Drawing.Size(1070, 682);
             this.NotAvailableTimes.TabIndex = 2;
             this.NotAvailableTimes.Text = "Not Available Times";
             this.NotAvailableTimes.UseVisualStyleBackColor = true;
