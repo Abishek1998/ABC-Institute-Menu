@@ -60,7 +60,8 @@ namespace ABC_Institute_Menu
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -410,14 +411,29 @@ namespace ABC_Institute_Menu
             this.textBox7.TabIndex = 86;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // textBox8
+            // radioButton1
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox8.Location = new System.Drawing.Point(292, 134);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(300, 30);
-            this.textBox8.TabIndex = 87;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(292, 146);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(80, 21);
+            this.radioButton1.TabIndex = 87;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "1st Sem";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(412, 146);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 21);
+            this.radioButton2.TabIndex = 88;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "2nd Sem";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // Add_Subjects
             // 
@@ -425,7 +441,8 @@ namespace ABC_Institute_Menu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1445, 849);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -501,6 +518,7 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

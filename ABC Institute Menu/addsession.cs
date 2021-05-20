@@ -108,7 +108,7 @@ namespace ABC_Institute_Menu
             }
 
 
-            string txtQuery = "Insert into sessionDetails (ID,Lecturer1, Lecturer2 , SubCode , Tag , GroupID , SubGroupID , Building , Room ) values ('" + textBox4.Text + "','" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + textBox5.Text + "', '" + Tag + "', '" + textBox1.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "' )";
+            string txtQuery = "Insert into sessionDetails (SessionID,Lecturer1, Lecturer2 , SubCode , Tag , GroupID , SubGroupID , NoOfStudents , Duration ) values ('" + textBox4.Text + "','" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + textBox5.Text + "', '" + Tag + "', '" + textBox1.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "' )";
             //comment 1
 
 
@@ -128,7 +128,7 @@ namespace ABC_Institute_Menu
             if (dialogResult == DialogResult.Yes)
             {
                 //do something
-                string txtQuery = "delete from sessionDetails where ID = '" + textBox4.Text + "'";
+                string txtQuery = "delete from sessionDetails where SessionID = '" + textBox4.Text + "'";
                 ExecuteQuery(txtQuery);
                 LoadData();
                 MessageBox.Show("Record Deleted !! ");
@@ -161,7 +161,7 @@ namespace ABC_Institute_Menu
             }
 
 
-            string txtQuery = "update sessionDetails set Lecturer1 = '" + textBox2.Text + "' , Lecturer2 = '" + textBox3.Text + "',  SubCode = '" + textBox5.Text + "', Tag = '" + Tag + "', GroupID = '" + textBox1.Text + "', SubGroupID = '" + textBox6.Text + "', Building = '" + textBox7.Text + "', Room = '" + textBox8.Text + "'  where ID = '" + textBox4.Text + "' ";
+            string txtQuery = "update sessionDetails set Lecturer1 = '" + textBox2.Text + "' , Lecturer2 = '" + textBox3.Text + "',  SubCode = '" + textBox5.Text + "', Tag = '" + Tag + "', GroupID = '" + textBox1.Text + "', SubGroupID = '" + textBox6.Text + "', NoOfStudents = '" + textBox7.Text + "', Duration = '" + textBox8.Text + "'  where SessionID = '" + textBox4.Text + "' ";
 
             ExecuteQuery(txtQuery);
             LoadData();
@@ -184,16 +184,16 @@ namespace ABC_Institute_Menu
 
 
 
-            if (dataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Lab")
+            if (dataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Lecture")
             {
                 rbLabs.Checked = true;
             }
 
-            else if (dataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Lecture")
+            else if (dataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Lab")
             {
                 rbLectures.Checked = true;
             }
-            else if (dataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Lecture")
+            else if (dataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Tute")
             {
                 rbTutes.Checked = true;
             }
@@ -206,6 +206,73 @@ namespace ABC_Institute_Menu
             }
 
 
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

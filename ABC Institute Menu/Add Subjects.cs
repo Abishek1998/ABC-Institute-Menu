@@ -81,7 +81,7 @@ namespace ABC_Institute_Menu
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string txtQuery = "insert into tbSubjects (OfferedYear,OfferedSemester,SubjectName,SubjectCode,NoOfLectureHr,NoOfTutorialHr,NoOfLabHr,NoOfEvaluationHr) values ('" + textBox1.Text + "', '" + textBox8.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "')";
+            string txtQuery = "insert into tbSubjects (OfferedYear,OfferedSemester,SubjectName,SubjectCode,NoOfLectureHr,NoOfTutorialHr,NoOfLabHr,NoOfEvaluationHr) values ('" + textBox1.Text + "', '" + Semester + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "')";
 
             ExecuteQuery(txtQuery);
             LoadData();
@@ -127,7 +127,7 @@ namespace ABC_Institute_Menu
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string txtQuery = "update tbLecturers set OfferedYear = '" + textBox1.Text + "',OfferedSemester = '" + textBox8.Text + "',SubjectName = '" + textBox3.Text + "',NoOfLectureHr = '" + textBox4.Text + "',NoOfTutorialHr = '" + textBox5.Text + "',NoOfLabHr='" + textBox6.Text + "',NoOfEvaluationHr = '" + textBox7.Text + "' where SubjectCode = '" + textBox2.Text + "' ";
+            string txtQuery = "update tbLecturers set OfferedYear = '" + textBox1.Text + "',OfferedSemester = '" + Semester + "',SubjectName = '" + textBox3.Text + "',NoOfLectureHr = '" + textBox4.Text + "',NoOfTutorialHr = '" + textBox5.Text + "',NoOfLabHr='" + textBox6.Text + "',NoOfEvaluationHr = '" + textBox7.Text + "' where SubjectCode = '" + textBox2.Text + "' ";
 
             ExecuteQuery(txtQuery);
             LoadData();
@@ -144,7 +144,7 @@ namespace ABC_Institute_Menu
             textBox5.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             textBox6.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
             textBox7.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
-            textBox8.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            Semester = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -154,6 +154,17 @@ namespace ABC_Institute_Menu
             LoadData();
             MessageBox.Show("Record Deleted !! ");
             return;
+        }
+
+        String Semester;
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Semester = "2nd Sem";
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Semester = "1st Sem";
         }
     }
 }
