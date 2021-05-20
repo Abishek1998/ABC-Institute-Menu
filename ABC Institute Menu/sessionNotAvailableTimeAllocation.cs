@@ -99,8 +99,8 @@ namespace ABC_Institute_Menu
             txtId.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             comboBox4.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            comboBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            comboBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            comboBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            comboBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
         }
     }
 }
