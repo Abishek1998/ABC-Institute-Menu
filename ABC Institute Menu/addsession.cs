@@ -41,7 +41,7 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
-        //set LoadDb
+        //set LoadDb for
         private void LoadData()
         {
             SetConnection();
