@@ -129,6 +129,12 @@
     <Compile Include="addWorkingDays.Designer.cs">
       <DependentUpon>addWorkingDays.cs</DependentUpon>
     </Compile>
+    <Compile Include="addsession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addsession.Designer.cs">
+      <DependentUpon>addsession.cs</DependentUpon>
+    </Compile>
     <Compile Include="locationTable.cs">
       <SubType>Form</SubType>
     </Compile>
