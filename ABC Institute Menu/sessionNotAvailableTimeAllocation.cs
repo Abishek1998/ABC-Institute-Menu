@@ -82,7 +82,7 @@ namespace ABC_Institute_Menu
             DialogResult dialogResult = MessageBox.Show("Are you sure do you want to delete this record?", "Delete Action", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //do something
+                //do something go
                 string txtQuery = "delete from workingDaysHours where ID = '" + txtId.Text + "'";
                 ExecuteQuery(txtQuery);
                 LoadData();
