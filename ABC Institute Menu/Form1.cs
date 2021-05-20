@@ -111,7 +111,7 @@ namespace ABC_Institute_Menu
 
         private void btnAddStudents_Click(object sender, EventArgs e)
         {
-            openChildForm(new StudentGroup());
+            //openChildForm(new StudentGroup());
             hideSubMenu();
         }
 

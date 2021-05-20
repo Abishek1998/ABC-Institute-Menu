@@ -133,7 +133,9 @@ namespace ABC_Institute_Menu
 
         private void dataGridView2_CellContentClick_3(object sender, DataGridViewCellEventArgs e)
         {
-
+            txtId.Text = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+            textBox5.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+            DayComboDay.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
         }
 
 
