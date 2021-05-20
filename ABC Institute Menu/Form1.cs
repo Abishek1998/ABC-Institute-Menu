@@ -164,11 +164,13 @@ namespace ABC_Institute_Menu
 
         private void btnAddSession_Click(object sender, EventArgs e)
         {
+            openChildForm(new addsession());
             hideSubMenu();
         }
 
         private void btnManageSession_Click(object sender, EventArgs e)
         {
+            openChildForm(new managesessions());
             hideSubMenu();
         }
 
@@ -185,6 +187,23 @@ namespace ABC_Institute_Menu
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSessionNotAvailableTimeAllocation_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new sessionNotAvailableTimeAllocation());
+            hideSubMenu();
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            openChildForm(new statistics());
+            hideSubMenu();
         }
     }
 }
