@@ -72,7 +72,7 @@ namespace ABC_Institute_Menu
 
         private void addSessions_Load(object sender, EventArgs e)
         {
-
+            LoadData();
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -82,32 +82,24 @@ namespace ABC_Institute_Menu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string txtQuery = "Insert into tbsessionDetails (SessionID,Lecturer1, Lecturer2 , Tag , SubCode  , GroupID , SubGroupID , NoOfStudents , Duration ) values ('" + textBox1.Text + "','" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + Tag + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "' )";
-
-
-
-            ExecuteQuery(txtQuery);
-            LoadData();
-
-            MessageBox.Show("One Record Added Successfully !! ");
-            return;
+            
         }
 
 
-        String Tag;
+        
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            Tag = "Lecture";
+            
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            Tag = "Lab";
+            
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            Tag = "Tute";
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -170,6 +162,91 @@ namespace ABC_Institute_Menu
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "Insert into tbsessionDetails (SessionID,Lecturer1, Lecturer2 , Tag , SubCode  , GroupID , SubGroupID , NoOfStudents , Duration ) values ('" + textBox1.Text + "','" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + Tag + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "' )";
+
+
+
+            ExecuteQuery(txtQuery);
+            LoadData();
+
+            MessageBox.Show("One Record Added Successfully !! ");
+            return;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "update tbsessionDetails set Lecturer1 = '" + textBox2.Text + "',Lecturer2 = '" + textBox3.Text + "',Tag = '" + Tag + "',SubCode = '" + textBox4.Text + "',GroupID = '" + textBox5.Text + "',SubGroupID='" + textBox6.Text + "',NoOfStudents = '" + textBox7.Text + "',Duration = '" + textBox8.Text + "' where SessionID = '" + textBox1.Text + "' ";
+
+            ExecuteQuery(txtQuery);
+            LoadData();
+            MessageBox.Show("Updated Successfully !! ");
+            return;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "delete from tbsessionDetails where SessionID = '" + textBox1.Text + "' ";
+            ExecuteQuery(txtQuery);
+            LoadData();
+            MessageBox.Show("Record Deleted !! ");
+            return;
+        }
+
+        String Tag;
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            Tag = "Lecture";
+        }
+
+        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            Tag = "Lab";
+        }
+
+        private void radioButton3_CheckedChanged_1(object sender, EventArgs e)
+        {
+            Tag = "Tute";
+        }
+
+        private void textBox7_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox8_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (!char.IsDigit(ch) && ch != 8 && ch != 46)

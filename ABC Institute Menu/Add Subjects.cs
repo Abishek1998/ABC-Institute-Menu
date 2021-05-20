@@ -81,7 +81,7 @@ namespace ABC_Institute_Menu
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string txtQuery = "insert into tbSubjects (OfferedYear,OfferedSemester,SubjectName,SubjectCode,NoOfLectureHr,NoOfTutorialHr,NoOfLabHr,NoOfEvaluationHr) values ('" + textBox1.Text + "', '" + Semester + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "')";
+            string txtQuery = "insert into tbSubjects (SubjectID,OfferedYear,OfferedSemester,SubjectName,SubjectCode,NoOfLectureHr,NoOfTutorialHr,NoOfLabHr,NoOfEvaluationHr) values ('" + textBox8.Text + "','" + textBox1.Text + "', '" + Semester + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "')";
 
             ExecuteQuery(txtQuery);
             LoadData();
@@ -127,7 +127,7 @@ namespace ABC_Institute_Menu
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string txtQuery = "update tbLecturers set OfferedYear = '" + textBox1.Text + "',OfferedSemester = '" + Semester + "',SubjectName = '" + textBox3.Text + "',NoOfLectureHr = '" + textBox4.Text + "',NoOfTutorialHr = '" + textBox5.Text + "',NoOfLabHr='" + textBox6.Text + "',NoOfEvaluationHr = '" + textBox7.Text + "' where SubjectCode = '" + textBox2.Text + "' ";
+            string txtQuery = "update tbSubjects set  OfferedYear = '" + textBox1.Text + "',OfferedSemester = '" + Semester + "',SubjectName = '" + textBox3.Text + "',SubjectCode = '" + textBox2.Text + "',NoOfLectureHr = '" + textBox4.Text + "',NoOfTutorialHr = '" + textBox5.Text + "',NoOfLabHr='" + textBox6.Text + "',NoOfEvaluationHr = '" + textBox7.Text + "' where SubjectID = '" + textBox8.Text + "' ";
 
             ExecuteQuery(txtQuery);
             LoadData();
@@ -138,18 +138,20 @@ namespace ABC_Institute_Menu
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            textBox2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            textBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            Semester = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             textBox4.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             textBox5.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             textBox6.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
             textBox7.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
-            Semester = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            textBox8.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string txtQuery = "delete from tbSubjects where SubjectCode = '" + textBox2.Text + "' ";
+            string txtQuery = "delete from tbSubjects where SubjectID = '" + textBox8.Text + "' ";
             ExecuteQuery(txtQuery);
             LoadData();
             MessageBox.Show("Record Deleted !! ");
@@ -165,6 +167,65 @@ namespace ABC_Institute_Menu
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             Semester = "1st Sem";
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
