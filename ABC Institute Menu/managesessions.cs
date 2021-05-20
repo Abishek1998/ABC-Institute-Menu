@@ -59,7 +59,7 @@ namespace ABC_Institute_Menu
         private void managesessions_Load(object sender, EventArgs e)
         {
            
-            LoadData();
+            
             
         }
 
