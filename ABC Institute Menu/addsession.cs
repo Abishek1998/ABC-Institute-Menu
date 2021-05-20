@@ -57,6 +57,7 @@ namespace ABC_Institute_Menu
         }
 
 
+        //add session
       
         private void addSessions_Load(object sender, EventArgs e)
         {
