@@ -489,6 +489,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label addWorkingDaysHours;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView1; 
     }
 }
