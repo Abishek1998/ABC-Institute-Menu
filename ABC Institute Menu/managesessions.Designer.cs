@@ -64,6 +64,8 @@ namespace ABC_Institute_Menu
             this.LblRoom = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.Sessions.SuspendLayout();
@@ -320,6 +322,8 @@ namespace ABC_Institute_Menu
             // 
             // NotAvailableTimes
             // 
+            this.NotAvailableTimes.Controls.Add(this.txtId);
+            this.NotAvailableTimes.Controls.Add(this.label8);
             this.NotAvailableTimes.Controls.Add(this.dateTimePicker2);
             this.NotAvailableTimes.Controls.Add(this.dateTimePicker1);
             this.NotAvailableTimes.Controls.Add(this.panel1);
@@ -357,6 +361,7 @@ namespace ABC_Institute_Menu
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(1054, 495);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // button3
             // 
@@ -371,6 +376,7 @@ namespace ABC_Institute_Menu
             this.button3.TabIndex = 44;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -400,12 +406,13 @@ namespace ABC_Institute_Menu
             this.button1.TabIndex = 25;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LblEndTime
             // 
             this.LblEndTime.AutoSize = true;
             this.LblEndTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEndTime.Location = new System.Drawing.Point(322, 80);
+            this.LblEndTime.Location = new System.Drawing.Point(424, 80);
             this.LblEndTime.Name = "LblEndTime";
             this.LblEndTime.Size = new System.Drawing.Size(76, 20);
             this.LblEndTime.TabIndex = 7;
@@ -414,16 +421,24 @@ namespace ABC_Institute_Menu
             // DayComboDay
             // 
             this.DayComboDay.FormattingEnabled = true;
-            this.DayComboDay.Location = new System.Drawing.Point(144, 79);
+            this.DayComboDay.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"});
+            this.DayComboDay.Location = new System.Drawing.Point(244, 79);
             this.DayComboDay.Name = "DayComboDay";
-            this.DayComboDay.Size = new System.Drawing.Size(121, 21);
+            this.DayComboDay.Size = new System.Drawing.Size(123, 21);
             this.DayComboDay.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(35, 77);
+            this.label7.Location = new System.Drawing.Point(137, 77);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 20);
             this.label7.TabIndex = 4;
@@ -433,7 +448,7 @@ namespace ABC_Institute_Menu
             // 
             this.LblStartTime.AutoSize = true;
             this.LblStartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStartTime.Location = new System.Drawing.Point(322, 32);
+            this.LblStartTime.Location = new System.Drawing.Point(424, 32);
             this.LblStartTime.Name = "LblStartTime";
             this.LblStartTime.Size = new System.Drawing.Size(82, 20);
             this.LblStartTime.TabIndex = 2;
@@ -441,7 +456,7 @@ namespace ABC_Institute_Menu
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(142, 34);
+            this.textBox5.Location = new System.Drawing.Point(244, 34);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(123, 20);
             this.textBox5.TabIndex = 1;
@@ -450,7 +465,7 @@ namespace ABC_Institute_Menu
             // 
             this.LblRoom.AutoSize = true;
             this.LblRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRoom.Location = new System.Drawing.Point(35, 34);
+            this.LblRoom.Location = new System.Drawing.Point(137, 34);
             this.LblRoom.Name = "LblRoom";
             this.LblRoom.Size = new System.Drawing.Size(101, 20);
             this.LblRoom.TabIndex = 0;
@@ -459,7 +474,7 @@ namespace ABC_Institute_Menu
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(420, 32);
+            this.dateTimePicker1.Location = new System.Drawing.Point(522, 32);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(81, 20);
             this.dateTimePicker1.TabIndex = 46;
@@ -467,10 +482,28 @@ namespace ABC_Institute_Menu
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(420, 80);
+            this.dateTimePicker2.Location = new System.Drawing.Point(522, 80);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(81, 20);
             this.dateTimePicker2.TabIndex = 47;
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(71, 34);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(44, 23);
+            this.txtId.TabIndex = 49;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(44, 34);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 17);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "ID";
             // 
             // managesessions
             // 
@@ -532,5 +565,7 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label8;
     }
 }
