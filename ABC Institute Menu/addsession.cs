@@ -63,7 +63,7 @@ namespace ABC_Institute_Menu
             LoadData();
         }
        
-        private void button3_Click(object sender, EventArgs e)
+       /* private void button3_Click(object sender, EventArgs e)
         {
             string txtQuery = "update tbsessionDetails set Lecturer1 = '" + textBox2.Text + "',Lecturer2 = '" + textBox3.Text + "',Tag = '" + Tag + "',SubCode = '" + textBox4.Text + "',GroupID = '" + textBox5.Text + "',SubGroupID='" + textBox6.Text + "',NoOfStudents = '" + textBox7.Text + "',Duration = '" + textBox8.Text + "' where SessionID = '" + textBox1.Text + "' ";
 
@@ -71,7 +71,7 @@ namespace ABC_Institute_Menu
             LoadData();
             MessageBox.Show("Updated Successfully !! ");
             return;
-        }
+        }*/
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -85,14 +85,14 @@ namespace ABC_Institute_Menu
             Tag = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+       /* private void button2_Click(object sender, EventArgs e)
         {
             string txtQuery = "delete from tbsessionDetails where SessionID = '" + textBox1.Text + "' ";
             ExecuteQuery(txtQuery);
             LoadData();
             MessageBox.Show("Record Deleted !! ");
             return;
-        }
+        }*/
 
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -130,7 +130,7 @@ namespace ABC_Institute_Menu
         {
 
         }
-
+        //add button
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string txtQuery = "Insert into tbsessionDetails (SessionID,Lecturer1, Lecturer2 , Tag , SubCode  , GroupID , SubGroupID , NoOfStudents , Duration ) values ('" + textBox1.Text + "','" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + Tag + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "' )";
@@ -144,7 +144,7 @@ namespace ABC_Institute_Menu
             return;
         }
 
-        //update 
+        //update button
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string txtQuery = "update tbsessionDetails set Lecturer1 = '" + textBox2.Text + "',Lecturer2 = '" + textBox3.Text + "',Tag = '" + Tag + "',SubCode = '" + textBox4.Text + "',GroupID = '" + textBox5.Text + "',SubGroupID='" + textBox6.Text + "',NoOfStudents = '" + textBox7.Text + "',Duration = '" + textBox8.Text + "' where SessionID = '" + textBox1.Text + "' ";
@@ -155,6 +155,7 @@ namespace ABC_Institute_Menu
             return;
         }
 
+        //deleted button
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string txtQuery = "delete from tbsessionDetails where SessionID = '" + textBox1.Text + "' ";
