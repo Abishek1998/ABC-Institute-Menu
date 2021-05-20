@@ -29,10 +29,6 @@ namespace ABC_Institute_Menu
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label17 = new System.Windows.Forms.Label();
-            this.addWorkingDaysHours = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -58,55 +54,14 @@ namespace ABC_Institute_Menu
             this.button5 = new System.Windows.Forms.Button();
             this.btmlabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.label9 = new System.Windows.Forms.Label();
+            this.addWorkingDaysHours = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 484);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1255, 284);
-            this.dataGridView1.TabIndex = 92;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(50, 103);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(91, 20);
-            this.label17.TabIndex = 94;
-            this.label17.Text = "Session ID";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // addWorkingDaysHours
-            // 
-            this.addWorkingDaysHours.AutoSize = true;
-            this.addWorkingDaysHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addWorkingDaysHours.Location = new System.Drawing.Point(44, 11);
-            this.addWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.addWorkingDaysHours.Name = "addWorkingDaysHours";
-            this.addWorkingDaysHours.Size = new System.Drawing.Size(196, 36);
-            this.addWorkingDaysHours.TabIndex = 2;
-            this.addWorkingDaysHours.Text = "Add Session";
-            this.addWorkingDaysHours.Click += new System.EventHandler(this.addWorkingDaysHours_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.addWorkingDaysHours);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1445, 62);
-            this.panel1.TabIndex = 95;
             // 
             // textBox1
             // 
@@ -413,12 +368,59 @@ namespace ABC_Institute_Menu
             this.panel3.Size = new System.Drawing.Size(1445, 62);
             this.panel3.TabIndex = 118;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(55, 103);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 20);
+            this.label9.TabIndex = 119;
+            this.label9.Text = "Session ID";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // addWorkingDaysHours
+            // 
+            this.addWorkingDaysHours.AutoSize = true;
+            this.addWorkingDaysHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addWorkingDaysHours.Location = new System.Drawing.Point(44, 11);
+            this.addWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addWorkingDaysHours.Name = "addWorkingDaysHours";
+            this.addWorkingDaysHours.Size = new System.Drawing.Size(196, 36);
+            this.addWorkingDaysHours.TabIndex = 2;
+            this.addWorkingDaysHours.Text = "Add Session";
+            this.addWorkingDaysHours.Click += new System.EventHandler(this.addWorkingDaysHours_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.addWorkingDaysHours);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1445, 62);
+            this.panel1.TabIndex = 95;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(27, 486);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1229, 275);
+            this.dataGridView1.TabIndex = 120;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
             // addsession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1445, 846);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnDelete);
@@ -444,27 +446,21 @@ namespace ABC_Institute_Menu
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "addsession";
             this.Text = "addSession";
             this.Load += new System.EventHandler(this.addSessions_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-       private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label addWorkingDaysHours;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -490,5 +486,9 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label btmlabel;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label addWorkingDaysHours;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

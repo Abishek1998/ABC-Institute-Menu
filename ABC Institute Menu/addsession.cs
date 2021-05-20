@@ -73,7 +73,7 @@ namespace ABC_Institute_Menu
             return;
         }*/
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       /* private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
@@ -83,7 +83,7 @@ namespace ABC_Institute_Menu
             textBox6.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
             textBox7.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
             Tag = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-        }
+        }*/
 
        /* private void button2_Click(object sender, EventArgs e)
         {
@@ -121,10 +121,6 @@ namespace ABC_Institute_Menu
             }
         }
 
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
@@ -293,6 +289,23 @@ namespace ABC_Institute_Menu
         private void addWorkingDaysHours_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            textBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            textBox4.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            textBox5.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            textBox6.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            textBox7.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+            Tag = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
         }
     }
 }
