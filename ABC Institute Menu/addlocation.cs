@@ -67,7 +67,7 @@ namespace ABC_Institute_Menu
 
         }
 
-        //ADD
+        //ADD Data
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -203,6 +203,11 @@ namespace ABC_Institute_Menu
         private void addlocation_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
