@@ -121,7 +121,7 @@ namespace ABC_Institute_Menu
             this.label3.Size = new System.Drawing.Size(111, 25);
             this.label3.TabIndex = 51;
             this.label3.Text = "Room Tag";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+          //  this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // rbLab
             // 
@@ -239,7 +239,7 @@ namespace ABC_Institute_Menu
             this.label5.Size = new System.Drawing.Size(117, 25);
             this.label5.TabIndex = 54;
             this.label5.Text = "Session ID";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+           // this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox4
             // 
@@ -366,7 +366,7 @@ namespace ABC_Institute_Menu
             this.dataGridView2.Size = new System.Drawing.Size(1405, 609);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_3);
+            //this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_3);
             // 
             // button3
             // 
