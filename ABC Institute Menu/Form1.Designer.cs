@@ -13,7 +13,7 @@ using System.Data.SQLite;
 namespace ABC_Institute_Menu
 {
     partial class Form1
-    {
+    {   
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -971,3 +971,4 @@ namespace ABC_Institute_Menu
 
 
 }
+

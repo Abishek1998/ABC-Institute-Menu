@@ -70,7 +70,7 @@ namespace ABC_Institute_Menu
             hideSubMenu();
         }
 
-
+        
 
         private void btnLecturers_Click(object sender, EventArgs e)
         {
@@ -111,7 +111,7 @@ namespace ABC_Institute_Menu
 
         private void btnAddStudents_Click(object sender, EventArgs e)
         {
-            openChildForm(new StudentGroup());
+            //openChildForm(new StudentGroup());
             hideSubMenu();
         }
 
@@ -161,7 +161,7 @@ namespace ABC_Institute_Menu
 
         private void btnAddSession_Click(object sender, EventArgs e)
         {
-            openChildForm(new addsession());
+            //openChildForm(new addsession());
             hideSubMenu();
         }
 
