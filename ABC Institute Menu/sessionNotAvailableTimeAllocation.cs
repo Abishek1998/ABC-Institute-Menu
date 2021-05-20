@@ -66,7 +66,7 @@ namespace ABC_Institute_Menu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string txtQuery = "Update sessionNotAvailableTimeLocation set selectLecturer = '" + comboBox1.Text + "' , selectSessionID = '" + comboBox4.Text + "' , selectGroup = '" + comboBox3.Text + "' , selectSubGroup = '" + comboBox2.Text + " , selectSubGroup = '" + comboBox2.Text + " ' where ID = '" + txtId.Text + "' ";
+            string txtQuery = "Update sessionNotAvailableTimeLocation set selectLecturer = '" + comboBox1.Text + "' , selectSessionID = '" + comboBox4.Text + "' , selectGroup = '" + comboBox3.Text + "' , selectSubGroup = '" + comboBox2.Text + " , startTime = '" + dateTimePicker1.Text + " , endTime = '" + dateTimePicker2.Text + " ' where ID = '" + txtId.Text + "' ";
             ExecuteQuery(txtQuery);
             LoadData();
             System.Windows.Forms.MessageBox.Show("Data Updated Successfully!");

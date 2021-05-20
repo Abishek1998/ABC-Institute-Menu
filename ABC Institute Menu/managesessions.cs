@@ -58,6 +58,7 @@ namespace ABC_Institute_Menu
 
         private void managesessions_Load(object sender, EventArgs e)
         {
+           
             LoadData();
             
         }
@@ -86,7 +87,7 @@ namespace ABC_Institute_Menu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string txtQuery = "Update workingDaysHours set selectRoom = '" + textBox5.Text + "' , selectDay = '" + DayComboDay.Text + "' , startTime = '" + dateTimePicker1.Text + "' , endTime = '" + dateTimePicker2.Text + "' where ID = '" + txtId.Text + "' ";
+            string txtQuery = "Update notAvailableTimesRoom set selectRoom = '" + textBox5.Text + "' , selectDay = '" + DayComboDay.Text + "' , startTime = '" + dateTimePicker1.Text + "' , endTime = '" + dateTimePicker2.Text + "' where ID = '" + txtId.Text + "' ";
             ExecuteQuery(txtQuery);
             LoadData();
             System.Windows.Forms.MessageBox.Show("Data Updated Successfully!");

@@ -266,7 +266,9 @@ namespace ABC_Institute_Menu
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Mr . Nelum"});
+            "Mr . Nelum",
+            "Mr. Pubudu",
+            "Mr. Saman"});
             this.comboBox1.Location = new System.Drawing.Point(276, 28);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(172, 21);
