@@ -58,7 +58,8 @@ namespace ABC_Institute_Menu
 
         private void managesessions_Load(object sender, EventArgs e)
         {
-                                    
+            
+            LoadData();                      
         }
 
         private void NotAvailableTimes_Click(object sender, EventArgs e)
