@@ -105,6 +105,12 @@
     <Compile Include="addlocation.Designer.cs">
       <DependentUpon>addlocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="addsession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addsession.Designer.cs">
+      <DependentUpon>addsession.cs</DependentUpon>
+    </Compile>
     <Compile Include="addTags.cs">
       <SubType>Form</SubType>
     </Compile>
