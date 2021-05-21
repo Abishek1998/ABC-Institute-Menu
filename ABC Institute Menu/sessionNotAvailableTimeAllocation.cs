@@ -166,6 +166,32 @@ namespace ABC_Institute_Menu
         {
 
         }
+        //=========================================insert=====================================================================================
+        private void AddSessionBtn_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "insert into Consecutive (SessionID,Lecturer1,Lecturer2,SubCode,GroupID,SubGroupID,Tag,Duration)values('" + IDtext.Text +
+                "','" + Lecturer1.Text + "','" + Lecturer2.Text + "','" + SubCode.Text + "','" + SubName.Text + "','" + GroupID.Text + "',"
+                + "'" + Tag.Text + "','" + Duration.Text + "')";
+            ExecuteQuery(txtQuery);
+            LoadData_1();
+
+            MessageBox.Show("Session insert successfully !! ");
+            return;
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "insert into Parallel (SessionID,Lecturer1,Lecturer2,SubCode,GroupID,SubGroupID,Tag,Duration)values('" + IDcomboBox.Text +
+                "','" + LecturecomboBox.Text + "','" + Lecture2comboBox.Text + "','" + SubcodecomboBox.Text + "','" + SubnamecomboBox.Text + "','" + GroupIDcomboBox.Text + "',"
+                + "'" + TagcomboBox.Text + "','" + DurationcomboBox.Text + "')";
+            ExecuteQuery(txtQuery);
+            LoadData_2();
+
+            MessageBox.Show("Session insert successfully !! ");
+            return;
+        }
+
         private void button9_Click(object sender, EventArgs e)
         {
             string txtQuery = "insert into Overlapping (SessionID,Lecturer1,Lecturer2,SubCode,GroupID,SubGroupID,Tag,Duration)values('" + ID_comboBox.Text +
@@ -173,6 +199,122 @@ namespace ABC_Institute_Menu
                 + "'" + Tag_comboBox.Text + "','" + Duration_comboBox.Text + "')";
             ExecuteQuery(txtQuery);
             LoadData_3();
+
+            MessageBox.Show("Session insert successfully !! ");
+            return;
+        }
+
+        //=========================================update=====================================================================================
+
+        private void Updatebtn_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "update Consecutive set SessionID='" + IDtext.Text + "',Lecturer1 = '" + Lecturer1.Text + "',Lecturer2 = '" + Lecturer2.Text + "',SubCode ='" + SubCode.Text + "',GroupID ='" + SubName.Text + "',SubGroupID ='" + GroupID.Text + "',Tag ='" + Tag.Text + "',Duration ='" + Duration.Text + "' where ID = '" + textBox1.Text + "'";
+            ExecuteQuery(txtQuery);
+            LoadData_1();
+
+            MessageBox.Show("Session updated successfully !! ");
+            return;
+
+
+        }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "update Overlapping set SessionID='" + ID_comboBox.Text + "',Lecturer1 = '" + Lecture_comboBox.Text + "',Lecturer2 = '" + Lecture2_comboBox.Text + "',SubCode ='" + subCode_comboBox.Text + "',GroupID ='" + subName_comboBox.Text + "',SubGroupID ='" + GroupID_comboBox.Text + "',Tag ='" + Tag_comboBox.Text + "',Duration ='" + Duration_comboBox.Text + "' where ID = '" + textBox1.Text + "'";
+            ExecuteQuery(txtQuery);
+            LoadData_3();
+
+            MessageBox.Show("Session updated successfully !! ");
+            return;
+        }
+
+       
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "update Parallel set SessionID='" + IDcomboBox.Text + "',Lecturer1 = '" + LecturecomboBox.Text + "',Lecturer2 = '" + Lecture2comboBox.Text + "',SubCode ='" + SubcodecomboBox.Text + "',GroupID ='" + SubnamecomboBox.Text + "',SubGroupID ='" + GroupIDcomboBox.Text + "',Tag ='" + TagcomboBox.Text + "',Duration ='" + DurationcomboBox.Text + "' where ID = '" + textBox1.Text + "'";
+            ExecuteQuery(txtQuery);
+            LoadData_2();
+
+            MessageBox.Show("Session updated successfully !! ");
+            return;
+        }
+
+        //=========================================Delete=====================================================================================
+
+        private void Delete_Btn_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "delete from Consecutive where ID ='" + textBox1.Text + "'";
+            ExecuteQuery(txtQuery);
+            LoadData_1();
+
+            MessageBox.Show("Session Deleted !! ");
+            return;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "delete from Parallel where ID ='" + textBox1.Text + "'";
+            ExecuteQuery(txtQuery);
+            LoadData_2();
+
+            MessageBox.Show("Session Deleted !! ");
+            return;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "delete from Overlapping where ID ='" + textBox1.Text + "'";
+            ExecuteQuery(txtQuery);
+            LoadData_3();
+
+            MessageBox.Show("Session Deleted !! ");
+            return;
+        }
+
+        //=========================================clear all====================================================================================
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //clear pa
+        }
+
+        
+
+        private void Clearall_Btn_Click(object sender, EventArgs e)
+        {
+            //clear con
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //clear overlapping
+        }
+
+
+        //Gridview===========================================================================================================================
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IDtext.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+            Lecturer1.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
+            Lecturer2.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
+            SubCode.Text = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
+            SubName.Text = dataGridView2.SelectedRows[0].Cells[5].Value.ToString();
+            GroupID.Text = dataGridView2.SelectedRows[0].Cells[6].Value.ToString();
+            Tag.Text = dataGridView2.SelectedRows[0].Cells[7].Value.ToString();
+            Duration.Text = dataGridView2.SelectedRows[0].Cells[8].Value.ToString();
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IDcomboBox.Text = dataGridView3.SelectedRows[0].Cells[1].Value.ToString();
+            LecturecomboBox.Text = dataGridView3.SelectedRows[0].Cells[2].Value.ToString();
+            Lecture2comboBox.Text = dataGridView3.SelectedRows[0].Cells[3].Value.ToString();
+            SubcodecomboBox.Text = dataGridView3.SelectedRows[0].Cells[4].Value.ToString();
+            SubnamecomboBox.Text = dataGridView3.SelectedRows[0].Cells[5].Value.ToString();
+            GroupIDcomboBox.Text = dataGridView3.SelectedRows[0].Cells[6].Value.ToString();
+            TagcomboBox.Text = dataGridView3.SelectedRows[0].Cells[7].Value.ToString();
+            DurationcomboBox.Text = dataGridView3.SelectedRows[0].Cells[8].Value.ToString();
         }
 
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -188,8 +330,8 @@ namespace ABC_Institute_Menu
             
         }
 
+        //===============================================================================================================================
 
-        
         //not overlapping
 
         private void LoadSessionID()
@@ -208,6 +350,13 @@ namespace ABC_Institute_Menu
             }
             sql_con.Close();
         }
+
+        private void ID_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSessionID();
+        }
+
+
         private void LoadLecturer1()
         {
             SetConnection();
@@ -223,6 +372,11 @@ namespace ABC_Institute_Menu
                 Lecture_comboBox.Items.Add(dr["Lecturer1"].ToString());
             }
             sql_con.Close();
+        }
+
+        private void Lecture_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadLecturer1();
         }
 
         private void LoadLecturer2()
@@ -241,6 +395,12 @@ namespace ABC_Institute_Menu
             }
             sql_con.Close();
         }
+
+        private void Lecture2_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadLecturer2();
+        }
+
         private void LoadSubCode()
         {
             SetConnection();
@@ -256,6 +416,11 @@ namespace ABC_Institute_Menu
                 subCode_comboBox.Items.Add(dr["SubCode"].ToString());
             }
             sql_con.Close();
+        }
+
+        private void subCode_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSubCode();
         }
 
         private void LoadGroupID()
@@ -274,6 +439,13 @@ namespace ABC_Institute_Menu
             }
             sql_con.Close();
         }
+
+        private void subName_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadGroupID();
+        }
+
+
         private void LoadSubGroupID()
         {
             SetConnection();
@@ -289,6 +461,11 @@ namespace ABC_Institute_Menu
                 GroupID_comboBox.Items.Add(dr["SubGroupID"].ToString());
             }
             sql_con.Close();
+        }
+
+        private void GroupID_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSubGroupID();
         }
 
         private void LoadTag()
@@ -308,6 +485,11 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
+        private void Tag_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadTag();
+        }
+
         private void LoadDuration()
         {
             SetConnection();
@@ -325,70 +507,15 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
-        private void ID_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadSessionID();
-        }
-
-        private void Lecture_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadLecturer1();
-        }
-
-        private void Lecture2_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadLecturer2();
-        }
-
-        private void subCode_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadSubCode();
-        }
-
-        private void subName_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadGroupID();
-        }
-
-        private void GroupID_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadSubGroupID();
-        }
-
-        private void Tag_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadTag();
-        }
-
         private void Duration_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadDuration();
         }
-
+        //====================================================================================================================================
 
         //Parallel
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            string txtQuery = "insert into Parallel (SessionID,Lecturer1,Lecturer2,SubCode,GroupID,SubGroupID,Tag,Duration)values('" + IDcomboBox.Text +
-                "','" + LecturecomboBox.Text + "','" + Lecture2comboBox.Text + "','" + SubcodecomboBox.Text + "','" + SubnamecomboBox.Text + "','" + GroupIDcomboBox.Text + "',"
-                + "'" + TagcomboBox.Text + "','" + DurationcomboBox.Text + "')";
-            ExecuteQuery(txtQuery);
-            LoadData_2();
-
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            IDcomboBox.Text = dataGridView3.SelectedRows[0].Cells[1].Value.ToString();
-            LecturecomboBox.Text = dataGridView3.SelectedRows[0].Cells[2].Value.ToString();
-            Lecture2comboBox.Text = dataGridView3.SelectedRows[0].Cells[3].Value.ToString();
-            SubcodecomboBox.Text = dataGridView3.SelectedRows[0].Cells[4].Value.ToString();
-            SubnamecomboBox.Text = dataGridView3.SelectedRows[0].Cells[5].Value.ToString();
-            GroupIDcomboBox.Text = dataGridView3.SelectedRows[0].Cells[6].Value.ToString();
-            TagcomboBox.Text = dataGridView3.SelectedRows[0].Cells[7].Value.ToString();
-            DurationcomboBox.Text = dataGridView3.SelectedRows[0].Cells[8].Value.ToString();
-        }
+        
 
         private void LoadsessionID()
         {
@@ -565,7 +692,7 @@ namespace ABC_Institute_Menu
         {
             Loadduration();
         }
-
+//==================================================================================================================================================
         //consecutive
 
         private void Loadsession_ID()
@@ -742,29 +869,9 @@ namespace ABC_Institute_Menu
             Load_Duration();
         }
 
-        private void AddSessionBtn_Click(object sender, EventArgs e)
-        {
-            string txtQuery = "insert into Consecutive (SessionID,Lecturer1,Lecturer2,SubCode,GroupID,SubGroupID,Tag,Duration)values('" + IDtext.Text +
-                "','" + Lecturer1.Text + "','" + Lecturer2.Text + "','" + SubCode.Text + "','" + SubName.Text + "','" + GroupID.Text + "'," 
-                + "'" + Tag.Text + "','" + Duration.Text + "')";
-            ExecuteQuery(txtQuery);
-            LoadData_1();
-
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            IDtext.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
-            Lecturer1.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
-            Lecturer2.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
-            SubCode.Text = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
-            SubName.Text = dataGridView2.SelectedRows[0].Cells[5].Value.ToString();
-            GroupID.Text = dataGridView2.SelectedRows[0].Cells[6].Value.ToString();
-            Tag.Text = dataGridView2.SelectedRows[0].Cells[7].Value.ToString();
-            Duration.Text = dataGridView2.SelectedRows[0].Cells[8].Value.ToString();
-        }
-
         
+        //==================================================================================================================================================
+
+
     }
  }
