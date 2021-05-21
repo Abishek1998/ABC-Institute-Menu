@@ -154,17 +154,17 @@ namespace ABC_Institute_Menu
         }
         private void tabPage1_Click(object sender, EventArgs e)
         {
-           
+            LoadData_1();
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
-           
+            LoadData_2();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
         {
-
+            LoadData_3();
         }
         //=========================================insert=====================================================================================
         private void AddSessionBtn_Click(object sender, EventArgs e)
