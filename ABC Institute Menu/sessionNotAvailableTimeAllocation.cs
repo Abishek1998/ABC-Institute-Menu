@@ -56,6 +56,20 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
+        private void LoadData1()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select * from session";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            dataGridView2.DataSource = DT;
+            sql_con.Close();
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string txtQuery = "Insert into sessionNotAvailableTimeLocation (ID, selectLecturer, selectSessionID, selectGroup, selectSubGroup, startTime, endTime) values ('" + txtId.Text + "' ,'" + comboBox1.Text + "' , '" + comboBox4.Text + "' , '" + comboBox3.Text + "' , '" + comboBox2.Text + "' , '" + dateTimePicker1.Text + "' , '" + dateTimePicker2.Text + "' )";
@@ -101,6 +115,64 @@ namespace ABC_Institute_Menu
             comboBox4.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             comboBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             comboBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+        }
+       
+
+        private void Consecutive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ID_comboBox.Text = dataGridView4.SelectedRows[0].Cells[1].Value.ToString();
+            Lecture_comboBox.Text = dataGridView4.SelectedRows[0].Cells[2].Value.ToString();
+            Lecture2_comboBox.Text = dataGridView4.SelectedRows[0].Cells[3].Value.ToString();
+            subCode_comboBox.Text = dataGridView4.SelectedRows[0].Cells[4].Value.ToString();
+            subName_comboBox.Text = dataGridView4.SelectedRows[0].Cells[5].Value.ToString();
+            GroupID_comboBox.Text = dataGridView4.SelectedRows[0].Cells[6].Value.ToString();
+            Tag_comboBox.Text = dataGridView4.SelectedRows[0].Cells[7].Value.ToString();
+            Duration_comboBox.Text = dataGridView4.SelectedRows[0].Cells[8].Value.ToString();
+            
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IDcomboBox.Text = dataGridView3.SelectedRows[0].Cells[1].Value.ToString();
+            LecturecomboBox.Text = dataGridView3.SelectedRows[0].Cells[2].Value.ToString();
+            Lecture2comboBox.Text = dataGridView3.SelectedRows[0].Cells[3].Value.ToString();
+            SubcodecomboBox.Text = dataGridView3.SelectedRows[0].Cells[4].Value.ToString();
+            SubnamecomboBox.Text = dataGridView3.SelectedRows[0].Cells[5].Value.ToString();
+            GroupIDcomboBox.Text = dataGridView3.SelectedRows[0].Cells[6].Value.ToString();
+            TagcomboBox.Text = dataGridView3.SelectedRows[0].Cells[7].Value.ToString();
+            DurationcomboBox.Text = dataGridView3.SelectedRows[0].Cells[8].Value.ToString();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IDtext.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+            Lecturer1.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
+            Lecturer2.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
+            SubCode.Text = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
+            SubName.Text = dataGridView2.SelectedRows[0].Cells[5].Value.ToString();
+            GroupID.Text = dataGridView2.SelectedRows[0].Cells[6].Value.ToString();
+            Tag.Text = dataGridView2.SelectedRows[0].Cells[7].Value.ToString();
+            Duration.Text = dataGridView2.SelectedRows[0].Cells[8].Value.ToString();
         }
     }
 }
