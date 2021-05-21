@@ -19,7 +19,10 @@ namespace ABC_Institute_Menu
         public managesessions()
         {
             InitializeComponent();
+           
         }
+
+      
 
         private SQLiteConnection sql_con;
         private SQLiteCommand sql_cmd;
@@ -32,6 +35,8 @@ namespace ABC_Institute_Menu
         {
             sql_con = new SQLiteConnection("Data Source=timetable.db;version=3;New=False;Compress=True");
         }
+
+
 
         //set execute query
         private void ExecuteQuery(String txtQuery)
@@ -59,10 +64,12 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
+     
         private void managesessions_Load(object sender, EventArgs e)
         {
             LoadData();
             LoadSessionData();
+            LoadSessionID();
         }
 
         private void NotAvailableTimes_Click(object sender, EventArgs e)
@@ -147,6 +154,23 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
+        private void LoadSessionID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select ID from manageSession";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows )
+            { 
+            comboBox2.Items.Add(dr ["ID"].ToString()) ;
+            }
+            sql_con.Close();
+        }
+
 
         //Insert Session Data
         private void btnAdd_Click(object sender, EventArgs e)
@@ -162,8 +186,8 @@ namespace ABC_Institute_Menu
                 RoomType = "Lab";
             }
 
-            string txtQuery = "Insert into manageSession (ID, Tag, SubjectID, Capacity,Room) values ('" + textBox4.Text + "' ,'" + RoomType + "' , '" + textBox1.Text + "' , '" + textBox2.Text + "' , '" + comboBox1.Text + "')";
-            ExecuteQuery(txtQuery);
+         //   string txtQuery = "Insert into manageSession (ID, Tag, SubjectID, Capacity,Room) values ('" + textBox4.Text + "' ,'" + RoomType + "' , '" + textBox1.Text + "' , '" + textBox2.Text + "' , '" + comboBox1.Text + "')";
+            //ExecuteQuery(txtQuery);
             LoadSessionData();
             System.Windows.Forms.MessageBox.Show("Data Added Successfully!");
         }
@@ -199,9 +223,9 @@ namespace ABC_Institute_Menu
 
 
 
-            string txtQuery = "update manageSession set SubjectID = '" + textBox1.Text + "' , Capacity = '" + textBox2.Text + "',  RoomType = '" + RoomType + "'   where ID = '" + textBox4.Text + "' ";
+            //string txtQuery = "update manageSession set SubjectID = '" + textBox1.Text + "' , Capacity = '" + textBox2.Text + "',  RoomType = '" + RoomType + "'   where ID = '" + textBox4.Text + "' ";
 
-            ExecuteQuery(txtQuery);
+           // ExecuteQuery(txtQuery);
             LoadSessionData();
             MessageBox.Show("Updated Successfully !! ");
             return;
@@ -212,7 +236,7 @@ namespace ABC_Institute_Menu
         //Retrive Session Data
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox4.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            //textBox4.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
            // textBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
              textBox1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
@@ -246,8 +270,8 @@ namespace ABC_Institute_Menu
             if (dialogResult == DialogResult.Yes)
             {
                 //do something
-                string txtQuery = "delete from manageSession where ID = '" + textBox4.Text + "'";
-                ExecuteQuery(txtQuery);
+               // string txtQuery = "delete from manageSession where ID = '" + textBox4.Text + "'";
+                //ExecuteQuery(txtQuery);
                 LoadSessionData();
                 MessageBox.Show("Record Deleted !! ");
                 return;
@@ -258,6 +282,51 @@ namespace ABC_Institute_Menu
                 return;
             }
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select * from manageSession where ID ='"+ comboBox2.Text + "' ";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+              //  textBox1.Text =DT.Cells[1].ToString();
+                textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+
+            }
+            sql_con.Close();
         }
     }
 }
