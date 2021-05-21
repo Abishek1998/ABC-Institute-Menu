@@ -117,6 +117,7 @@ namespace ABC_Institute_Menu
 
         private void btnManageStudents_Click(object sender, EventArgs e)
         {
+            
             hideSubMenu();
         }
 

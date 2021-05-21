@@ -72,6 +72,7 @@ namespace ABC_Institute_Menu
             sql_con.Close();
 
         }
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
@@ -110,7 +111,12 @@ namespace ABC_Institute_Menu
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+            string AcedemicYear = textBox1.Text;
+            string Semester = textBox6.Text;
+            string GroupNumber = textBox4.Text;
+            string SubGroupNumber = textBox3.Text;
+            string GroupID = "Y" + AcedemicYear + ".S" + Semester + "." + GroupNumber + "." + SubGroupNumber;
+            textBox2.Text = GroupID;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -125,7 +131,7 @@ namespace ABC_Institute_Menu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string txtQuery = "delete from studentGroup where ID ='" + textBox6.Text + "'";
+            string txtQuery = "delete from studentGroup where ID ='" + textBox7.Text + "'";
             ExecuteQuery(txtQuery);
             LoadData();
 
@@ -191,7 +197,7 @@ namespace ABC_Institute_Menu
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
-            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
             {
                 e.Handled = true;
             }

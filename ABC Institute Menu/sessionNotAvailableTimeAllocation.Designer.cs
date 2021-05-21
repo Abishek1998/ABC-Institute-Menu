@@ -34,7 +34,6 @@ namespace ABC_Institute_Menu
             this.Duration = new System.Windows.Forms.ComboBox();
             this.GroupID = new System.Windows.Forms.ComboBox();
             this.Tag = new System.Windows.Forms.ComboBox();
-            this.SubName = new System.Windows.Forms.ComboBox();
             this.SubCode = new System.Windows.Forms.ComboBox();
             this.Lecturer2 = new System.Windows.Forms.ComboBox();
             this.Lecturer1 = new System.Windows.Forms.ComboBox();
@@ -47,7 +46,6 @@ namespace ABC_Institute_Menu
             this.Duration_label = new System.Windows.Forms.Label();
             this.Tag_label = new System.Windows.Forms.Label();
             this.GrID_label = new System.Windows.Forms.Label();
-            this.Subname_label = new System.Windows.Forms.Label();
             this.ID_label = new System.Windows.Forms.Label();
             this.AddSessionBtn = new System.Windows.Forms.Button();
             this.Updatebtn = new System.Windows.Forms.Button();
@@ -56,7 +54,6 @@ namespace ABC_Institute_Menu
             this.DurationcomboBox = new System.Windows.Forms.ComboBox();
             this.GroupIDcomboBox = new System.Windows.Forms.ComboBox();
             this.TagcomboBox = new System.Windows.Forms.ComboBox();
-            this.SubnamecomboBox = new System.Windows.Forms.ComboBox();
             this.SubcodecomboBox = new System.Windows.Forms.ComboBox();
             this.Lecture2comboBox = new System.Windows.Forms.ComboBox();
             this.LecturecomboBox = new System.Windows.Forms.ComboBox();
@@ -71,14 +68,12 @@ namespace ABC_Institute_Menu
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.Duration_comboBox = new System.Windows.Forms.ComboBox();
             this.GroupID_comboBox = new System.Windows.Forms.ComboBox();
             this.Tag_comboBox = new System.Windows.Forms.ComboBox();
-            this.subName_comboBox = new System.Windows.Forms.ComboBox();
             this.subCode_comboBox = new System.Windows.Forms.ComboBox();
             this.Lecture2_comboBox = new System.Windows.Forms.ComboBox();
             this.Lecture_comboBox = new System.Windows.Forms.ComboBox();
@@ -91,7 +86,6 @@ namespace ABC_Institute_Menu
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -117,6 +111,12 @@ namespace ABC_Institute_Menu
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.subName_comboBox = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.SubnamecomboBox = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.SubName = new System.Windows.Forms.ComboBox();
+            this.Subname_label = new System.Windows.Forms.Label();
             this.Consecutive.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -186,6 +186,7 @@ namespace ABC_Institute_Menu
             this.Duration.Name = "Duration";
             this.Duration.Size = new System.Drawing.Size(276, 28);
             this.Duration.TabIndex = 148;
+            this.Duration.SelectedIndexChanged += new System.EventHandler(this.Duration_SelectedIndexChanged);
             // 
             // GroupID
             // 
@@ -195,6 +196,7 @@ namespace ABC_Institute_Menu
             this.GroupID.Name = "GroupID";
             this.GroupID.Size = new System.Drawing.Size(276, 28);
             this.GroupID.TabIndex = 147;
+            this.GroupID.SelectedIndexChanged += new System.EventHandler(this.GroupID_SelectedIndexChanged);
             // 
             // Tag
             // 
@@ -204,15 +206,7 @@ namespace ABC_Institute_Menu
             this.Tag.Name = "Tag";
             this.Tag.Size = new System.Drawing.Size(276, 28);
             this.Tag.TabIndex = 146;
-            // 
-            // SubName
-            // 
-            this.SubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubName.FormattingEnabled = true;
-            this.SubName.Location = new System.Drawing.Point(264, 256);
-            this.SubName.Name = "SubName";
-            this.SubName.Size = new System.Drawing.Size(276, 28);
-            this.SubName.TabIndex = 145;
+            this.Tag.SelectedIndexChanged += new System.EventHandler(this.Tag_SelectedIndexChanged);
             // 
             // SubCode
             // 
@@ -222,6 +216,7 @@ namespace ABC_Institute_Menu
             this.SubCode.Name = "SubCode";
             this.SubCode.Size = new System.Drawing.Size(276, 28);
             this.SubCode.TabIndex = 144;
+            this.SubCode.SelectedIndexChanged += new System.EventHandler(this.SubCode_SelectedIndexChanged);
             // 
             // Lecturer2
             // 
@@ -231,6 +226,7 @@ namespace ABC_Institute_Menu
             this.Lecturer2.Name = "Lecturer2";
             this.Lecturer2.Size = new System.Drawing.Size(276, 28);
             this.Lecturer2.TabIndex = 143;
+            this.Lecturer2.SelectedIndexChanged += new System.EventHandler(this.Lecturer2_SelectedIndexChanged);
             // 
             // Lecturer1
             // 
@@ -240,6 +236,7 @@ namespace ABC_Institute_Menu
             this.Lecturer1.Name = "Lecturer1";
             this.Lecturer1.Size = new System.Drawing.Size(276, 28);
             this.Lecturer1.TabIndex = 142;
+            this.Lecturer1.SelectedIndexChanged += new System.EventHandler(this.Lecturer1_SelectedIndexChanged);
             // 
             // IDtext
             // 
@@ -249,6 +246,7 @@ namespace ABC_Institute_Menu
             this.IDtext.Name = "IDtext";
             this.IDtext.Size = new System.Drawing.Size(276, 28);
             this.IDtext.TabIndex = 141;
+            this.IDtext.SelectedIndexChanged += new System.EventHandler(this.IDtext_SelectedIndexChanged);
             // 
             // Delete_Btn
             // 
@@ -301,7 +299,6 @@ namespace ABC_Institute_Menu
             this.Lecturer1_label.Size = new System.Drawing.Size(109, 25);
             this.Lecturer1_label.TabIndex = 97;
             this.Lecturer1_label.Text = "Lecturer 1";
-           // this.Lecturer1_label.Click += new System.EventHandler(this.Lecture1_label_Click);
             // 
             // Subcode_label
             // 
@@ -343,20 +340,9 @@ namespace ABC_Institute_Menu
             this.GrID_label.Location = new System.Drawing.Point(68, 298);
             this.GrID_label.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.GrID_label.Name = "GrID_label";
-            this.GrID_label.Size = new System.Drawing.Size(98, 25);
+            this.GrID_label.Size = new System.Drawing.Size(137, 25);
             this.GrID_label.TabIndex = 92;
-            this.GrID_label.Text = "Group ID";
-            // 
-            // Subname_label
-            // 
-            this.Subname_label.AutoSize = true;
-            this.Subname_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subname_label.Location = new System.Drawing.Point(68, 258);
-            this.Subname_label.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.Subname_label.Name = "Subname_label";
-            this.Subname_label.Size = new System.Drawing.Size(147, 25);
-            this.Subname_label.TabIndex = 91;
-            this.Subname_label.Text = "Subject Name";
+            this.GrID_label.Text = "SubGroup ID";
             // 
             // ID_label
             // 
@@ -368,7 +354,6 @@ namespace ABC_Institute_Menu
             this.ID_label.Size = new System.Drawing.Size(33, 25);
             this.ID_label.TabIndex = 90;
             this.ID_label.Text = "ID";
-            //this.ID_label.Click += new System.EventHandler(this.ID_label_Click);
             // 
             // AddSessionBtn
             // 
@@ -384,6 +369,7 @@ namespace ABC_Institute_Menu
             this.AddSessionBtn.TabIndex = 89;
             this.AddSessionBtn.Text = "Add Session";
             this.AddSessionBtn.UseVisualStyleBackColor = false;
+            this.AddSessionBtn.Click += new System.EventHandler(this.AddSessionBtn_Click);
             // 
             // Updatebtn
             // 
@@ -452,6 +438,7 @@ namespace ABC_Institute_Menu
             this.DurationcomboBox.Name = "DurationcomboBox";
             this.DurationcomboBox.Size = new System.Drawing.Size(276, 28);
             this.DurationcomboBox.TabIndex = 148;
+            this.DurationcomboBox.SelectedIndexChanged += new System.EventHandler(this.DurationcomboBox_SelectedIndexChanged);
             // 
             // GroupIDcomboBox
             // 
@@ -461,6 +448,7 @@ namespace ABC_Institute_Menu
             this.GroupIDcomboBox.Name = "GroupIDcomboBox";
             this.GroupIDcomboBox.Size = new System.Drawing.Size(276, 28);
             this.GroupIDcomboBox.TabIndex = 147;
+            this.GroupIDcomboBox.SelectedIndexChanged += new System.EventHandler(this.GroupIDcomboBox_SelectedIndexChanged);
             // 
             // TagcomboBox
             // 
@@ -470,15 +458,7 @@ namespace ABC_Institute_Menu
             this.TagcomboBox.Name = "TagcomboBox";
             this.TagcomboBox.Size = new System.Drawing.Size(276, 28);
             this.TagcomboBox.TabIndex = 146;
-            // 
-            // SubnamecomboBox
-            // 
-            this.SubnamecomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubnamecomboBox.FormattingEnabled = true;
-            this.SubnamecomboBox.Location = new System.Drawing.Point(236, 266);
-            this.SubnamecomboBox.Name = "SubnamecomboBox";
-            this.SubnamecomboBox.Size = new System.Drawing.Size(276, 28);
-            this.SubnamecomboBox.TabIndex = 145;
+            this.TagcomboBox.SelectedIndexChanged += new System.EventHandler(this.TagcomboBox_SelectedIndexChanged);
             // 
             // SubcodecomboBox
             // 
@@ -488,6 +468,7 @@ namespace ABC_Institute_Menu
             this.SubcodecomboBox.Name = "SubcodecomboBox";
             this.SubcodecomboBox.Size = new System.Drawing.Size(276, 28);
             this.SubcodecomboBox.TabIndex = 144;
+            this.SubcodecomboBox.SelectedIndexChanged += new System.EventHandler(this.SubcodecomboBox_SelectedIndexChanged);
             // 
             // Lecture2comboBox
             // 
@@ -497,6 +478,7 @@ namespace ABC_Institute_Menu
             this.Lecture2comboBox.Name = "Lecture2comboBox";
             this.Lecture2comboBox.Size = new System.Drawing.Size(276, 28);
             this.Lecture2comboBox.TabIndex = 143;
+            this.Lecture2comboBox.SelectedIndexChanged += new System.EventHandler(this.Lecture2comboBox_SelectedIndexChanged);
             // 
             // LecturecomboBox
             // 
@@ -506,6 +488,7 @@ namespace ABC_Institute_Menu
             this.LecturecomboBox.Name = "LecturecomboBox";
             this.LecturecomboBox.Size = new System.Drawing.Size(276, 28);
             this.LecturecomboBox.TabIndex = 142;
+            this.LecturecomboBox.SelectedIndexChanged += new System.EventHandler(this.LecturecomboBox_SelectedIndexChanged);
             // 
             // IDcomboBox
             // 
@@ -515,7 +498,7 @@ namespace ABC_Institute_Menu
             this.IDcomboBox.Name = "IDcomboBox";
             this.IDcomboBox.Size = new System.Drawing.Size(276, 28);
             this.IDcomboBox.TabIndex = 141;
-           // this.IDcomboBox.SelectedIndexChanged += new System.EventHandler(this.IDcomboBox_SelectedIndexChanged);
+            this.IDcomboBox.SelectedIndexChanged += new System.EventHandler(this.IDcomboBox_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -561,6 +544,7 @@ namespace ABC_Institute_Menu
             this.button5.TabIndex = 111;
             this.button5.Text = "Add Session";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -639,20 +623,9 @@ namespace ABC_Institute_Menu
             this.label14.Location = new System.Drawing.Point(58, 307);
             this.label14.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 25);
+            this.label14.Size = new System.Drawing.Size(137, 25);
             this.label14.TabIndex = 101;
-            this.label14.Text = "Group ID";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(58, 268);
-            this.label15.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(147, 25);
-            this.label15.TabIndex = 100;
-            this.label15.Text = "Subject Name";
+            this.label14.Text = "SubGroup ID";
             // 
             // label16
             // 
@@ -716,6 +689,7 @@ namespace ABC_Institute_Menu
             this.Duration_comboBox.Name = "Duration_comboBox";
             this.Duration_comboBox.Size = new System.Drawing.Size(276, 28);
             this.Duration_comboBox.TabIndex = 140;
+            this.Duration_comboBox.SelectedIndexChanged += new System.EventHandler(this.Duration_comboBox_SelectedIndexChanged);
             // 
             // GroupID_comboBox
             // 
@@ -725,6 +699,7 @@ namespace ABC_Institute_Menu
             this.GroupID_comboBox.Name = "GroupID_comboBox";
             this.GroupID_comboBox.Size = new System.Drawing.Size(276, 28);
             this.GroupID_comboBox.TabIndex = 139;
+            this.GroupID_comboBox.SelectedIndexChanged += new System.EventHandler(this.GroupID_comboBox_SelectedIndexChanged);
             // 
             // Tag_comboBox
             // 
@@ -734,15 +709,7 @@ namespace ABC_Institute_Menu
             this.Tag_comboBox.Name = "Tag_comboBox";
             this.Tag_comboBox.Size = new System.Drawing.Size(276, 28);
             this.Tag_comboBox.TabIndex = 138;
-            // 
-            // subName_comboBox
-            // 
-            this.subName_comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subName_comboBox.FormattingEnabled = true;
-            this.subName_comboBox.Location = new System.Drawing.Point(209, 283);
-            this.subName_comboBox.Name = "subName_comboBox";
-            this.subName_comboBox.Size = new System.Drawing.Size(276, 28);
-            this.subName_comboBox.TabIndex = 137;
+            this.Tag_comboBox.SelectedIndexChanged += new System.EventHandler(this.Tag_comboBox_SelectedIndexChanged);
             // 
             // subCode_comboBox
             // 
@@ -752,6 +719,7 @@ namespace ABC_Institute_Menu
             this.subCode_comboBox.Name = "subCode_comboBox";
             this.subCode_comboBox.Size = new System.Drawing.Size(276, 28);
             this.subCode_comboBox.TabIndex = 136;
+            this.subCode_comboBox.SelectedIndexChanged += new System.EventHandler(this.subCode_comboBox_SelectedIndexChanged);
             // 
             // Lecture2_comboBox
             // 
@@ -761,6 +729,7 @@ namespace ABC_Institute_Menu
             this.Lecture2_comboBox.Name = "Lecture2_comboBox";
             this.Lecture2_comboBox.Size = new System.Drawing.Size(276, 28);
             this.Lecture2_comboBox.TabIndex = 135;
+            this.Lecture2_comboBox.SelectedIndexChanged += new System.EventHandler(this.Lecture2_comboBox_SelectedIndexChanged);
             // 
             // Lecture_comboBox
             // 
@@ -770,6 +739,7 @@ namespace ABC_Institute_Menu
             this.Lecture_comboBox.Name = "Lecture_comboBox";
             this.Lecture_comboBox.Size = new System.Drawing.Size(276, 28);
             this.Lecture_comboBox.TabIndex = 134;
+            this.Lecture_comboBox.SelectedIndexChanged += new System.EventHandler(this.Lecture_comboBox_SelectedIndexChanged);
             // 
             // ID_comboBox
             // 
@@ -779,6 +749,7 @@ namespace ABC_Institute_Menu
             this.ID_comboBox.Name = "ID_comboBox";
             this.ID_comboBox.Size = new System.Drawing.Size(276, 28);
             this.ID_comboBox.TabIndex = 133;
+            this.ID_comboBox.SelectedIndexChanged += new System.EventHandler(this.ID_comboBox_SelectedIndexChanged);
             // 
             // button7
             // 
@@ -872,20 +843,9 @@ namespace ABC_Institute_Menu
             this.label23.Location = new System.Drawing.Point(47, 326);
             this.label23.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(98, 25);
+            this.label23.Size = new System.Drawing.Size(137, 25);
             this.label23.TabIndex = 115;
-            this.label23.Text = "Group ID";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(47, 286);
-            this.label24.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(147, 25);
-            this.label24.TabIndex = 114;
-            this.label24.Text = "Subject Name";
+            this.label23.Text = "SubGroup ID";
             // 
             // label25
             // 
@@ -912,6 +872,7 @@ namespace ABC_Institute_Menu
             this.button9.TabIndex = 112;
             this.button9.Text = "Add Session";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -1199,6 +1160,69 @@ namespace ABC_Institute_Menu
             this.label1.TabIndex = 0;
             this.label1.Text = "Select Lecturer";
             // 
+            // subName_comboBox
+            // 
+            this.subName_comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subName_comboBox.FormattingEnabled = true;
+            this.subName_comboBox.Location = new System.Drawing.Point(209, 283);
+            this.subName_comboBox.Name = "subName_comboBox";
+            this.subName_comboBox.Size = new System.Drawing.Size(276, 28);
+            this.subName_comboBox.TabIndex = 137;
+            this.subName_comboBox.SelectedIndexChanged += new System.EventHandler(this.subName_comboBox_SelectedIndexChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(47, 286);
+            this.label24.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(92, 25);
+            this.label24.TabIndex = 114;
+            this.label24.Text = "GroupID";
+            // 
+            // SubnamecomboBox
+            // 
+            this.SubnamecomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubnamecomboBox.FormattingEnabled = true;
+            this.SubnamecomboBox.Location = new System.Drawing.Point(236, 266);
+            this.SubnamecomboBox.Name = "SubnamecomboBox";
+            this.SubnamecomboBox.Size = new System.Drawing.Size(276, 28);
+            this.SubnamecomboBox.TabIndex = 145;
+            this.SubnamecomboBox.SelectedIndexChanged += new System.EventHandler(this.SubnamecomboBox_SelectedIndexChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(58, 268);
+            this.label15.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 25);
+            this.label15.TabIndex = 100;
+            this.label15.Text = "Group ID";
+            // 
+            // SubName
+            // 
+            this.SubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubName.FormattingEnabled = true;
+            this.SubName.Location = new System.Drawing.Point(264, 256);
+            this.SubName.Name = "SubName";
+            this.SubName.Size = new System.Drawing.Size(276, 28);
+            this.SubName.TabIndex = 145;
+            this.SubName.SelectedIndexChanged += new System.EventHandler(this.SubName_SelectedIndexChanged);
+            // 
+            // Subname_label
+            // 
+            this.Subname_label.AutoSize = true;
+            this.Subname_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Subname_label.Location = new System.Drawing.Point(68, 258);
+            this.Subname_label.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Subname_label.Name = "Subname_label";
+            this.Subname_label.Size = new System.Drawing.Size(92, 25);
+            this.Subname_label.TabIndex = 91;
+            this.Subname_label.Text = "GroupID";
+            // 
             // sessionNotAvailableTimeAllocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1264,7 +1288,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Label Duration_label;
         private System.Windows.Forms.Label Tag_label;
         private System.Windows.Forms.Label GrID_label;
-        private System.Windows.Forms.Label Subname_label;
         private System.Windows.Forms.Label ID_label;
         private System.Windows.Forms.Button AddSessionBtn;
         private System.Windows.Forms.Button Delete_Btn;
@@ -1280,7 +1303,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button button7;
@@ -1291,7 +1313,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
@@ -1299,7 +1320,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.ComboBox Duration;
         private System.Windows.Forms.ComboBox GroupID;
         private System.Windows.Forms.ComboBox Tag;
-        private System.Windows.Forms.ComboBox SubName;
         private System.Windows.Forms.ComboBox SubCode;
         private System.Windows.Forms.ComboBox Lecturer2;
         private System.Windows.Forms.ComboBox Lecturer1;
@@ -1307,7 +1327,6 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.ComboBox DurationcomboBox;
         private System.Windows.Forms.ComboBox GroupIDcomboBox;
         private System.Windows.Forms.ComboBox TagcomboBox;
-        private System.Windows.Forms.ComboBox SubnamecomboBox;
         private System.Windows.Forms.ComboBox SubcodecomboBox;
         private System.Windows.Forms.ComboBox Lecture2comboBox;
         private System.Windows.Forms.ComboBox LecturecomboBox;
@@ -1315,10 +1334,15 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.ComboBox Duration_comboBox;
         private System.Windows.Forms.ComboBox GroupID_comboBox;
         private System.Windows.Forms.ComboBox Tag_comboBox;
-        private System.Windows.Forms.ComboBox subName_comboBox;
         private System.Windows.Forms.ComboBox subCode_comboBox;
         private System.Windows.Forms.ComboBox Lecture2_comboBox;
         private System.Windows.Forms.ComboBox Lecture_comboBox;
         private System.Windows.Forms.ComboBox ID_comboBox;
+        private System.Windows.Forms.ComboBox SubnamecomboBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox subName_comboBox;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox SubName;
+        private System.Windows.Forms.Label Subname_label;
     }
 }

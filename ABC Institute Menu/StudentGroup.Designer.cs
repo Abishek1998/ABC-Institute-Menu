@@ -201,6 +201,7 @@ namespace ABC_Institute_Menu
             this.textBox1.Size = new System.Drawing.Size(537, 26);
             this.textBox1.TabIndex = 111;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 

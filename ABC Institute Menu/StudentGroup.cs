@@ -160,6 +160,16 @@ namespace ABC_Institute_Menu
             }
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+
 
         //ADD Button
         private void button2_Click(object sender, EventArgs e)
@@ -182,14 +192,21 @@ namespace ABC_Institute_Menu
             textBox3.Text = "";
             textBox4.Text = "";
             textBox5.Text = "";
+
         }
 
         //GENERATE ID Button
         private void button3_Click(object sender, EventArgs e)
         {
-
+            string AcedemicYear = textBox7.Text;
+            string Semester = textBox1.Text;
+            string GroupNumber = textBox3.Text;
+            string SubGroupNumber = textBox4.Text;
+            string GroupID = "Y" + AcedemicYear+ ".S" + Semester+ "." + GroupNumber+ "." + SubGroupNumber;
+            textBox5.Text = GroupID;
         }
 
+        
 
 
         /* private void label8_Click(object sender, EventArgs e)

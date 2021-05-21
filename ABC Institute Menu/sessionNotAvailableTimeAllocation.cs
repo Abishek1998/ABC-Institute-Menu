@@ -56,12 +56,13 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
-        private void LoadData1()
+
+        private void LoadData_1()
         {
             SetConnection();
             sql_con.Open();
             sql_cmd = sql_con.CreateCommand();
-            string CommandText = "select * from session";
+            string CommandText = "select * from Consecutive";
             DB = new SQLiteDataAdapter(CommandText, sql_con);
             DS.Reset();
             DB.Fill(DS);
@@ -69,6 +70,35 @@ namespace ABC_Institute_Menu
             dataGridView2.DataSource = DT;
             sql_con.Close();
         }
+
+        private void LoadData_2()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select * from Parallel";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            dataGridView3.DataSource = DT;
+            sql_con.Close();
+        }
+
+        private void LoadData_3()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select * from Overlapping";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            dataGridView4.DataSource = DT;
+            sql_con.Close();
+        }
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -136,8 +166,15 @@ namespace ABC_Institute_Menu
         {
 
         }
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "insert into Overlapping (SessionID,Lecturer1,Lecturer2,SubCode,GroupID,SubGroupID,Tag,Duration)values('" + ID_comboBox.Text +
+                "','" + Lecture_comboBox.Text + "','" + Lecture2_comboBox.Text + "','" + subCode_comboBox.Text + "','" + subName_comboBox.Text + "','" + GroupID_comboBox.Text + "',"
+                + "'" + Tag_comboBox.Text + "','" + Duration_comboBox.Text + "')";
+            ExecuteQuery(txtQuery);
+            LoadData_3();
+        }
 
-        
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             ID_comboBox.Text = dataGridView4.SelectedRows[0].Cells[1].Value.ToString();
@@ -149,6 +186,196 @@ namespace ABC_Institute_Menu
             Tag_comboBox.Text = dataGridView4.SelectedRows[0].Cells[7].Value.ToString();
             Duration_comboBox.Text = dataGridView4.SelectedRows[0].Cells[8].Value.ToString();
             
+        }
+
+
+        
+        //not overlapping
+
+        private void LoadSessionID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SessionID from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                ID_comboBox.Items.Add(dr["SessionID"].ToString());
+            }
+            sql_con.Close();
+        }
+        private void LoadLecturer1()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Lecturer1 from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                Lecture_comboBox.Items.Add(dr["Lecturer1"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void LoadLecturer2()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Lecturer2 from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                Lecture2_comboBox.Items.Add(dr["Lecturer2"].ToString());
+            }
+            sql_con.Close();
+        }
+        private void LoadSubCode()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SubCode from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                subCode_comboBox.Items.Add(dr["SubCode"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void LoadGroupID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select GroupID from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                subName_comboBox.Items.Add(dr["GroupID"].ToString());
+            }
+            sql_con.Close();
+        }
+        private void LoadSubGroupID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SubGroupID from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                GroupID_comboBox.Items.Add(dr["SubGroupID"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void LoadTag()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Tag from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                Tag_comboBox.Items.Add(dr["Tag"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void LoadDuration()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Duration from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                Duration_comboBox.Items.Add(dr["Duration"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void ID_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSessionID();
+        }
+
+        private void Lecture_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadLecturer1();
+        }
+
+        private void Lecture2_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadLecturer2();
+        }
+
+        private void subCode_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSubCode();
+        }
+
+        private void subName_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadGroupID();
+        }
+
+        private void GroupID_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSubGroupID();
+        }
+
+        private void Tag_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadTag();
+        }
+
+        private void Duration_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDuration();
+        }
+
+
+        //Parallel
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "insert into Parallel (SessionID,Lecturer1,Lecturer2,SubCode,GroupID,SubGroupID,Tag,Duration)values('" + IDcomboBox.Text +
+                "','" + LecturecomboBox.Text + "','" + Lecture2comboBox.Text + "','" + SubcodecomboBox.Text + "','" + SubnamecomboBox.Text + "','" + GroupIDcomboBox.Text + "',"
+                + "'" + TagcomboBox.Text + "','" + DurationcomboBox.Text + "')";
+            ExecuteQuery(txtQuery);
+            LoadData_2();
+
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -163,6 +390,369 @@ namespace ABC_Institute_Menu
             DurationcomboBox.Text = dataGridView3.SelectedRows[0].Cells[8].Value.ToString();
         }
 
+        private void LoadsessionID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SessionID from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                IDcomboBox.Items.Add(dr["SessionID"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void IDcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadsessionID();
+        }
+
+        private void LoadLecturer()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Lecturer1 from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                LecturecomboBox.Items.Add(dr["Lecturer1"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void LecturecomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadLecturer();
+        }
+
+        private void LoadLecturer_2()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Lecturer2 from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                Lecture2comboBox.Items.Add(dr["Lecturer2"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void Lecture2comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadLecturer_2();
+        }
+
+        private void LoadSubcode()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SubCode from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                SubcodecomboBox.Items.Add(dr["SubCode"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void SubcodecomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSubcode();
+        }
+
+        private void LoadgroupID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select GroupID from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                SubnamecomboBox.Items.Add(dr["GroupID"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void SubnamecomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadgroupID();
+        }
+
+        private void LoadsubGroupID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SubGroupID from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                GroupIDcomboBox.Items.Add(dr["SubGroupID"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void GroupIDcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadsubGroupID();
+        }
+
+        private void LoadTags()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Tag from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                TagcomboBox.Items.Add(dr["Tag"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void TagcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadTags();
+        }
+
+        private void Loadduration()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Duration from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                DurationcomboBox.Items.Add(dr["Duration"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void DurationcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Loadduration();
+        }
+
+        //consecutive
+
+        private void Loadsession_ID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SessionID from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                IDtext.Items.Add(dr["SessionID"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void IDtext_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Loadsession_ID();
+        }
+
+        private void LoadLecturer_1()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Lecturer1 from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                Lecturer1.Items.Add(dr["Lecturer1"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void Lecturer1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadLecturer_1();
+        }
+
+        private void Loadlecturer_2()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Lecturer2 from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                Lecturer2.Items.Add(dr["Lecturer2"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void Lecturer2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Loadlecturer_2();
+        }
+
+        private void LoadSub_code()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SubCode from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                SubCode.Items.Add(dr["SubCode"].ToString());
+            }
+            sql_con.Close();
+        }
+        private void SubCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSub_code();
+        }
+
+        private void Loadgroup_ID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select GroupID from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                SubName.Items.Add(dr["GroupID"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void SubName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Loadgroup_ID();
+        }
+
+        private void LoadSubgroupID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SubGroupID from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                GroupID.Items.Add(dr["SubGroupID"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void GroupID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSubgroupID();
+        }
+
+        private void Load_Tag()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Tag from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                Tag.Items.Add(dr["Tag"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void Tag_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Load_Tag();
+        }
+        private void Load_Duration()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select Duration from tbsessionDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                Duration.Items.Add(dr["Duration"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void Duration_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Load_Duration();
+        }
+
+        private void AddSessionBtn_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "insert into Consecutive (SessionID,Lecturer1,Lecturer2,SubCode,GroupID,SubGroupID,Tag,Duration)values('" + IDtext.Text +
+                "','" + Lecturer1.Text + "','" + Lecturer2.Text + "','" + SubCode.Text + "','" + SubName.Text + "','" + GroupID.Text + "'," 
+                + "'" + Tag.Text + "','" + Duration.Text + "')";
+            ExecuteQuery(txtQuery);
+            LoadData_1();
+
+
+        }
+
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             IDtext.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
@@ -174,5 +764,7 @@ namespace ABC_Institute_Menu
             Tag.Text = dataGridView2.SelectedRows[0].Cells[7].Value.ToString();
             Duration.Text = dataGridView2.SelectedRows[0].Cells[8].Value.ToString();
         }
+
+        
     }
-}
+ }
