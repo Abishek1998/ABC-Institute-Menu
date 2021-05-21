@@ -40,7 +40,6 @@ namespace ABC_Institute_Menu
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            //  this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -127,6 +126,7 @@ namespace ABC_Institute_Menu
             this.button1.TabIndex = 92;
             this.button1.Text = "Clear All";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -136,6 +136,7 @@ namespace ABC_Institute_Menu
             this.textBox2.Size = new System.Drawing.Size(691, 26);
             this.textBox2.TabIndex = 115;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
@@ -145,6 +146,7 @@ namespace ABC_Institute_Menu
             this.textBox1.Size = new System.Drawing.Size(691, 26);
             this.textBox1.TabIndex = 114;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox7
             // 
@@ -154,17 +156,7 @@ namespace ABC_Institute_Menu
             this.textBox7.Size = new System.Drawing.Size(691, 26);
             this.textBox7.TabIndex = 113;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
-            // 
-            // label3
-            // 
-            // this.label3.AutoSize = true;
-            //   this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            //   this.label3.Location = new System.Drawing.Point(50, 165);
-            //   this.label3.Name = "label3";
-            //    this.label3.Size = new System.Drawing.Size(71, 25);
-            //    this.label3.TabIndex = 126;
-            //    this.label3.Text = "TagID";
-            //    this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // addTags
             // 
@@ -172,7 +164,6 @@ namespace ABC_Institute_Menu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1445, 849);
-            //    this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox7);

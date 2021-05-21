@@ -55,6 +55,7 @@ namespace ABC_Institute_Menu
             this.textBox2.Size = new System.Drawing.Size(320, 26);
             this.textBox2.TabIndex = 123;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
@@ -64,6 +65,7 @@ namespace ABC_Institute_Menu
             this.textBox1.Size = new System.Drawing.Size(320, 26);
             this.textBox1.TabIndex = 122;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox7
             // 
@@ -73,6 +75,7 @@ namespace ABC_Institute_Menu
             this.textBox7.Size = new System.Drawing.Size(382, 26);
             this.textBox7.TabIndex = 121;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // label7
             // 
@@ -162,6 +165,7 @@ namespace ABC_Institute_Menu
             this.button3.TabIndex = 128;
             this.button3.Text = "Clear All";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 

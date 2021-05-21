@@ -176,7 +176,12 @@ namespace ABC_Institute_Menu
         //CLEAR ALL Button
         private void button1_Click(object sender, EventArgs e)
         {
-
+            textBox7.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
         }
 
         //GENERATE ID Button

@@ -137,7 +137,39 @@ namespace ABC_Institute_Menu
             return;
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && !char.IsLetter(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch)  && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = "";
+            textBox7.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
     }
 }
