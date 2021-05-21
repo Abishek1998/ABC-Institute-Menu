@@ -101,21 +101,37 @@ namespace ABC_Institute_Menu
         //add
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string txtQuery = " insert into tbLecturers ( EmployeeID,EmployeeName,Faculty,Department,Center,Building,Level,Rank ) values ( '" + textBox3.Text + "','" + textBox1.Text + "','" + textBox5.Text + "','" + textBox4.Text + "','" + textBox7.Text + "','" + textBox6.Text + "','" + textBox8.Text + "','" + textBox2.Text + "')";
+            string txtQuery = " insert into tbLecturers ( EmployeeID,EmployeeName,Faculty,Department,Center,Building,Level,Rank ) values ( '" + textBox3.Text + "','" + textBox1.Text + "','" + textBox5.Text + "','" + textBox4.Text + "','" + textBox7.Text + "','" + textBox6.Text + "','" + comboBox1.Text + "','" + textBox2.Text + "')";
 
 
-           /* if(ValidateChildren(ValidationConstraints.Enabled))
+            //Check text fileds are not empty
+            if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == ""  )
             {
-                MessageBox.Show(textBox1.Text, " No insert");
-            }*/
+                MessageBox.Show("Fill all records !! ");
+            }
+
+            else if(comboBox1.Text == null || comboBox1.Text == string.Empty )
+            {
+                MessageBox.Show("Fill selected Level !! ");
+            }
+
+            //Check Length only 6 digit in Employee number
+            else if (textBox3.Text.Length < 6 || textBox3.Text.Length > 6)
+            {
+                MessageBox.Show("Invalied Employee ID.Enter 6 Digit !! ");
+            }
 
 
+            else
+            {
+                ExecuteQuery(txtQuery);
+                LoadData();
 
-            ExecuteQuery(txtQuery);
-            LoadData();
 
-            MessageBox.Show("One Record Added Successfully !! ");
-            return;
+                MessageBox.Show("One Record Added Successfully !! ");
+                return;
+
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -172,12 +188,12 @@ namespace ABC_Institute_Menu
             textBox5.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             textBox6.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             textBox7.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            textBox8.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string txtQuery = "update tbLecturers set EmployeeName = '" + textBox1.Text + "',EmployeeID = '" + textBox3.Text + "',Faculty = '" + textBox5.Text + "',Department ='" + textBox4.Text + "',Center ='" + textBox7.Text + "',Building = '" + textBox6.Text + "',Level = '" + textBox8.Text + "',Rank = '" + textBox2.Text + "' where EmployeeID = '" + textBox3.Text + "' ";
+            string txtQuery = "update tbLecturers set EmployeeName = '" + textBox1.Text + "',EmployeeID = '" + textBox3.Text + "',Faculty = '" + textBox5.Text + "',Department ='" + textBox4.Text + "',Center ='" + textBox7.Text + "',Building = '" + textBox6.Text + "',Level = '" + comboBox1.Text + "',Rank = '" + textBox2.Text + "' where EmployeeID = '" + textBox3.Text + "' ";
 
             ExecuteQuery(txtQuery);
             LoadData();
@@ -226,7 +242,7 @@ namespace ABC_Institute_Menu
         private void button1_Click(object sender, EventArgs e)
         {
             string EmpID = textBox3.Text;
-            string EmpLevel = textBox8.Text;
+            string EmpLevel = comboBox1.Text;
             string Rank = EmpLevel + " . " + EmpID;
             textBox2.Text = Rank;
         }
@@ -245,6 +261,26 @@ namespace ABC_Institute_Menu
                 e.Cancel = false;
                 ErrorProvider.ReferenceEquals(textBox1, " ");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = " ";
+            textBox2.Text = " ";
+            textBox3.Text = " ";
+            textBox4.Text = " ";
+            textBox5.Text = " ";
+            textBox6.Text = " ";
+            textBox7.Text = " ";
+            
+
+
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

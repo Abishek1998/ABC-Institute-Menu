@@ -82,13 +82,23 @@ namespace ABC_Institute_Menu
         //added button
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string txtQuery = "insert into tbSubjects (SubjectID,OfferedYear,OfferedSemester,SubjectName,SubjectCode,NoOfLectureHr,NoOfTutorialHr,NoOfLabHr,NoOfEvaluationHr) values ('" + textBox8.Text + "','" + textBox1.Text + "', '" + Semester + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "')";
+            string txtQuery = "insert into tbSubjects (SubjectID,OfferedYear,OfferedSemester,SubjectName,SubjectCode,NoOfLectureHr,NoOfTutorialHr,NoOfLabHr,NoOfEvaluationHr) values ('" + textBox8.Text + "','" + comboBox1.Text + "', '" + Semester + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "')";
 
-            ExecuteQuery(txtQuery);
-            LoadData();
+            if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == "" || textBox8.Text == "" || comboBox1.Text == "" || Semester == "")
+            {
+                MessageBox.Show("Fill all records !! ");
+            }
 
-            MessageBox.Show("One Record Added Successfully !! ");
-            return;
+            
+
+            else
+            {
+                ExecuteQuery(txtQuery);
+                LoadData();
+
+                MessageBox.Show("One Record Added Successfully !! ");
+                return;
+            }
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -128,7 +138,7 @@ namespace ABC_Institute_Menu
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string txtQuery = "update tbSubjects set  OfferedYear = '" + textBox1.Text + "',OfferedSemester = '" + Semester + "',SubjectName = '" + textBox3.Text + "',SubjectCode = '" + textBox2.Text + "',NoOfLectureHr = '" + textBox4.Text + "',NoOfTutorialHr = '" + textBox5.Text + "',NoOfLabHr='" + textBox6.Text + "',NoOfEvaluationHr = '" + textBox7.Text + "' where SubjectID = '" + textBox8.Text + "' ";
+            string txtQuery = "update tbSubjects set  OfferedYear = '" + comboBox1.Text + "',OfferedSemester = '" + Semester + "',SubjectName = '" + textBox3.Text + "',SubjectCode = '" + textBox2.Text + "',NoOfLectureHr = '" + textBox4.Text + "',NoOfTutorialHr = '" + textBox5.Text + "',NoOfLabHr='" + textBox6.Text + "',NoOfEvaluationHr = '" + textBox7.Text + "' where SubjectID = '" + textBox8.Text + "' ";
 
             ExecuteQuery(txtQuery);
             LoadData();
@@ -138,7 +148,7 @@ namespace ABC_Institute_Menu
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             Semester = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
@@ -231,6 +241,28 @@ namespace ABC_Institute_Menu
 
         private void label17_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            comboBox1.Text = " ";
+            textBox2.Text = " ";
+            textBox3.Text = " ";
+            textBox4.Text = " ";
+            textBox5.Text = " ";
+            textBox6.Text = " ";
+            textBox7.Text = " ";
+            textBox8.Text = " ";
+            Semester = " ";
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           /* comboBox1.Items.Add(1);
+            comboBox1.Items.Add(2);
+            comboBox1.Items.Add(3);
+            comboBox1.Items.Add(4);*/
 
         }
     }
