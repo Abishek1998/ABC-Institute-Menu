@@ -30,20 +30,18 @@ namespace ABC_Institute_Menu
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.LectureHall = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.rbLab = new System.Windows.Forms.RadioButton();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.noOfWorkingDays = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -51,21 +49,21 @@ namespace ABC_Institute_Menu
             this.Sessions = new System.Windows.Forms.TabControl();
             this.Consecutive = new System.Windows.Forms.TabPage();
             this.NotAvailableTimes = new System.Windows.Forms.TabPage();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.LblEndTime = new System.Windows.Forms.Label();
             this.DayComboDay = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.LblStartTime = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.LblRoom = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.Sessions.SuspendLayout();
@@ -78,48 +76,31 @@ namespace ABC_Institute_Menu
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(444, 237);
+            this.label6.Location = new System.Drawing.Point(471, 249);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 20);
             this.label6.TabIndex = 61;
             this.label6.Text = "Select Room";
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(640, 164);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(146, 26);
-            this.textBox3.TabIndex = 60;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(442, 168);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Capacity";
-            // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 335);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 412);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(939, 226);
+            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(846, 226);
             this.dataGridView1.TabIndex = 56;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // LectureHall
             // 
             this.LectureHall.AutoSize = true;
-            this.LectureHall.Location = new System.Drawing.Point(640, 113);
+            this.LectureHall.Location = new System.Drawing.Point(619, 150);
             this.LectureHall.Margin = new System.Windows.Forms.Padding(2);
             this.LectureHall.Name = "LectureHall";
             this.LectureHall.Size = new System.Drawing.Size(82, 17);
@@ -127,21 +108,23 @@ namespace ABC_Institute_Menu
             this.LectureHall.TabStop = true;
             this.LectureHall.Text = "Lecture Hall";
             this.LectureHall.UseVisualStyleBackColor = true;
+            this.LectureHall.CheckedChanged += new System.EventHandler(this.LectureHall_CheckedChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(442, 113);
+            this.label3.Location = new System.Drawing.Point(471, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 20);
+            this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 51;
-            this.label3.Text = "Room Type / Tag";
+            this.label3.Text = "Room Tag";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // rbLab
             // 
             this.rbLab.AutoSize = true;
-            this.rbLab.Location = new System.Drawing.Point(748, 113);
+            this.rbLab.Location = new System.Drawing.Point(727, 150);
             this.rbLab.Margin = new System.Windows.Forms.Padding(2);
             this.rbLab.Name = "rbLab";
             this.rbLab.Size = new System.Drawing.Size(43, 17);
@@ -149,6 +132,7 @@ namespace ABC_Institute_Menu
             this.rbLab.TabStop = true;
             this.rbLab.Text = "Lab";
             this.rbLab.UseVisualStyleBackColor = true;
+            this.rbLab.CheckedChanged += new System.EventHandler(this.rbLab_CheckedChanged);
             // 
             // btnDelete
             // 
@@ -157,39 +141,25 @@ namespace ABC_Institute_Menu
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(852, 625);
+            this.btnDelete.Location = new System.Drawing.Point(646, 339);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 40);
             this.btnDelete.TabIndex = 32;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(187)))), ((int)(((byte)(75)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(599, 625);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(120, 40);
-            this.btnAdd.TabIndex = 30;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.LectureHall);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.noOfWorkingDays);
@@ -197,7 +167,6 @@ namespace ABC_Institute_Menu
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.btnDelete);
             this.tabPage1.Controls.Add(this.btnUpdate);
-            this.tabPage1.Controls.Add(this.btnAdd);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
@@ -207,14 +176,46 @@ namespace ABC_Institute_Menu
             this.tabPage1.Text = "Sessions";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(216, 93);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(135, 21);
+            this.comboBox2.TabIndex = 65;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.LimeGreen;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(221, 132);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(129, 38);
+            this.button4.TabIndex = 64;
+            this.button4.Text = "Show Data";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(640, 237);
+            this.comboBox1.Items.AddRange(new object[] {
+            "A502",
+            "A501",
+            "B502",
+            "B501",
+            "A401"});
+            this.comboBox1.Location = new System.Drawing.Point(622, 249);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(146, 21);
             this.comboBox1.TabIndex = 62;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -229,46 +230,39 @@ namespace ABC_Institute_Menu
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(214, 237);
+            this.textBox2.Location = new System.Drawing.Point(622, 197);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(146, 26);
             this.textBox2.TabIndex = 57;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(66, 113);
+            this.label5.Location = new System.Drawing.Point(67, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 20);
+            this.label5.Size = new System.Drawing.Size(153, 20);
             this.label5.TabIndex = 54;
-            this.label5.Text = "Session ID";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(214, 113);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(146, 26);
-            this.textBox4.TabIndex = 53;
+            this.label5.Text = "Select Session ID";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(66, 237);
+            this.label4.Location = new System.Drawing.Point(471, 197);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 52;
             this.label4.Text = "Capacity";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // noOfWorkingDays
             // 
             this.noOfWorkingDays.AutoSize = true;
             this.noOfWorkingDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noOfWorkingDays.Location = new System.Drawing.Point(66, 177);
+            this.noOfWorkingDays.Location = new System.Drawing.Point(471, 95);
             this.noOfWorkingDays.Name = "noOfWorkingDays";
             this.noOfWorkingDays.Size = new System.Drawing.Size(94, 20);
             this.noOfWorkingDays.TabIndex = 50;
@@ -277,7 +271,7 @@ namespace ABC_Institute_Menu
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(214, 177);
+            this.textBox1.Location = new System.Drawing.Point(619, 95);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(146, 26);
@@ -290,12 +284,13 @@ namespace ABC_Institute_Menu
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(726, 625);
+            this.btnUpdate.Location = new System.Drawing.Point(512, 339);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(120, 40);
             this.btnUpdate.TabIndex = 31;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Add Room";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // Sessions
             // 
@@ -322,19 +317,19 @@ namespace ABC_Institute_Menu
             // 
             // NotAvailableTimes
             // 
-            this.NotAvailableTimes.Controls.Add(this.button2);
-            this.NotAvailableTimes.Controls.Add(this.txtId);
-            this.NotAvailableTimes.Controls.Add(this.label8);
+            this.NotAvailableTimes.Controls.Add(this.comboBox3);
             this.NotAvailableTimes.Controls.Add(this.dateTimePicker2);
             this.NotAvailableTimes.Controls.Add(this.dateTimePicker1);
+            this.NotAvailableTimes.Controls.Add(this.txtId);
+            this.NotAvailableTimes.Controls.Add(this.label2);
             this.NotAvailableTimes.Controls.Add(this.panel1);
             this.NotAvailableTimes.Controls.Add(this.button3);
+            this.NotAvailableTimes.Controls.Add(this.button2);
             this.NotAvailableTimes.Controls.Add(this.button1);
             this.NotAvailableTimes.Controls.Add(this.LblEndTime);
             this.NotAvailableTimes.Controls.Add(this.DayComboDay);
             this.NotAvailableTimes.Controls.Add(this.label7);
             this.NotAvailableTimes.Controls.Add(this.LblStartTime);
-            this.NotAvailableTimes.Controls.Add(this.textBox5);
             this.NotAvailableTimes.Controls.Add(this.LblRoom);
             this.NotAvailableTimes.Location = new System.Drawing.Point(4, 22);
             this.NotAvailableTimes.Margin = new System.Windows.Forms.Padding(2);
@@ -345,39 +340,47 @@ namespace ABC_Institute_Menu
             this.NotAvailableTimes.UseVisualStyleBackColor = true;
             this.NotAvailableTimes.Click += new System.EventHandler(this.NotAvailableTimes_Click);
             // 
-            // txtId
+            // comboBox3
             // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(71, 34);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(44, 23);
-            this.txtId.TabIndex = 49;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(44, 34);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 17);
-            this.label8.TabIndex = 48;
-            this.label8.Text = "ID";
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(244, 37);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(123, 21);
+            this.comboBox3.TabIndex = 50;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(522, 80);
+            this.dateTimePicker2.Location = new System.Drawing.Point(531, 80);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(81, 20);
-            this.dateTimePicker2.TabIndex = 47;
+            this.dateTimePicker2.Size = new System.Drawing.Size(84, 20);
+            this.dateTimePicker2.TabIndex = 49;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(522, 32);
+            this.dateTimePicker1.Location = new System.Drawing.Point(531, 34);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(81, 20);
-            this.dateTimePicker1.TabIndex = 46;
+            this.dateTimePicker1.Size = new System.Drawing.Size(84, 20);
+            this.dateTimePicker1.TabIndex = 48;
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(39, 72);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(44, 23);
+            this.txtId.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 17);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "ID";
             // 
             // panel1
             // 
@@ -393,10 +396,11 @@ namespace ABC_Institute_Menu
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(1054, 495);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_3);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_1);
             // 
             // button3
             // 
@@ -420,15 +424,14 @@ namespace ABC_Institute_Menu
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(388, 158);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(291, 128);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 49);
+            this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 43;
             this.button2.Text = "Delete Record";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            //
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(187)))), ((int)(((byte)(75)))));
@@ -490,13 +493,6 @@ namespace ABC_Institute_Menu
             this.LblStartTime.TabIndex = 2;
             this.LblStartTime.Text = "Start Time";
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(244, 34);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(123, 20);
-            this.textBox5.TabIndex = 1;
-            // 
             // LblRoom
             // 
             this.LblRoom.AutoSize = true;
@@ -506,20 +502,6 @@ namespace ABC_Institute_Menu
             this.LblRoom.Size = new System.Drawing.Size(101, 20);
             this.LblRoom.TabIndex = 0;
             this.LblRoom.Text = "Select Room";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(291, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 40);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "Delete Record";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // managesessions
             // 
@@ -547,20 +529,16 @@ namespace ABC_Institute_Menu
         #endregion
 
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RadioButton LectureHall;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbLab;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label noOfWorkingDays;
         private System.Windows.Forms.TextBox textBox1;
@@ -573,15 +551,17 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.ComboBox DayComboDay;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label LblStartTime;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

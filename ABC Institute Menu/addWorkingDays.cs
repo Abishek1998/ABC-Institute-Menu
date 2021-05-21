@@ -78,6 +78,161 @@ namespace ABC_Institute_Menu
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
 
+            
+        }
+
+
+        //Update
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string workingDays = "";
+
+            if (monday.CheckState == CheckState.Checked)
+            {
+                workingDays += "Monday";
+            }
+
+            if (tuesday.CheckState == CheckState.Checked)
+            {
+                workingDays += ", Tuesday";
+            }
+
+            if (wednesday.CheckState == CheckState.Checked)
+            {
+                workingDays += ", Wednesday";
+            }
+
+            if (thursday.CheckState == CheckState.Checked)
+            {
+                workingDays += ", Thursday";
+            }
+
+            if (friday.CheckState == CheckState.Checked)
+            {
+                workingDays += ", Friday";
+            }
+
+            if (saturday.CheckState == CheckState.Checked)
+            {
+                workingDays += ", Saturday";
+            }
+
+            if (sunday.CheckState == CheckState.Checked)
+            {
+                workingDays += ", Sunday";
+            }
+
+
+            string txtQuery = "Update workingDaysHours set noOfWorkingDays = '" + numericUpDown1.Text + "' , hours = '" + numericUpDown2.Text + "' , minutes = '" + numericUpDown3.Text + "' , workingDays = '" + workingDays + "' where ID = '" + txtId.Text + "' ";
+            ExecuteQuery(txtQuery);
+            LoadData();
+            System.Windows.Forms.MessageBox.Show("Data Updated Successfully!");
+
+
+
+        }
+
+        //Delete
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("Are you sure do you want to delete this record?", "Delete Action", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+                string txtQuery = "delete from workingDaysHours where ID = '" + txtId.Text + "'";
+                ExecuteQuery(txtQuery);
+                LoadData();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else shsagg
+                return;
+            }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            txtId.Text = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+            numericUpDown1.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+            numericUpDown2.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
+            numericUpDown3.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
+
+            if (dataGridView2.SelectedRows[0].Cells[4].Value.ToString() == "Monday")
+            {
+                monday.Checked = true;
+            }
+
+            if (dataGridView2.SelectedRows[0].Cells[4].Value.ToString() == "Tuesday")
+            {
+                tuesday.Checked = true;
+            }
+
+            if (dataGridView2.SelectedRows[0].Cells[4].Value.ToString() == "Wednesday")
+            {
+                wednesday.Checked = true;
+            }
+
+            if (dataGridView2.SelectedRows[0].Cells[4].Value.ToString() == "Thursday")
+            {
+                thursday.Checked = true;
+            }
+
+            if (dataGridView2.SelectedRows[0].Cells[4].Value.ToString() == "Friday")
+            {
+                friday.Checked = true;
+            }
+
+            if (dataGridView2.SelectedRows[0].Cells[4].Value.ToString() == "Saturday")
+            {
+                saturday.Checked = true;
+            }
+
+            if (dataGridView2.SelectedRows[0].Cells[4].Value.ToString() == "Sunday")
+            {
+                sunday.Checked = true;
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void txtId_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
             string workingDays = "";
 
             if (monday.CheckState == CheckState.Checked)
@@ -122,84 +277,6 @@ namespace ABC_Institute_Menu
             ExecuteQuery(txtQuery);
             LoadData();
             System.Windows.Forms.MessageBox.Show("Data Added Successfully!");
-        }
-
-
-        //Update
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            string txtQuery = "Update workingDaysHours set noOfWorkingDays = '" + numericUpDown1.Text + "' , hours = '" + numericUpDown2.Text + "' , minutes = '" + numericUpDown3.Text + "' where ID = '" + txtId.Text + "' ";
-            ExecuteQuery(txtQuery);
-            LoadData();
-            System.Windows.Forms.MessageBox.Show("Data Updated Successfully!");
-
-
-
-        }
-
-        //Delete
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-            DialogResult dialogResult = MessageBox.Show("Are you sure do you want to delete this record?", "Delete Action", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                //do something
-                string txtQuery = "delete from workingDaysHours where ID = '" + txtId.Text + "'";
-                ExecuteQuery(txtQuery);
-                LoadData();
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else shsagg
-                return;
-            }
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            txtId.Text = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
-            numericUpDown1.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
-            numericUpDown2.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
-            numericUpDown3.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
-
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void txtId_Validating(object sender, CancelEventArgs e)
-        {
-
         }
     }
 }

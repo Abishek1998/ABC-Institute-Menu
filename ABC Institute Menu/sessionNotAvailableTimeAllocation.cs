@@ -13,9 +13,14 @@ namespace ABC_Institute_Menu
 {
     public partial class sessionNotAvailableTimeAllocation : Form
     {
+
         public sessionNotAvailableTimeAllocation()
         {
             InitializeComponent();
+            LoadLecturer();
+            LoadSessionID();
+            LoadGroup();
+            LoadSubGroup();
         }
 
         private SQLiteConnection sql_con;
@@ -61,20 +66,23 @@ namespace ABC_Institute_Menu
             string txtQuery = "Insert into sessionNotAvailableTimeLocation (ID, selectLecturer, selectSessionID, selectGroup, selectSubGroup, startTime, endTime) values ('" + txtId.Text + "' ,'" + comboBox1.Text + "' , '" + comboBox4.Text + "' , '" + comboBox3.Text + "' , '" + comboBox2.Text + "' , '" + dateTimePicker1.Text + "' , '" + dateTimePicker2.Text + "' )";
             ExecuteQuery(txtQuery);
             LoadData();
+            
             System.Windows.Forms.MessageBox.Show("Data Added Successfully!");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string txtQuery = "Update sessionNotAvailableTimeLocation set selectLecturer = '" + comboBox1.Text + "' , selectSessionID = '" + comboBox4.Text + "' , selectGroup = '" + comboBox3.Text + "' , selectSubGroup = '" + comboBox2.Text + " , startTime = '" + dateTimePicker1.Text + " , endTime = '" + dateTimePicker2.Text + " ' where ID = '" + txtId.Text + "' ";
+            string txtQuery = "Update sessionNotAvailableTimeLocation set selectLecturer = '" + comboBox1.Text + "' , selectSessionID = '" + comboBox4.Text + "' , selectGroup = '" + comboBox3.Text + "' , selectSubGroup = '" + comboBox2.Text + "' , startTime = '" + dateTimePicker1.Text + "' , endTime = '" + dateTimePicker2.Text + "' where ID = '" + txtId.Text + "' ";
             ExecuteQuery(txtQuery);
             LoadData();
+            
             System.Windows.Forms.MessageBox.Show("Data Updated Successfully!");
         }
 
         private void sessionNotAvailableTimeAllocation_Load(object sender, EventArgs e)
         {
             LoadData();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -83,9 +91,10 @@ namespace ABC_Institute_Menu
             if (dialogResult == DialogResult.Yes)
             {
                 //do something go sgag
-                string txtQuery = "delete from workingDaysHours where ID = '" + txtId.Text + "'";
+                string txtQuery = "delete from sessionNotAvailableTimeLocation where ID = '" + txtId.Text + "'";
                 ExecuteQuery(txtQuery);
                 LoadData();
+                
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -101,6 +110,74 @@ namespace ABC_Institute_Menu
             comboBox4.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             comboBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             comboBox2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+        }
+
+        private void LoadLecturer()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select EmployeeName from tbLecturers";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                comboBox1.Items.Add(dr["EmployeeName"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void LoadSessionID()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select ID from manageSession";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                comboBox4.Items.Add(dr["ID"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void LoadGroup()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select GroupNumber from studentGroup";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                comboBox3.Items.Add(dr["GroupNumber"].ToString());
+            }
+            sql_con.Close();
+        }
+
+        private void LoadSubGroup()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select SubGroupNumber from studentGroup";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                comboBox2.Items.Add(dr["SubGroupNumber"].ToString());
+            }
+            sql_con.Close();
         }
     }
 }
