@@ -101,20 +101,36 @@ namespace ABC_Institute_Menu
         //add
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string txtQuery = " insert into tbLecturers ( EmployeeID,EmployeeName,Faculty,Department,Center,Building,Level,Rank ) values ( '" + textBox3.Text + "','" + textBox1.Text + "','" + textBox5.Text + "','" + textBox4.Text + "','" + textBox7.Text + "','" + textBox6.Text + "','" + comboBox1.Text + "','" + textBox2.Text + "')";
+            string txtQuery = " insert into tbLecturers ( EmployeeID,EmployeeName,Faculty,Department,Center,Building,Level,Rank ) values ( '" + textBox3.Text + "','" + textBox1.Text + "','" + comboBox2.Text + "','" + comboBox3.Text + "','" + comboBox4.Text + "','" + textBox6.Text + "','" + comboBox1.Text + "','" + textBox2.Text + "')";
 
 
             //Check text fileds are not empty
-            if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == ""  )
+            if (textBox2.Text == "" || textBox3.Text == "" || textBox6.Text == "" || textBox1.Text == ""  )
             {
                 MessageBox.Show("Fill all records !! ");
             }
 
-            else if(comboBox1.Text == null || comboBox1.Text == string.Empty )
+            else if (comboBox1.Text == null || comboBox1.Text == string.Empty)
             {
-                MessageBox.Show("Fill selected Level !! ");
+                MessageBox.Show("Level is empty !! ");
             }
 
+            else if (comboBox2.Text == null || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Faculty is empty !! ");
+            }
+
+            else if (comboBox3.Text == null || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Department is empty !! ");
+            }
+
+            else if(comboBox4.Text == null || comboBox1.Text == string.Empty )
+            {
+                MessageBox.Show("Center is emptyl !! ");
+            }
+
+            
             //Check Length only 6 digit in Employee number
             else if (textBox3.Text.Length < 6 || textBox3.Text.Length > 6)
             {
@@ -184,21 +200,60 @@ namespace ABC_Institute_Menu
             textBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
             textBox3.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            textBox4.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            textBox5.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            comboBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            comboBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             textBox6.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            textBox7.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            comboBox4.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             comboBox1.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string txtQuery = "update tbLecturers set EmployeeName = '" + textBox1.Text + "',EmployeeID = '" + textBox3.Text + "',Faculty = '" + textBox5.Text + "',Department ='" + textBox4.Text + "',Center ='" + textBox7.Text + "',Building = '" + textBox6.Text + "',Level = '" + comboBox1.Text + "',Rank = '" + textBox2.Text + "' where EmployeeID = '" + textBox3.Text + "' ";
+            string txtQuery = "update tbLecturers set EmployeeName = '" + textBox1.Text + "',EmployeeID = '" + textBox3.Text + "',Faculty = '" + comboBox2.Text + "',Department ='" + comboBox3.Text + "',Center ='" + comboBox4.Text + "',Building = '" + textBox6.Text + "',Level = '" + comboBox1.Text + "',Rank = '" + textBox2.Text + "' where EmployeeID = '" + textBox3.Text + "' ";
 
-            ExecuteQuery(txtQuery);
-            LoadData();
-            MessageBox.Show("Updated Successfully !! ");
-            return;
+            //Check text fileds are not empty
+            if (textBox2.Text == "" || textBox3.Text == "" || textBox6.Text == "" || textBox1.Text == "")
+            {
+                MessageBox.Show("Fill all records !! ");
+            }
+
+            else if (comboBox1.Text == null || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Level is empty !! ");
+            }
+
+            else if (comboBox2.Text == null || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Faculty is empty !! ");
+            }
+
+            else if (comboBox3.Text == null || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Department is empty !! ");
+            }
+
+            else if (comboBox4.Text == null || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Center is emptyl !! ");
+            }
+
+
+            //Check Length only 6 digit in Employee number
+            else if (textBox3.Text.Length < 6 || textBox3.Text.Length > 6)
+            {
+                MessageBox.Show("Invalied Employee ID.Enter 6 Digit !! ");
+            }
+
+
+
+            else
+            {
+
+                ExecuteQuery(txtQuery);
+                LoadData();
+                MessageBox.Show("Updated Successfully !! ");
+                return;
+            }
 
 
         }
@@ -268,11 +323,18 @@ namespace ABC_Institute_Menu
             textBox1.Text = " ";
             textBox2.Text = " ";
             textBox3.Text = " ";
-            textBox4.Text = " ";
-            textBox5.Text = " ";
+            //textBox4.Text = " ";
+           // textBox5.Text = " ";
             textBox6.Text = " ";
-            textBox7.Text = " ";
-            
+           // textBox7.Text = " ";
+
+            comboBox1.Text = string.Empty;
+            comboBox2.Text = string.Empty;
+            comboBox3.Text = string.Empty;
+            comboBox4.Text = string.Empty;
+
+
+
 
 
 

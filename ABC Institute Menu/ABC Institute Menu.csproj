@@ -200,6 +200,9 @@
     <EmbeddedResource Include="addlocation.resx">
       <DependentUpon>addlocation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="addsession.resx">
+      <DependentUpon>addsession.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addTags.resx">
       <DependentUpon>addTags.cs</DependentUpon>
     </EmbeddedResource>

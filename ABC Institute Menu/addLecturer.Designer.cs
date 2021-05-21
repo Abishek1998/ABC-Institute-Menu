@@ -49,12 +49,12 @@ namespace ABC_Institute_Menu
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -65,9 +65,9 @@ namespace ABC_Institute_Menu
             this.panel1.Controls.Add(this.addWorkingDaysHours);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1445, 62);
+            this.panel1.Size = new System.Drawing.Size(1084, 50);
             this.panel1.TabIndex = 28;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -75,19 +75,19 @@ namespace ABC_Institute_Menu
             // 
             this.addWorkingDaysHours.AutoSize = true;
             this.addWorkingDaysHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addWorkingDaysHours.Location = new System.Drawing.Point(44, 11);
-            this.addWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addWorkingDaysHours.Location = new System.Drawing.Point(33, 9);
             this.addWorkingDaysHours.Name = "addWorkingDaysHours";
-            this.addWorkingDaysHours.Size = new System.Drawing.Size(215, 36);
+            this.addWorkingDaysHours.Size = new System.Drawing.Size(175, 29);
             this.addWorkingDaysHours.TabIndex = 2;
             this.addWorkingDaysHours.Text = "Add Lecturers";
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(870, 220);
+            this.textBox2.Location = new System.Drawing.Point(652, 179);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 30);
+            this.textBox2.Size = new System.Drawing.Size(226, 26);
             this.textBox2.TabIndex = 44;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
@@ -95,9 +95,10 @@ namespace ABC_Institute_Menu
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(292, 125);
+            this.textBox3.Location = new System.Drawing.Point(219, 110);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(300, 30);
+            this.textBox3.Size = new System.Drawing.Size(226, 26);
             this.textBox3.TabIndex = 43;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
@@ -105,9 +106,10 @@ namespace ABC_Institute_Menu
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(292, 77);
+            this.textBox1.Location = new System.Drawing.Point(219, 63);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 30);
+            this.textBox1.Size = new System.Drawing.Size(226, 26);
             this.textBox1.TabIndex = 42;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
@@ -116,10 +118,9 @@ namespace ABC_Institute_Menu
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 84);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(10, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 20);
+            this.label5.Size = new System.Drawing.Size(111, 17);
             this.label5.TabIndex = 49;
             this.label5.Text = "Employee Name";
             // 
@@ -127,10 +128,9 @@ namespace ABC_Institute_Menu
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 135);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 50;
             this.label1.Text = "Employee ID";
             // 
@@ -138,10 +138,9 @@ namespace ABC_Institute_Menu
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 182);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(12, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.Size = new System.Drawing.Size(53, 17);
             this.label2.TabIndex = 51;
             this.label2.Text = "Faculty";
             // 
@@ -149,10 +148,9 @@ namespace ABC_Institute_Menu
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 227);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 20);
+            this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 52;
             this.label3.Text = "Department";
             // 
@@ -160,10 +158,9 @@ namespace ABC_Institute_Menu
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(657, 227);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(493, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 20);
+            this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 59;
             this.label4.Text = "Rank";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -172,10 +169,9 @@ namespace ABC_Institute_Menu
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(657, 182);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(493, 148);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 20);
+            this.label6.Size = new System.Drawing.Size(42, 17);
             this.label6.TabIndex = 58;
             this.label6.Text = "Level";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -184,10 +180,9 @@ namespace ABC_Institute_Menu
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(657, 135);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(493, 110);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
+            this.label7.Size = new System.Drawing.Size(58, 17);
             this.label7.TabIndex = 57;
             this.label7.Text = "Building";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -196,10 +191,9 @@ namespace ABC_Institute_Menu
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(655, 84);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(491, 68);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 20);
+            this.label8.Size = new System.Drawing.Size(50, 17);
             this.label8.TabIndex = 56;
             this.label8.Text = "Center";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -207,11 +201,12 @@ namespace ABC_Institute_Menu
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 369);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 300);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1421, 411);
+            this.dataGridView1.Size = new System.Drawing.Size(1066, 334);
             this.dataGridView1.TabIndex = 63;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -220,10 +215,9 @@ namespace ABC_Institute_Menu
             // 
             this.panel3.Controls.Add(this.btmlabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 787);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(0, 637);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1445, 62);
+            this.panel3.Size = new System.Drawing.Size(1084, 50);
             this.panel3.TabIndex = 64;
             // 
             // btmlabel
@@ -232,10 +226,9 @@ namespace ABC_Institute_Menu
             this.btmlabel.AutoSize = true;
             this.btmlabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btmlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmlabel.Location = new System.Drawing.Point(629, 21);
-            this.btmlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btmlabel.Location = new System.Drawing.Point(472, 17);
             this.btmlabel.Name = "btmlabel";
-            this.btmlabel.Size = new System.Drawing.Size(240, 17);
+            this.btmlabel.Size = new System.Drawing.Size(182, 13);
             this.btmlabel.TabIndex = 0;
             this.btmlabel.Text = "ABC Institute Timetable Management";
             // 
@@ -246,10 +239,9 @@ namespace ABC_Institute_Menu
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(1021, 296);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Location = new System.Drawing.Point(766, 240);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(160, 49);
+            this.btnDelete.Size = new System.Drawing.Size(120, 40);
             this.btnDelete.TabIndex = 67;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -262,10 +254,9 @@ namespace ABC_Institute_Menu
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(853, 296);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Location = new System.Drawing.Point(640, 240);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(160, 49);
+            this.btnUpdate.Size = new System.Drawing.Size(120, 40);
             this.btnUpdate.TabIndex = 66;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -278,10 +269,9 @@ namespace ABC_Institute_Menu
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(684, 296);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Location = new System.Drawing.Point(513, 240);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(160, 49);
+            this.btnAdd.Size = new System.Drawing.Size(120, 40);
             this.btnAdd.TabIndex = 65;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -294,50 +284,23 @@ namespace ABC_Institute_Menu
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(516, 296);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(387, 240);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 49);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 68;
             this.button1.Text = "Genarate Rank";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(292, 223);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(300, 30);
-            this.textBox4.TabIndex = 70;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(292, 175);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(300, 30);
-            this.textBox5.TabIndex = 69;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(870, 125);
+            this.textBox6.Location = new System.Drawing.Point(652, 102);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(300, 30);
+            this.textBox6.Size = new System.Drawing.Size(226, 26);
             this.textBox6.TabIndex = 72;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.Location = new System.Drawing.Point(870, 77);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(300, 30);
-            this.textBox7.TabIndex = 71;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // button2
             // 
@@ -346,10 +309,9 @@ namespace ABC_Institute_Menu
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1189, 296);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(892, 240);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 49);
+            this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 74;
             this.button2.Text = "Clear All";
             this.button2.UseVisualStyleBackColor = false;
@@ -365,25 +327,84 @@ namespace ABC_Institute_Menu
             "3",
             "4",
             "5",
-            "6"});
-            this.comboBox1.Location = new System.Drawing.Point(870, 181);
+            "6",
+            ""});
+            this.comboBox1.Location = new System.Drawing.Point(652, 147);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 24);
+            this.comboBox1.Size = new System.Drawing.Size(226, 21);
             this.comboBox1.TabIndex = 75;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Computing",
+            "Engineering",
+            "Business",
+            "Humanities & Sciences",
+            "School of Architecture",
+            ""});
+            this.comboBox2.Location = new System.Drawing.Point(219, 148);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(226, 21);
+            this.comboBox2.TabIndex = 76;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Information Technology - IT",
+            "Information System Enginer - ISE",
+            "Software Enginer - SE",
+            "Data Ssience - DS",
+            "Interactive Media - IM",
+            "Cyber Security - CS",
+            "Architecture",
+            "Business Management - BM",
+            "Enginering",
+            ""});
+            this.comboBox3.Location = new System.Drawing.Point(219, 184);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(226, 21);
+            this.comboBox3.TabIndex = 77;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Malabe",
+            "Metro",
+            "Matara",
+            "Kandy",
+            "Kurunagala",
+            "Jaffna",
+            "",
+            ""});
+            this.comboBox4.Location = new System.Drawing.Point(652, 67);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(226, 21);
+            this.comboBox4.TabIndex = 78;
+            // 
             // addLecturer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1445, 849);
+            this.ClientSize = new System.Drawing.Size(1084, 687);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -402,7 +423,6 @@ namespace ABC_Institute_Menu
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "addLecturer";
             this.Text = "addLecturer";
             this.Load += new System.EventHandler(this.addLecturer_Load);
@@ -437,11 +457,11 @@ namespace ABC_Institute_Menu
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }

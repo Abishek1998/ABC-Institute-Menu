@@ -89,7 +89,16 @@ namespace ABC_Institute_Menu
                 MessageBox.Show("Fill all records !! ");
             }
 
-            
+           else if (comboBox1.Text == null || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Offered year is empty !! ");
+            }
+
+            //Check Length only 4 digit in Subject ID
+            else if (textBox8.Text.Length < 4 || textBox8.Text.Length > 4)
+            {
+                MessageBox.Show("Invalied Subject ID. Enter 4 Digit number for Subject ID !! ");
+            }
 
             else
             {
@@ -140,23 +149,46 @@ namespace ABC_Institute_Menu
         {
             string txtQuery = "update tbSubjects set  OfferedYear = '" + comboBox1.Text + "',OfferedSemester = '" + Semester + "',SubjectName = '" + textBox3.Text + "',SubjectCode = '" + textBox2.Text + "',NoOfLectureHr = '" + textBox4.Text + "',NoOfTutorialHr = '" + textBox5.Text + "',NoOfLabHr='" + textBox6.Text + "',NoOfEvaluationHr = '" + textBox7.Text + "' where SubjectID = '" + textBox8.Text + "' ";
 
-            ExecuteQuery(txtQuery);
-            LoadData();
-            MessageBox.Show("Updated Successfully !! ");
-            return;
+            if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == "" || textBox8.Text == "" || comboBox1.Text == "" || Semester == "")
+            {
+                MessageBox.Show("Fill all records !! ");
+            }
+
+
+
+            else if (comboBox1.Text == null || comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Offered year is empty !! ");
+            }
+
+            //Check Length only 4 digit in Subject ID
+            else if (textBox8.Text.Length < 4 || textBox8.Text.Length > 4)
+            {
+                MessageBox.Show("Invalied Subject ID. Enter 4 Digit number for Subject ID !! ");
+            }
+
+
+            else
+            {
+                ExecuteQuery(txtQuery);
+                LoadData();
+                MessageBox.Show("Updated Successfully !! ");
+                return;
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            Semester = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            textBox4.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            textBox5.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            textBox6.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
-            textBox7.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
-            textBox8.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+        {   
+            textBox8.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            Semester = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            textBox3.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            textBox4.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            textBox5.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            textBox6.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+            textBox7.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+            
             
         }
 
@@ -216,14 +248,6 @@ namespace ABC_Institute_Menu
             }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
-            {
-                e.Handled = true;
-            }
-        }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -255,6 +279,7 @@ namespace ABC_Institute_Menu
             textBox7.Text = " ";
             textBox8.Text = " ";
             Semester = " ";
+            comboBox1.Text = string.Empty;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -265,5 +290,7 @@ namespace ABC_Institute_Menu
             comboBox1.Items.Add(4);*/
 
         }
+
+     
     }
 }
