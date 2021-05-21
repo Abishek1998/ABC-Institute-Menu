@@ -19,10 +19,12 @@ namespace ABC_Institute_Menu
         public managesessions()
         {
             InitializeComponent();
-           
+            LoadSessionID();
+            LoadRoom();
+
         }
 
-      
+
 
         private SQLiteConnection sql_con;
         private SQLiteCommand sql_cmd;
@@ -67,9 +69,9 @@ namespace ABC_Institute_Menu
      
         private void managesessions_Load(object sender, EventArgs e)
         {
-            LoadData();
-            LoadSessionData();
-            LoadSessionID();
+            //LoadData();
+              LoadRoomData();
+         
         }
 
         private void NotAvailableTimes_Click(object sender, EventArgs e)
@@ -134,18 +136,13 @@ namespace ABC_Institute_Menu
 
         //ManageSession Starts here
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         //set LoadSessionData
-        private void LoadSessionData()
+        private void LoadRoomData()
         {
             SetConnection();
             sql_con.Open();
             sql_cmd = sql_con.CreateCommand();
-            string CommandText = "select * from manageSession";
+            string CommandText = "select * from manageRoom";
             DB = new SQLiteDataAdapter(CommandText, sql_con);
             DS.Reset();
             DB.Fill(DS);
@@ -171,25 +168,32 @@ namespace ABC_Institute_Menu
             sql_con.Close();
         }
 
+        private void LoadRoom()
+        {
+            SetConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select RoomName from locationDetails";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            foreach (DataRow dr in DT.Rows)
+            {
+                comboBox1.Items.Add(dr["RoomName"].ToString());
+            }
+            sql_con.Close();
+        }
+
 
         //Insert Session Data
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
-            if (LectureHall.Checked)
-            {
-                RoomType = "Lecture Hall";
-            }
-
-            if (rbLab.Checked)
-            {
-                RoomType = "Lab";
-            }
-
-         //   string txtQuery = "Insert into manageSession (ID, Tag, SubjectID, Capacity,Room) values ('" + textBox4.Text + "' ,'" + RoomType + "' , '" + textBox1.Text + "' , '" + textBox2.Text + "' , '" + comboBox1.Text + "')";
-            //ExecuteQuery(txtQuery);
-            LoadSessionData();
+            string txtQuery = "Insert into manageRoom (ID, SessionID, Room) values ('" + textBox4.Text + "' ,'" + comboBox2.Text + "' , '" + comboBox1.Text + "')";
+            ExecuteQuery(txtQuery);
+            LoadRoomData();
             System.Windows.Forms.MessageBox.Show("Data Added Successfully!");
+
         }
 
         private void LectureHall_CheckedChanged(object sender, EventArgs e)
@@ -207,72 +211,23 @@ namespace ABC_Institute_Menu
 
         }
 
-
-        //Update Session Data
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (LectureHall.Checked)
-            {
-                RoomType = "Lecture Hall";
-            }
-
-            else if (rbLab.Checked)
-            {
-                RoomType = "Lab";
-            }
-
-
-
-            //string txtQuery = "update manageSession set SubjectID = '" + textBox1.Text + "' , Capacity = '" + textBox2.Text + "',  RoomType = '" + RoomType + "'   where ID = '" + textBox4.Text + "' ";
-
-           // ExecuteQuery(txtQuery);
-            LoadSessionData();
-            MessageBox.Show("Updated Successfully !! ");
-            return;
-
-
+            
         }
 
-        //Retrive Session Data
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //textBox4.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-           // textBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-             textBox1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            textBox2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+       
 
-
-            if (dataGridView1.SelectedRows[0].Cells[1].Value.ToString() == "Lab")
-            {
-                rbLab.Checked = true;
-            }
-
-            else if (dataGridView1.SelectedRows[0].Cells[1].Value.ToString() == "Lecture Hall")
-            {
-                LectureHall.Checked = true;
-            }
-
-            else
-            {
-                rbLab.Checked = false;
-                LectureHall.Checked = false;
-            }
-
-
-        }
-
-
-        //Delete Session Data
+        //Delete Room Data
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure do you want to delete this record?", "Delete Action", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //do something
-               // string txtQuery = "delete from manageSession where ID = '" + textBox4.Text + "'";
-                //ExecuteQuery(txtQuery);
-                LoadSessionData();
+               
+                string txtQuery = "delete from manageRoom where ID = '" + textBox4.Text + "'";
+                ExecuteQuery(txtQuery);
+                LoadRoomData();
                 MessageBox.Show("Record Deleted !! ");
                 return;
             }
@@ -312,21 +267,50 @@ namespace ABC_Institute_Menu
 
         private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            SetConnection();
-            sql_con.Open();
-            sql_cmd = sql_con.CreateCommand();
-            string CommandText = "select * from manageSession where ID ='"+ comboBox2.Text + "' ";
-            DB = new SQLiteDataAdapter(CommandText, sql_con);
-            DS.Reset();
-            DB.Fill(DS);
-            DT = DS.Tables[0];
-            foreach (DataRow dr in DT.Rows)
-            {
-              //  textBox1.Text =DT.Cells[1].ToString();
-                textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+ 
+        }
 
-            }
-            sql_con.Close();
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+                    }
+        //Retrieve Data
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox4.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            comboBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Retrieve Data
+        private void dataGridView1_CellContentClick1(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox4.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            comboBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            string txtQuery = "update manageRoom set SessionID = '" + comboBox2.Text + "' , Room = '" + comboBox1.Text + "'   where ID = '" + textBox4.Text + "' ";
+
+            ExecuteQuery(txtQuery);
+            LoadRoomData();
+            MessageBox.Show("Updated Successfully !! ");
+            return;
         }
     }
 }

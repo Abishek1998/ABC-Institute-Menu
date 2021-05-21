@@ -53,7 +53,7 @@ namespace ABC_Institute_Menu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 47);
+            this.label1.Location = new System.Drawing.Point(58, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 17);
             this.label1.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace ABC_Institute_Menu
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1133, 470);
+            this.button2.Location = new System.Drawing.Point(434, 366);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 49);
@@ -82,7 +82,7 @@ namespace ABC_Institute_Menu
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(767, 470);
+            this.button1.Location = new System.Drawing.Point(68, 366);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 49);
@@ -94,7 +94,7 @@ namespace ABC_Institute_Menu
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(305, 315);
+            this.textBox1.Location = new System.Drawing.Point(307, 217);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 30);
             this.textBox1.TabIndex = 27;
@@ -102,7 +102,7 @@ namespace ABC_Institute_Menu
             // rbLab
             // 
             this.rbLab.AutoSize = true;
-            this.rbLab.Location = new System.Drawing.Point(1240, 213);
+            this.rbLab.Location = new System.Drawing.Point(1232, 150);
             this.rbLab.Name = "rbLab";
             this.rbLab.Size = new System.Drawing.Size(53, 21);
             this.rbLab.TabIndex = 33;
@@ -114,7 +114,7 @@ namespace ABC_Institute_Menu
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(305, 413);
+            this.textBox3.Location = new System.Drawing.Point(307, 280);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(300, 30);
             this.textBox3.TabIndex = 34;
@@ -122,7 +122,7 @@ namespace ABC_Institute_Menu
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(993, 306);
+            this.textBox2.Location = new System.Drawing.Point(985, 219);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(300, 30);
             this.textBox2.TabIndex = 36;
@@ -132,7 +132,7 @@ namespace ABC_Institute_Menu
             // 
             this.noOfWorkingDays.AutoSize = true;
             this.noOfWorkingDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noOfWorkingDays.Location = new System.Drawing.Point(60, 320);
+            this.noOfWorkingDays.Location = new System.Drawing.Point(62, 222);
             this.noOfWorkingDays.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.noOfWorkingDays.Name = "noOfWorkingDays";
             this.noOfWorkingDays.Size = new System.Drawing.Size(151, 25);
@@ -143,7 +143,7 @@ namespace ABC_Institute_Menu
             // 
             this.addWorkingDaysHours.AutoSize = true;
             this.addWorkingDaysHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addWorkingDaysHours.Location = new System.Drawing.Point(55, 114);
+            this.addWorkingDaysHours.Location = new System.Drawing.Point(55, 75);
             this.addWorkingDaysHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addWorkingDaysHours.Name = "addWorkingDaysHours";
             this.addWorkingDaysHours.Size = new System.Drawing.Size(380, 36);
@@ -154,7 +154,7 @@ namespace ABC_Institute_Menu
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 418);
+            this.label2.Location = new System.Drawing.Point(62, 285);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 25);
@@ -165,7 +165,7 @@ namespace ABC_Institute_Menu
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(748, 213);
+            this.label3.Location = new System.Drawing.Point(740, 150);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 25);
@@ -176,7 +176,7 @@ namespace ABC_Institute_Menu
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(748, 309);
+            this.label4.Location = new System.Drawing.Point(740, 222);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 25);
@@ -190,7 +190,7 @@ namespace ABC_Institute_Menu
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(951, 470);
+            this.button3.Location = new System.Drawing.Point(252, 366);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(160, 49);
@@ -202,13 +202,14 @@ namespace ABC_Institute_Menu
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(117, 598);
+            this.dataGridView1.Location = new System.Drawing.Point(67, 449);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(1176, 293);
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.Size = new System.Drawing.Size(1217, 374);
             this.dataGridView1.TabIndex = 43;
             this.dataGridView1.AutoSizeColumnModeChanged += new System.Windows.Forms.DataGridViewAutoSizeColumnModeEventHandler(this.Fill);
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -218,7 +219,7 @@ namespace ABC_Institute_Menu
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(60, 224);
+            this.label5.Location = new System.Drawing.Point(62, 159);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 25);
@@ -229,7 +230,7 @@ namespace ABC_Institute_Menu
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(305, 219);
+            this.textBox4.Location = new System.Drawing.Point(307, 154);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(300, 30);
             this.textBox4.TabIndex = 44;
@@ -238,7 +239,7 @@ namespace ABC_Institute_Menu
             // LectureHall
             // 
             this.LectureHall.AutoSize = true;
-            this.LectureHall.Location = new System.Drawing.Point(993, 213);
+            this.LectureHall.Location = new System.Drawing.Point(985, 150);
             this.LectureHall.Name = "LectureHall";
             this.LectureHall.Size = new System.Drawing.Size(105, 21);
             this.LectureHall.TabIndex = 46;
